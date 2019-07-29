@@ -1,0 +1,38 @@
+{
+  "name": "view-showcase",
+  "version": "5.0.1",
+  "description": "Show custom elements in action",
+  "main": "main/index.js",
+  "scripts": {
+    "start": "rm -rf dist/* && parcel showcase/index.html --public-url /showcase",
+    "build": "rm -rf dist && parcel build showcase/index.html --public-url /showcase",
+    "deploy": "bash ./scripts/deploy.sh staging",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epha/view-showcase.git"
+  },
+  "author": "Marco Egbring",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epha/view-showcase/issues"
+  },
+  "alias": {
+    "view-element": "../view-element"
+  },
+  "homepage": "https://github.com/epha/view-showcase#readme",
+  "dependencies": {
+    "core-js": "^3.1.4",
+    "regenerator-runtime": "^0.13.3",
+    "object-path-immutable": "^3.1.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "lit-html": "^1.1.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10"
+  }
+}

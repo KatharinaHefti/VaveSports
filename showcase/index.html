@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>View Element</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="custom,element,framework">
+  <meta name="description" content="Collection of custom elements">
+  <style>
+    html {
+      font-family: roboto;
+      line-height: 1.6rem;
+      font-size: 16px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+    }
+
+    article.app {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      box-sizing: border-box;
+    }
+
+    section.right {
+      position: absolute;
+      left: 200px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      overflow: auto;
+    }
+
+    [hidden=false] {
+      opacity: 1;
+      animation: fadeIn .4s ease-in;
+    }
+
+    [hidden=true] {
+      display: none !important;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <article class=app></article>
+  <script src="index.js"></script>
+</body>
+
+</html>
