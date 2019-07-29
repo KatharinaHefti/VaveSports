@@ -3,6 +3,7 @@
   "version": "5.0.1",
   "description": "Show custom elements in action",
   "main": "main/index.js",
+  "source": true,
   "scripts": {
     "start": "rm -rf dist/* && parcel showcase/index.html --public-url /showcase",
     "build": "rm -rf dist && parcel build showcase/index.html --public-url /showcase",
@@ -31,8 +32,9 @@
     "lit-html": "^1.1.1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
     "autoprefixer": "^9.6.1",
-    "cssnano": "^4.1.10"
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1"
   }
 }

@@ -1,0 +1,30 @@
+# View Element
+
+## Javascript
+
+```javascript
+for(var i = 0; i < 10; i++) {
+  console.log("no")
+}
+```
+
+## Bash
+
+```bash
+rm -f node_modules
+```
+
+## Stylesheet
+
+```css
+body {
+  padding: 15px;
+}
+```
+
+## Pyhton
+
+```python
+for i in l:
+  pass
+```

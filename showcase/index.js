@@ -1,3 +1,4 @@
+import './index.css'
 import 'core-js/stable'
 import "regenerator-runtime/runtime"
 
@@ -12,7 +13,6 @@ import 'view-element/view-md'
 // Load some example views
 import './view-links'
 import './view-basic'
-
 
 import mds from './asset/*.mdown'
 
@@ -42,9 +42,15 @@ window.onload = async () => {
 
   const showMDown = ( data ) => html `
     <view-md .state=${mds.test1}></view-md>
+    <hr>
     <view-md .state=${{
       value:mds.test2,
       hidden:"false"
+    }}></view-md>
+    <hr>
+    <view-md .state=${{
+      value:mds.code,
+      theme: Math.random() > 0.5 ? "twilight" : "tomorrow"
     }}></view-md>
   `
 
