@@ -7,7 +7,7 @@
   "scripts": {
     "start": "rm -rf dist/* && parcel showcase/index.html --public-url /showcase",
     "build": "rm -rf dist && parcel build showcase/index.html --public-url /showcase",
-    "deploy": "bash ./scripts/deploy.sh staging",
+    "staging": "bash ./scripts/deploy.sh staging",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
