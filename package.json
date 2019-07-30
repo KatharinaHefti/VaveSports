@@ -5,8 +5,9 @@
   "main": "main/index.js",
   "source": true,
   "scripts": {
-    "start": "rm -rf dist/* && parcel showcase/index.html --public-url /showcase",
-    "build": "rm -rf dist && NODE_ENV=production parcel build showcase/index.html --public-url /showcase",
+    "clear": "rm -rf dist/*", 
+    "start": "npm run clear && parcel showcase/index.html --public-url /showcase",
+    "build": "npm run clear && NODE_ENV=production parcel build showcase/index.html --public-url /showcase",
     "staging": "bash ./scripts/deploy.sh staging",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

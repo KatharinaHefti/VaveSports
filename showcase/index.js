@@ -8,7 +8,7 @@ import { store } from './store'
 
 // Showcases
 import 'view-element'
-import 'view-element/view-md'
+import 'view-element/main/view-md'
 
 // Load some example views
 import './view-links'
