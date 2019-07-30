@@ -36,25 +36,27 @@ window.onload = async () => {
     console.timeEnd( "render" )
   }
 
-  const showBasic = ( data ) => html `
-    <view-basic @action=${onBasic} hidden="false" .state=${data.basic}></view-basic>
-  `
-
-  const showMDown = ( data ) => html `
-    <view-md .state=${mds.test1}></view-md>
-    <hr>
-    <view-md .state=${{
-      value:mds.test2,
-      hidden:"false"
-    }}></view-md>
-    <hr>
-    <view-md .state=${{
-      value:mds.code,
-      theme: Math.random() > 0.5 ? "twilight" : "tomorrow"
-    }}></view-md>
-  `
-
   const template = ( data ) => {
+
+    const showBasic = ( data ) => html `
+      <view-basic @action=${onBasic} hidden="false" .state=${data.basic}></view-basic>
+    `
+
+    const showMDown = ( data ) => html `
+      <style>
+        view-md {
+          border-bottom: 1px solid #ddd;
+        }
+      </style>
+      <view-md .state=${{
+        value:mds.code,
+        theme: Math.random() > 0.7 ? "twilight" : Math.random() > 0.5 ? "tomorrow" : "default"
+      }}></view-md>
+      <view-md .state=${{
+        value:"https://epha.io/akte/recht/nutzung.md",
+        hidden:"false"
+      }}></view-md>
+    `
 
     return html `
       <article class=main>
@@ -72,6 +74,7 @@ window.onload = async () => {
         </section>
       </article>
     `
+
   }
 
   store.subscribe( update )
