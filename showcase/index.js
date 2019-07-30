@@ -21,7 +21,7 @@ window.onload = async () => {
   const app = document.querySelector( "article.app" )
 
   const onLinks = ( e ) => {
-    const pathname = `/element/${e.detail.value}/`
+    const pathname = `/showcase/${e.detail.value}/`
     history.pushState( null, null, pathname )
     store.dispatch( { type: "LINKS_VALUE", data: e.detail.value } )
   }
