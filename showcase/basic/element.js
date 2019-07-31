@@ -1,6 +1,8 @@
 import { html, render } from 'lit-html'
 import { styleMap } from 'lit-html/directives/style-map.js'
 
+// Layz import units
+import 'view-units/source/'
 // Assets
 import { boxes } from '../asset/*.svg'
 
@@ -94,12 +96,12 @@ export default class Basic extends HTMLElement {
           id: "counter", value: data.counter, width: "40px"
         }}></unit-button>
         <unit-button data-idx=0 .state=${ {
-          "value": "width 350px", "icon1": boxes, "icon2": { value: boxes, height: "50px" }
+          id:"nothing", "value": "width 350px", "icon1": boxes, "icon2": { value: boxes, height: "50px" }
         }}></unit-button>
         <unit-button @action=${onFarben} data-idx=0 .state=${ {
           "id": "localFarben", "value": "click for colors asdfasdfasdf", "icon2": boxes, width: "100px"
         }}></unit-button>
-        <unit-button value="Set Attribute value"></unit-button> 
+        <unit-button value="Set Attribute value not working"></unit-button>
         <span>Text</span>
       </section>
       <hr>
@@ -150,3 +152,5 @@ export default class Basic extends HTMLElement {
   }
 
 }
+
+customElements.define( "area-basic", Basic )

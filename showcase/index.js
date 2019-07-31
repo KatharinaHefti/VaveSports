@@ -6,17 +6,15 @@ import "regenerator-runtime/runtime"
 
 import { html, render } from 'lit-html'
 import { cache } from 'lit-html/directives/cache.js'
+import { until } from 'lit-html/directives/until.js'
 import { store } from './store'
 
-// Showcases
-import 'view-units/source/'
-import 'view-units/source/unit-md'
-
-// Load some example views
-import './area-basic'
-// view acticle.mdwon
-
-import mds from './asset/*.mdown'
+// For navi
+import 'view-units/source/unit-liste'
+// For views
+import basic from './basic'
+import mdown from './mdown'
+import playground from './playground'
 
 window.onload = async () => {
 
@@ -36,48 +34,32 @@ window.onload = async () => {
       store.dispatch( { type: "LINKS_VALUE", data: e.detail.value } )
     }
 
-    return html `
-      <nav @action=${onNavi}>
-        <unit-column .state=${{
-          id: "links", items: data.links.paths.map(item => {
-            return { ...item, selected: item.value == data.links.value }
-          })
-        }}></unit-column>
-      </nav>
-      <main>${ createView(data) }</main>
-    `
-  }
-
-  const createView = ( data ) => {
-
     const onBasic = ( e ) => {
       store.dispatch( { type: "BASIC", data: e.detail } )
     }
 
+    return html `
+      <nav @action=${onNavi}>
+        <unit-liste .state=${{
+          id: "links", items: data.links.paths.map(item => {
+            return { ...item, selected: item.value == data.links.value }
+          })
+        }}></unit-liste>
+      </nav>
+      <main @action=${onBasic}>${ createView(data) }</main>
+    `
+  }
+
+  const createView = ( data ) => {
     switch ( data.links.value ) {
-
       case "basic":
-        return cache( html `
-          <area-basic @action=${onBasic} .state=${data.basic}></area-basic>
-        ` )
-
+        return cache( until( basic( data ) ) )
       case "mdown":
-        return cache( html `
-          <article class=mdown hidden=false>
-            <unit-md .state=${{
-              value:mds.code,
-              theme: Math.random() > 0.7 ? "twilight" : Math.random() > 0.5 ? "tomorrow" : "default"
-            }}></unit-md>
-            <unit-md .state=${{
-              value:"https://epha.io/akte/recht/nutzung.md",
-              hidden:"false"
-            }}></unit-md>
-          </article>
-        ` )
-
+        return cache( until( mdown( data ) ) )
+      case "playground":
+        return cache( until( playground( data ) ) )
       default:
         return ``
-
     }
   }
 
@@ -90,7 +72,8 @@ window.onload = async () => {
       value: location.pathname.split( "/" ).filter( p => !!p ).pop(),
       paths: [
         { label: "Basic Units", value: "basic" },
-        { label: "Markdown", value: "mdown" }
+        { label: "Markdown", value: "mdown" },
+        { label: "playground", value: "playground" }
       ]
     }
   } )
