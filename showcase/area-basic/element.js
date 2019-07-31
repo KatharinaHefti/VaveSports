@@ -78,40 +78,40 @@ export default class Basic extends HTMLElement {
 
       <h1>Element SVG</h1>
       <hr>
-      <view-svg .state=${{
+      <unit-svg .state=${{
         id:"boxes", value: boxes, fill: "tomato", width: "40px"
-      }}></view-svg>
-      <view-svg .state=${{
+      }}></unit-svg>
+      <unit-svg .state=${{
         id:"boxes", value: boxes, fill: "blue", background: "green", width: "40px", cursor: "pointer"
-      }}></view-svg>
+      }}></unit-svg>
       <span style="line-height:44px;">Text</span>
       <hr>
 
       <h1>Element Button</h1>
       <hr>
       <section style="display:flex;align-items:center;">
-        <view-button style="margin-right:10px;" .state=${{
+        <unit-button style="margin-right:10px;" .state=${{
           id: "counter", value: data.counter, width: "40px"
-        }}></view-button>
-        <view-button data-idx=0 .state=${ {
+        }}></unit-button>
+        <unit-button data-idx=0 .state=${ {
           "value": "width 350px", "icon1": boxes, "icon2": { value: boxes, height: "50px" }
-        }}></view-button>
-        <view-button @action=${onFarben} data-idx=0 .state=${ {
+        }}></unit-button>
+        <unit-button @action=${onFarben} data-idx=0 .state=${ {
           "id": "localFarben", "value": "click for colors asdfasdfasdf", "icon2": boxes, width: "100px"
-        }}></view-button>
+        }}></unit-button>
         <span>Text</span>
       </section>
       <hr>
         <section style="display:flex;">
-        <view-button style="flex:1" data-idx=0 .state=${ data["breite"] || {
+        <unit-button style="flex:1" data-idx=0 .state=${ data["breite"] || {
           id: "breite", value: "maximise width", icon1: boxes, className: "blue"
-        }}></view-button>
+        }}></unit-button>
         </section>
       <hr>
 
       <h1>Check</h1>
       <hr>
-      <view-choice .state=${{
+      <unit-choice .state=${{
         "id": "symptom",
         "item-width": "150px",
         'items': [
@@ -123,9 +123,9 @@ export default class Basic extends HTMLElement {
           item.selected = data.symptom == item.value
           return item
         })
-      }}></view-choice>
+      }}></unit-choice>
       <hr>
-      <view-choice .state=${{
+      <unit-choice .state=${{
         "id": "symptom",
         "wrap": true,
         'items': [
@@ -143,7 +143,7 @@ export default class Basic extends HTMLElement {
           item.selected = data.symptom == item.value
           return item
         })
-      }}></view-choice>
+      }}></unit-choice>
       <hr>
       `
   }

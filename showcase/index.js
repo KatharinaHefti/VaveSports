@@ -7,75 +7,78 @@ import { cache } from 'lit-html/directives/cache.js'
 import { store } from './store'
 
 // Showcases
-import 'view-element'
-import 'view-element/view-md'
+import 'view-units/source/'
+import 'view-units/source/unit-md'
 
 // Load some example views
-import './view-links'
-import './view-basic'
+import './area-basic'
+// view acticle.mdwon
 
 import mds from './asset/*.mdown'
 
 window.onload = async () => {
 
-  const app = document.querySelector( "article.app" )
-
-  const onLinks = ( e ) => {
-    const pathname = `/showcase/${e.detail.value}/`
-    history.pushState( null, null, pathname )
-    store.dispatch( { type: "LINKS_VALUE", data: e.detail.value } )
-  }
-
-  const onBasic = ( e ) => {
-    store.dispatch( { type: "BASIC", data: e.detail } )
-  }
+  const app = document.querySelector( "main" )
 
   const update = () => {
     console.time( "render" )
-    render( template( store.getState() ), app )
+    render( createApp( store.getState() ), document.body )
     console.timeEnd( "render" )
   }
 
-  const template = ( data ) => {
+  const createApp = ( data ) => {
 
-    const showBasic = ( data ) => html `
-      <view-basic @action=${onBasic} hidden="false" .state=${data.basic}></view-basic>
-    `
-
-    const showMDown = ( data ) => html `
-      <style>
-        view-md {
-          border-bottom: 1px solid #ddd;
-        }
-      </style>
-      <view-md .state=${{
-        value:mds.code,
-        theme: Math.random() > 0.7 ? "twilight" : Math.random() > 0.5 ? "tomorrow" : "default"
-      }}></view-md>
-      <view-md .state=${{
-        value:"https://epha.io/akte/recht/nutzung.md",
-        hidden:"false"
-      }}></view-md>
-    `
+    const onNavi = ( e ) => {
+      const pathname = `/showcase/${e.detail.value}/`
+      history.pushState( null, null, pathname )
+      store.dispatch( { type: "LINKS_VALUE", data: e.detail.value } )
+    }
 
     return html `
-      <article class=main>
-        <view-links @action=${onLinks} .state=${data.links}></view-links>
-        <section class=right>
-        <!-- Changing Views -->
-        ${ html`${ cache(data.links.value == "basic"
-          ? showBasic(data)
-          : ``)}`
-        }
-        ${ html`${ cache(data.links.value == "mdown"
-          ? showMDown(data)
-          : ``)}`
-        }
-        </section>
-      </article>
+      <nav @action=${onNavi}>
+        <unit-column .state=${{
+          id: "links", items: data.links.paths.map(item => {
+            return { ...item, selected: item.value == data.links.value }
+          })
+        }}></unit-column>
+      </nav>
+      <main>${ createView(data) }</main>
     `
-
   }
+
+  const createView = ( data ) => {
+
+    const onBasic = ( e ) => {
+      store.dispatch( { type: "BASIC", data: e.detail } )
+    }
+
+    switch ( data.links.value ) {
+
+      case "basic":
+        return cache( html `
+          <area-basic @action=${onBasic} .state=${data.basic}></area-basic>
+        ` )
+
+      case "mdown":
+        return cache( html `
+          <article class=mdown hidden=false>
+            <unit-md .state=${{
+              value:mds.code,
+              theme: Math.random() > 0.7 ? "twilight" : Math.random() > 0.5 ? "tomorrow" : "default"
+            }}></unit-md>
+            <unit-md .state=${{
+              value:"https://epha.io/akte/recht/nutzung.md",
+              hidden:"false"
+            }}></unit-md>
+          </article>
+        ` )
+
+      default:
+        return ``
+
+    }
+  }
+
 
   store.subscribe( update )
 
@@ -83,7 +86,10 @@ window.onload = async () => {
     type: "LINKS",
     data: {
       value: location.pathname.split( "/" ).filter( p => !!p ).pop(),
-      paths: [ "basic", "mdown" ]
+      paths: [
+        { label: "Basic Units", value: "basic" },
+        { label: "Markdown", value: "mdown" }
+      ]
     }
   } )
 
