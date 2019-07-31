@@ -7,7 +7,6 @@ import "regenerator-runtime/runtime"
 import { html, render } from 'lit-html'
 import { cache } from 'lit-html/directives/cache.js'
 import { until } from 'lit-html/directives/until.js'
-import { store } from './store'
 
 // For navi
 import 'view-units/source/unit-liste'
@@ -17,6 +16,8 @@ import mdown from './mdown'
 import playground from './playground'
 
 window.onload = async () => {
+
+  const { store } = await import( './store' )
 
   const app = document.querySelector( "main" )
 
