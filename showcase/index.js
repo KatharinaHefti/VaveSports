@@ -1,4 +1,6 @@
 import './index.css'
+import 'view-types/source/font/ibm.css'
+
 import 'core-js/stable'
 import "regenerator-runtime/runtime"
 

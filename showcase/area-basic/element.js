@@ -99,6 +99,7 @@ export default class Basic extends HTMLElement {
         <unit-button @action=${onFarben} data-idx=0 .state=${ {
           "id": "localFarben", "value": "click for colors asdfasdfasdf", "icon2": boxes, width: "100px"
         }}></unit-button>
+        <unit-button value="Set Attribute value"></unit-button> 
         <span>Text</span>
       </section>
       <hr>
