@@ -3,7 +3,7 @@
   "version": "5.0.4",
   "description": "Show custom elements in action",
   "main": "main/index.js",
-  "source": true,
+  "source": "source/index.js",
   "scripts": {
     "clear": "rm -rf dist/*", 
     "start": "npm run clear && parcel showcase/index.html --public-url /showcase",
@@ -21,7 +21,10 @@
     "url": "https://github.com/epha/view-showcase/issues"
   },
   "alias": {
-    "view-element": "../view-element"
+    "view-units": "../view-units",
+    "view-types": "../view-types",
+    "view-utils": "../view-utils",
+    "view-store": "../view-store"
   },
   "homepage": "https://github.com/epha/view-showcase#readme",
   "dependencies": {

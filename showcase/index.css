@@ -1,34 +1,3 @@
-html {
-  font-family: roboto;
-  line-height: 1.6rem;
-  font-size: 16px;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: #fafafa;
-}
-
-article.app {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  box-sizing: border-box;
-}
-
-section.right {
-  position: absolute;
-  left: 200px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
-  overflow: auto;
-}
-
 [hidden=false] {
   opacity: 1;
   animation: fadeIn .4s ease-in;
@@ -47,4 +16,50 @@ section.right {
   to {
     opacity: 1;
   }
+}
+
+html {
+  font-family: 'IBM Plex', sans-serif;
+  line-height: 1.6rem;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  background: #555;
+  border-right: 1px solid #555;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+main area-basic {
+  display: block;
+  padding: 3rem;
+}
+
+main article.mdown {
+  display: block;
+}
+
+main article.mdown unit-md {
+  border-bottom: 1px solid #ddd;
 }
