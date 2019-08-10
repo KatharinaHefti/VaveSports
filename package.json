@@ -5,9 +5,11 @@
   "main": "main/index.js",
   "source": "source/index.js",
   "scripts": {
-    "clear": "rm -rf dist/*", 
+    "clear": "rm -rf dist/*",
     "start": "npm run clear && parcel showcase/index.html --public-url /showcase",
     "build": "npm run clear && NODE_ENV=production parcel build showcase/index.html --public-url /showcase",
+    "proto1": "parcel proto/index.html",
+    "proto2": "parcel build proto/index.html --detailed-report",
     "staging": "bash ./scripts/deploy.sh staging",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,11 +31,12 @@
   "homepage": "https://github.com/epha/view-showcase#readme",
   "dependencies": {
     "core-js": "^3.1.4",
-    "regenerator-runtime": "^0.13.3",
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.1",
     "object-path-immutable": "^3.1.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "lit-html": "^1.1.1"
+    "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",

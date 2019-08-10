@@ -64,7 +64,6 @@ window.onload = async () => {
     }
   }
 
-
   store.subscribe( update )
 
   store.dispatch( {
