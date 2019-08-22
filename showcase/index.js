@@ -26,20 +26,22 @@ window.onload = async () => {
     console.timeEnd( "render" )
   }
 
+  var i = 0
 
   const createApp = ( data ) => {
     const test = 500
-
-    return html `<unit-svg id="14" src=${edit} .state=${data}></unit-svg>`
+    console.log( i )
+    return html `<unit-svg id="14" src=${edit} .state=${{ a: i}}></unit-svg>`
 
   }
 
   store.subscribe( update )
 
   setInterval( () => {
+    i++
     console.log( "update" )
     store.dispatch( { type: "Hallo" } )
-  }, 5000 )
+  }, 2000 )
   //
   //   const createApp = ( data ) => {
   //
