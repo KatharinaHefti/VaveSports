@@ -20,78 +20,75 @@ import 'view-units/unit-svg'
 
 window.onload = async () => {
 
-  const update = () => {
-    console.time( "render" )
-    render( createApp( store.getState() ), document.body )
-    console.timeEnd( "render" )
+  const svg = ( id, src, props = {} ) => {
+    return html `<unit-svg id="${id}" src=${src} .state=${props}></unit-svg>`
   }
 
-  var i = 0
+  console.time( "svg1" )
+  render( svg( "11", edit, { width: "32px", height: "32px" } ), document.body )
+  console.timeEnd( "svg1" )
 
-  const createApp = ( data ) => {
-    const test = 500
-    console.log( i )
-    return html `<unit-svg id="14" src=${edit} .state=${{ a: i}}></unit-svg>`
+  await new Promise( resolve => setTimeout( resolve, 3000 ) )
 
-  }
+  console.time( "svg2" )
+  render( svg( "12", boxes ), document.body )
+  console.timeEnd( "svg2" )
 
-  store.subscribe( update )
+  await new Promise( resolve => setTimeout( resolve, 3000 ) )
 
-  setInterval( () => {
-    i++
-    console.log( "update" )
-    store.dispatch( { type: "Hallo" } )
-  }, 2000 )
-  //
-  //   const createApp = ( data ) => {
-  //
-  //     const onNavi = ( e ) => {
-  //       const pathname = `/showcase/${e.detail.value}/`
-  //       history.pushState( null, null, pathname )
-  //       store.dispatch( { type: "LINKS_VALUE", data: e.detail.value } )
-  //     }
-  //
-  //     const onBasic = ( e ) => {
-  //       store.dispatch( { type: "BASIC", data: e.detail } )
-  //     }
-  //
-  //     return html `
-  //       <nav @action=${onNavi}>
-  //         <unit-liste .state=${{
-  //           id: "links", items: data.links.paths.map(item => {
-  //             return { ...item, selected: item.value == data.links.value }
-  //           })
-  //         }}></unit-liste>
-  //       </nav>
-  //       <main @action=${onBasic}>${ createView(data) }</main>
-  //     `
-  //   }
-  //
-  //   const createView = ( data ) => {
-  //     switch ( data.links.value ) {
-  //       case "basic":
-  //         return cache( until( basic( data ) ) )
-  //       case "mdown":
-  //         return cache( until( mdown( data ) ) )
-  //       case "playground":
-  //         return cache( until( playground( data ) ) )
-  //       default:
-  //         return ``
-  //     }
-  //   }
-  //
-  //
-  //
-  //   store.dispatch( {
-  //     type: "LINKS",
-  //     data: {
-  //       value: location.pathname.split( "/" ).filter( p => !!p ).pop(),
-  //       paths: [
-  //         { label: "Basic Units", value: "basic" },
-  //         { label: "Markdown", value: "mdown" },
-  //         { label: "playground", value: "playground" }
-  //       ]
-  //     }
-  //   } )
-  //
+  console.time( "svg3" )
+  render( svg( "13", null, { src: edit } ), document.body )
+  console.timeEnd( "svg3" )
 }
+//
+//   const createApp = ( data ) => {
+//
+//     const onNavi = ( e ) => {
+//       const pathname = `/showcase/${e.detail.value}/`
+//       history.pushState( null, null, pathname )
+//       store.dispatch( { type: "LINKS_VALUE", data: e.detail.value } )
+//     }
+//
+//     const onBasic = ( e ) => {
+//       store.dispatch( { type: "BASIC", data: e.detail } )
+//     }
+//
+//     return html `
+//       <nav @action=${onNavi}>
+//         <unit-liste .state=${{
+//           id: "links", items: data.links.paths.map(item => {
+//             return { ...item, selected: item.value == data.links.value }
+//           })
+//         }}></unit-liste>
+//       </nav>
+//       <main @action=${onBasic}>${ createView(data) }</main>
+//     `
+//   }
+//
+//   const createView = ( data ) => {
+//     switch ( data.links.value ) {
+//       case "basic":
+//         return cache( until( basic( data ) ) )
+//       case "mdown":
+//         return cache( until( mdown( data ) ) )
+//       case "playground":
+//         return cache( until( playground( data ) ) )
+//       default:
+//         return ``
+//     }
+//   }
+//
+//
+//
+//   store.dispatch( {
+//     type: "LINKS",
+//     data: {
+//       value: location.pathname.split( "/" ).filter( p => !!p ).pop(),
+//       paths: [
+//         { label: "Basic Units", value: "basic" },
+//         { label: "Markdown", value: "mdown" },
+//         { label: "playground", value: "playground" }
+//       ]
+//     }
+//   } )
+//
