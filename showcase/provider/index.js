@@ -17,6 +17,7 @@ const State = {
     symptom: null
   }
 }
+
 // ---------------------
 // Reducer
 // ---------------------
@@ -38,6 +39,7 @@ function reducer( state = cloneDeep( State ), action ) {
   return state
 
 }
+
 // ----------------------------------
 // Create with logger in dev mode
 // ----------------------------------

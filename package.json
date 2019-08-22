@@ -5,11 +5,9 @@
   "main": "main/index.js",
   "source": "source/index.js",
   "scripts": {
-    "clear": "rm -rf dist/*",
-    "start": "npm run clear && parcel showcase/index.html --public-url /showcase",
-    "build": "npm run clear && NODE_ENV=production parcel build showcase/index.html --public-url /showcase",
-    "proto1": "parcel proto/index.html",
-    "proto2": "parcel build proto/index.html --detailed-report",
+    "start": "parcel showcase/index.html --public-url /showcase",
+    "prebuild": "rm -rf dist/* && rm -rf .cache",
+    "build": "parcel build showcase/index.html --public-url /showcase  --detailed-report --experimental-scope-hoisting",
     "staging": "bash ./scripts/deploy.sh staging",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,22 +15,21 @@
     "type": "git",
     "url": "git+https://github.com/epha/view-showcase.git"
   },
+  "alias": {
+    "view-types": "../view-types",
+    "view-units": "../view-units"
+  },
   "author": "Marco Egbring",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/epha/view-showcase/issues"
   },
-  "alias": {
-    "view-units": "../view-units",
-    "view-types": "../view-types",
-    "view-utils": "../view-utils",
-    "view-store": "../view-store"
-  },
   "homepage": "https://github.com/epha/view-showcase#readme",
   "dependencies": {
-    "core-js": "^3.1.4",
+    "core-js": "^3.2.1",
     "lit-element": "^2.2.1",
-    "lit-html": "^1.1.1",
+    "lit-html": "^1.1.2",
+    "lodash": "^4.17.15",
     "object-path-immutable": "^3.1.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
@@ -41,6 +38,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
+    "htmlnano": "^0.2.4",
     "parcel-bundler": "^1.12.3",
     "postcss-modules": "^1.4.1"
   }
