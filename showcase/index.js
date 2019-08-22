@@ -21,11 +21,21 @@ import 'view-units/unit-svg'
 window.onload = async () => {
 
   const svg = ( id, src, props = {} ) => {
-    return html `<unit-svg id="${id}" src=${src} .state=${props}></unit-svg>`
+    return html `
+      <section style="border:1px solid grey; height:100px;">
+        <style>
+          unit-svg {
+            border: 1px solid green;
+          }
+        </style>
+        <unit-svg id="${id}" src=${src} .state=${props}></unit-svg>
+        <span>Text Baseline</span>
+        <unit-svg id="${id}" src=${src} .state=${props}></unit-svg>
+      </section>`
   }
 
   console.time( "svg1" )
-  render( svg( "11", edit, { width: "32px", height: "32px" } ), document.body )
+  render( svg( "11", edit, { cursor: "pointer", width: "42px", height: "42px" } ), document.body )
   console.timeEnd( "svg1" )
 
   await new Promise( resolve => setTimeout( resolve, 3000 ) )
@@ -37,7 +47,7 @@ window.onload = async () => {
   await new Promise( resolve => setTimeout( resolve, 3000 ) )
 
   console.time( "svg3" )
-  render( svg( "13", null, { src: edit } ), document.body )
+  render( svg( "13", null, { src: edit, width: "60px", fill: "tomato", background: "blue" } ), document.body )
   console.timeEnd( "svg3" )
 }
 //
