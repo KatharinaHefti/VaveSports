@@ -21,8 +21,14 @@ import 'view-units/unit-svg'
 window.onload = async () => {
 
   const svg = ( id, src, props = {} ) => {
+    const onAction = ( e ) => {
+      console.log( "action", e.target.state )
+    }
+    const onClick = ( e ) => {
+      console.log( "click", e.target.state )
+    }
     return html `
-      <section style="border:1px solid grey; height:100px;">
+      <section @action="${onAction}" @click="${onClick}" style="border:1px solid grey; height:100px;">
         <style>
           unit-svg {
             border: 1px solid green;
