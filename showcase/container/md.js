@@ -20,8 +20,13 @@ export function md( state ) {
       <h1>unit-md with theme ${theme}</h1>
       <h3>Show some example mds - Width is limited for readability</h3>
 
+      <hr>
       <unit-md .state=${{ raw: manual.join("\n") }}></unit-md>
+
+      <hr>
       <unit-md .state=${{ src: mds.code, theme: theme }}></unit-md>
+
+      <hr>
       <unit-md src="https://epha.io/akte/recht/nutzung.md" hidden="false"></unit-md>
 
     </article>
