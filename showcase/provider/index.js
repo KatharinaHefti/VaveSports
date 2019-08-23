@@ -7,37 +7,12 @@ import thunk from "redux-thunk"
 // Store
 import { createStore } from "redux"
 
-const State = {
-  links: {
-    paths: [],
-    value: null
-  },
-  basic: {
-    counter: 0,
-    symptom: null
-  }
-}
-
 // ---------------------
 // Reducer
 // ---------------------
-function reducer( state = cloneDeep( State ), action ) {
-
-  if ( action.type === "BASIC" ) {
-    return immu.set( state, 'basic', cloneDeep( action.data ) )
-  }
-  if ( action.type === "LINKS" ) {
-    return immu.set( state, 'links', cloneDeep( action.data ) )
-  }
-  if ( action.type === "LINKS_VALUE" ) {
-    return immu.set( state, 'links.value', cloneDeep( action.data ) )
-  }
-  if ( action.type === "RESET" ) {
-    return cloneDeep( State )
-  }
-
-  return state
-
+function reducer( state = {}, action ) {
+  // type state part
+  return immu.set( state, action.type, cloneDeep( action.data ) )
 }
 
 // ----------------------------------

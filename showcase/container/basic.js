@@ -2,72 +2,60 @@ import { html, render } from 'lit-html'
 import { styleMap } from 'lit-html/directives/style-map.js'
 
 // Layz import units
-import 'view-units/source/'
+import 'view-units/unit-button/'
+import 'view-units/unit-choice/'
+
 // Assets
 import { boxes } from '../asset/*.svg'
 
-// ---------------------------
-// Property .state
-// ---------------------------
-const State = {
-  counter: 0,
-  symptom: null
-}
+export function basic( state ) {
 
-export default class Basic extends HTMLElement {
+  const onAction = ( e ) => {
+    e.stopPropagation()
 
-  set state( state ) {
-    // Quality check
-    this._state = state
-    // Update ui with state
-    this.update()
-  }
-
-  get state() {
-    return this._state || State
-  }
-
-  update() {
-    render( this.template( this.state ), this, { eventContext: this } )
-  }
-
-  template( data ) {
-
-    const onAction = ( e ) => {
-      e.stopPropagation()
-
-      switch ( e.detail.id ) {
-        case "counter":
-          this.state.counter = parseInt( e.detail.value ) + 1
-          break;
-        case "symptom":
-          this.state.symptom = e.detail.value
-          break;
-        default:
-          return console.log( "Unknowm action from id", e.detail.id )
-      }
-
-      this.dispatchEvent( new CustomEvent( 'action', {
-        bubbles: true,
-        detail: { ...this.state }
-      } ) )
+    switch ( e.detail.id ) {
+      case "counter":
+        state.counter = parseInt( e.detail.value ) + 1
+        break;
+      case "symptom":
+        state.symptom = e.detail.value
+        break;
+      default:
+        return console.log( "Unknowm action from id", e.detail.id )
     }
 
-    const onFarben = ( e ) => {
-      e.stopPropagation()
-      const farben = [ "green", "blue", "orange", "red" ]
+    e.target.dispatchEvent( new CustomEvent( 'action', {
+      bubbles: true,
+      detail: { ...state }
+    } ) )
+  }
 
-      if ( Number( e.target.dataset.idx ) > farben.length - 1 ) {
-        e.target.dataset.idx = 0
-      }
-      e.target.className = farben[ e.target.dataset.idx ]
-      e.target.state.value = farben[ e.target.dataset.idx ]
-      e.target.dataset.idx++
+  const onFarben = ( e ) => {
+    e.stopPropagation()
+    const farben = [ "green", "blue", "orange", "red" ]
+
+    if ( Number( e.target.dataset.idx ) > farben.length - 1 ) {
+      e.target.dataset.idx = 0
     }
+    e.target.className = farben[ e.target.dataset.idx ]
+    e.target.state.value = farben[ e.target.dataset.idx ]
+    e.target.dataset.idx++
+  }
 
 
-    return html `
-      <article @action=${onAction}>
+  return html `
+      <style>
+        article.basic {
+          display: block;
+        }
+
+        article.basic h1 {
+          background: #555;
+          color: white;
+          padding: .5rem;
+        }
+      </style>
+      <article class=basic @action=${onAction}>
       <h1>Custom Elements Blueprint</h1>
       <ol>
         <li>Add Event Listener</li>
@@ -93,7 +81,7 @@ export default class Basic extends HTMLElement {
       <hr>
       <section style="display:flex;align-items:center;">
         <unit-button style="margin-right:10px;" .state=${{
-          id: "counter", value: data.counter, width: "40px"
+          id: "counter", value: state.counter, width: "40px"
         }}></unit-button>
         <unit-button data-idx=0 .state=${ {
           id:"nothing", "value": "width 350px", "icon1": boxes, "icon2": { value: boxes, height: "50px" }
@@ -106,7 +94,7 @@ export default class Basic extends HTMLElement {
       </section>
       <hr>
         <section style="display:flex;">
-        <unit-button style="flex:1" data-idx=0 .state=${ data["breite"] || {
+        <unit-button style="flex:1" data-idx=0 .state=${ state["breite"] || {
           id: "breite", value: "maximise width", icon1: boxes, className: "blue"
         }}></unit-button>
         </section>
@@ -123,7 +111,7 @@ export default class Basic extends HTMLElement {
           { 'label': 'Pfeifen', 'value': 'pfeifen' },
           { 'label': 'Stridor', 'value': 'stridor' }
         ].map( item => {
-          item.selected = data.symptom == item.value
+          item.selected = state.symptom == item.value
           return item
         })
       }}></unit-choice>
@@ -143,14 +131,10 @@ export default class Basic extends HTMLElement {
           { 'label': 'Pfeifen', 'value': 'pfeifen' },
           { 'label': 'Stridor', 'value': 'stridor' }
         ].map( item => {
-          item.selected = data.symptom == item.value
+          item.selected = state.symptom == item.value
           return item
         })
       }}></unit-choice>
       <hr>
       `
-  }
-
 }
-
-customElements.define( "area-basic", Basic )

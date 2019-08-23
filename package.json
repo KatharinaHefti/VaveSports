@@ -5,6 +5,7 @@
   "main": "main/index.js",
   "source": "source/index.js",
   "scripts": {
+    "prestart": "rm -rf dist/* && rm -rf .cache",
     "start": "parcel showcase/index.html --public-url /showcase",
     "prebuild": "rm -rf dist/* && rm -rf .cache",
     "build": "parcel build showcase/index.html --public-url /showcase  --detailed-report --experimental-scope-hoisting",
@@ -16,8 +17,8 @@
     "url": "git+https://github.com/epha/view-showcase.git"
   },
   "alias": {
-    "view-types": "../view-types",
-    "view-units": "../view-units"
+    "view-units": "../view-units",
+    "view-types": "../view-types"
   },
   "author": "Marco Egbring",
   "license": "ISC",
