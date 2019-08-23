@@ -7,7 +7,9 @@ export function navigation( state ) {
   const onNavi = ( e ) => {
     const pathname = `/showcase/${e.detail.value}/`
     history.pushState( null, null, pathname )
-    store.dispatch( { type: "LINKS_VALUE", data: e.detail.value } )
+    state.value = e.detail.value
+    store.dispatch( { type: "navigation", data: state } )
+
   }
 
   return html `

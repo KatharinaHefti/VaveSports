@@ -9,9 +9,7 @@ export function svg( state ) {
     const state = {
       width: "42px",
       padding: "10px",
-      background: "hsl(" + ( idx * 2 ) + ",50%,50%)",
-      fill: "#ccc",
-      stroke: "black",
+      fill: "hsl(" + ( idx * 2 ) + ",50%,50%)",
       cursor: "pointer"
     }
     return html `<unit-svg src=${src} .state=${state}></unit-svg>`
@@ -20,7 +18,7 @@ export function svg( state ) {
   return html `
     <article class=svg hidden="false">
       <h1>Element unit-svg</h1>
-      <h3>with folder icon from view-types</h3>
+      <h3>icon from view-types with variable fill</h3>
       <section>
         ${
           Object.values(icon).map(createIcon)

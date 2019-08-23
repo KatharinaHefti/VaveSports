@@ -14,13 +14,7 @@ import { until } from 'lit-html/directives/until.js'
 // import basic from './basic'
 // import mdown from './mdown'
 // import playground from './playground'
-import { navigation, basic, svg } from './container'
-
-import edit from 'view-types/icon/edit.svg'
-import boxes from 'view-types/icon/boxes.svg'
-
-import 'view-units/unit-svg'
-
+import { navigation, basic, svg, md } from './container'
 
 window.onload = async () => {
 
@@ -42,11 +36,11 @@ window.onload = async () => {
           ( state.navigation.value == "showcase" )
           ? html `<article><h1>Showcase</h1></article>` :
           ( state.navigation.value == "unit-svg")
-          ? svg(state.svg) : ''
+          ? svg(state.svg) :
+          ( state.navigation.value == "unit-md")
+          ? md( state.md ) : ''
           // ( state.links.value == "basic")
           // ? cache( until( basic( state.basic ))) :
-          // ( state.links.value == "mdown")
-          // ? cache( until( mdown( data ))) :
           // ( state.links.value == "playground")
           // ? cache( until( playground( data ))) :
           // ''
