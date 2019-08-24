@@ -8,13 +8,9 @@ import { store } from './provider'
 import { html, render } from 'lit-html'
 import { cache } from 'lit-html/directives/cache.js'
 import { until } from 'lit-html/directives/until.js'
-// For navi
 //
-// // For views
-// import basic from './basic'
-// import mdown from './mdown'
-// import playground from './playground'
-import { navigation, basic, svg, md } from './container'
+import { navigation } from './views'
+import { svg, md, choice, button } from './views'
 
 window.onload = async () => {
 
@@ -22,8 +18,12 @@ window.onload = async () => {
 
     const onMain = ( e ) => {
       e.stopPropagation()
+
       if ( e.target.nodeName == "UNIT-SVG" ) {
         store.dispatch( { type: "svg", data: e.target.state.src } )
+      }
+      if ( e.target.nodeName == "UNIT-BUTTON" ) {
+        store.dispatch( { type: "button", data: e.detail } )
       }
     }
 
@@ -35,22 +35,24 @@ window.onload = async () => {
         ${
           ( state.navigation.value == "showcase" )
           ? html `<article><h1>Showcase</h1></article>` :
+
           ( state.navigation.value == "unit-svg")
-          ? svg(state.svg) :
+          ? cache( svg(state.svg) ) :
           ( state.navigation.value == "unit-md")
-          ? md( state.md ) : ''
-          // ( state.links.value == "basic")
-          // ? cache( until( basic( state.basic ))) :
-          // ( state.links.value == "playground")
-          // ? cache( until( playground( data ))) :
-          // ''
+          ? md( state.md ) :
+          ( state.navigation.value == "unit-button")
+          ? button( state.button ) :
+          ( state.navigation.value == "unit-choice")
+          ? choice( state.choice ) : ''
         }
       </main>
     `
   }
 
   const refresh = () => {
+    console.time( "render app" )
     render( app( store.getState() ), document.body )
+    console.timeEnd( "render app" )
   }
 
   store.subscribe( refresh )
@@ -62,7 +64,8 @@ window.onload = async () => {
       paths: [
         { label: "unit-svg", value: "unit-svg" },
         { label: "unit-md", value: "unit-md" },
-        { label: "Playground", value: "playground" }
+        { label: "unit-button", value: "unit-button" },
+        { label: "unit-choice", value: "unit-choice" }
       ]
     }
   } )

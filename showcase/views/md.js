@@ -17,7 +17,7 @@ export function md( state ) {
   return html `
     <article class=mdown hidden=false>
 
-      <h1>unit-md with theme ${theme}</h1>
+      <h1>Element unit-md with theme ${theme}</h1>
       <h3>Show some example mds - Width is limited for readability</h3>
 
       <hr>
