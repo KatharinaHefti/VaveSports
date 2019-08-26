@@ -16,22 +16,23 @@ then
 
   npm update
 
-  npm run build
-
   git add .
   git commit -am "Upload Fresh Build"
   npm version patch
   git push && git push --tags
 
+  npm run build
 
   aws --region eu-central-1 s3 --delete sync dist s3://epha.io/$view/ --exclude .DS_Store
 
   echo ""
   paths="/$view/index.html"
-  echo "Invalidating ${paths}"
+  echo " > Invalidating ${paths} - Please wait"
   id=$(aws cloudfront create-invalidation --distribution-id $dist --paths $paths | grep Id | awk -F '"' '{print $4}')
   aws cloudfront wait invalidation-completed --distribution-id $dist --id $id
-  osascript -e 'display notification "Invalidated $view!" with title "AWS" subtitle "Cloudfront" sound name "Submarine"'
+  osascript -e 'display notification "Invalidated showcase" with title "AWS" subtitle "Cloudfront" sound name "Submarine" '
+  open "https://epha.io/$view/"
+
 fi
 
 printf " \n"
