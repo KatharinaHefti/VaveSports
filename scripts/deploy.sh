@@ -22,7 +22,7 @@ then
   git push && git push --tags
 
 
-  aws --region eu-central-1 s3 sync dist s3://epha.io/showcase/ --exclude .DS_Store
+  aws --region eu-central-1 s3 sync --delete dist s3://epha.io/showcase/ --exclude .DS_Store
   aws cloudfront create-invalidation --distribution-id 	E3O8ET4HHUEUOM --paths /showcase/index.html
 
 fi
