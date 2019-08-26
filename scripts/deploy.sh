@@ -25,8 +25,9 @@ then
   aws --region eu-central-1 s3 --delete sync dist s3://epha.io/showcase/ --exclude .DS_Store
 
   echo ""
-  echo "Invalidate index.html"
-  aws cloudfront create-invalidation --distribution-id 	E3O8ET4HHUEUOM --paths "/showcase/index.html" 1>/dev/null
+  echo "Invalidating index.html"
+  ID=aws cloudfront create-invalidation --distribution-id 	E3O8ET4HHUEUOM --paths "/showcase/index.html" | grep Id | awk -F '"' '{print $4}'
+  aws cloudfront invalidation-completed --distribution-id E3O8ET4HHUEUOM --id $ID && notfiy "Invalidation complete"
 
 fi
 
