@@ -5,7 +5,8 @@ import { styleMap } from 'lit-html/directives/style-map.js'
 import 'view-units/unit-button/'
 
 // Assets
-import { boxes } from 'view-types/icon'
+import { icon } from 'view-types'
+const { boxes } = icon;
 
 export function button( state = {} ) {
 
