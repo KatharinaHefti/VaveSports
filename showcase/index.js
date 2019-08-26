@@ -25,9 +25,12 @@ window.onload = async () => {
       if ( e.target.nodeName == "UNIT-SVG" ) {
         store.dispatch( { type: "svg", data: e.target.state.src } )
       }
-      if ( e.target.nodeName == "UNIT-BUTTON" ) {
-        store.dispatch( { type: "button", data: e.detail } )
+
+      if ( e.target.nodeName == "UNIT-BUTTON" && e.target.id == "counter" ) {
+        const value = parseInt( e.target.state.value ) + 1
+        store.dispatch( { type: "button", data: value } )
       }
+
     }
 
     return html `

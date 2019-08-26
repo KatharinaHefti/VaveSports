@@ -2,34 +2,15 @@ import { html, render } from 'lit-html'
 import { styleMap } from 'lit-html/directives/style-map.js'
 
 // Layz import units
-import 'view-units/unit-button/'
-
+import unitButton from 'view-units/unit-button/'
+import 'view-units/unit-md'
 // Assets
 import { icon } from 'view-types'
 const { boxes } = icon;
 
-export function button( state = {} ) {
+export function button( state = 0 ) {
 
-  const onAction = ( e ) => {
-    e.stopPropagation()
-
-    switch ( e.detail.id ) {
-      case "counter":
-        state.counter = parseInt( e.detail.value ) + 1
-        break;
-      case "symptom":
-        state.symptom = e.detail.value
-        break;
-      default:
-        return console.log( "Unknowm action from id", e.detail.id )
-    }
-
-    e.target.dispatchEvent( new CustomEvent( 'action', {
-      bubbles: true,
-      detail: { ...state }
-    } ) )
-  }
-
+  // Only locally without state
   const onFarben = ( e ) => {
     e.stopPropagation()
     const farben = [ "green", "blue", "orange", "red" ]
@@ -38,34 +19,41 @@ export function button( state = {} ) {
       e.target.dataset.idx = 0
     }
     e.target.className = farben[ e.target.dataset.idx ]
-    e.target.state.value = farben[ e.target.dataset.idx ]
+    e.target.state = { ...state, value: "FARBEN " + farben[ e.target.dataset.idx ].toUpperCase() }
     e.target.dataset.idx++
   }
 
-
   return html `
     <article>
-    <h1>Element unit-button</h1>
-    <hr>
-    <section style="display:flex;align-items:center;">
-      <unit-button style="margin-right:10px;" .state=${{
-        id: "counter", value: state.counter, width: "40px"
-      }}></unit-button>
-      <unit-button data-idx=0 .state=${ {
-        id:"nothing", "value": "width 350px", "icon1": boxes, "icon2": { src: boxes, fill:"black", height: "50px" }
-      }}></unit-button>
-      <unit-button @action=${onFarben} data-idx=0 .state=${ {
-        "id": "localFarben", "value": "click for colors asdfasdfasdf", "icon2": boxes, width: "100px"
-      }}></unit-button>
-      <unit-button value="Set Attribute value not working"></unit-button>
-      <span>Text</span>
-    </section>
-    <hr>
-      <section style="display:flex;">
-      <unit-button style="flex:1" data-idx=0 .state=${ state["breite"] || {
-        id: "breite", value: "maximise width", icon1: boxes, className: "blue"
-      }}></unit-button>
+
+      <h1>Element unit-button</h1>
+      <unit-md .state=${{ raw: unitButton.signature, theme:"tomorrow" }}></unit-md>
+
+      <h2>Example Counter</h2>
+      <section style="display:flex;align-items:center;">
+        <unit-button style="margin-right:10px;" .state=${{
+          id: "counter", value: state, width: "50px"
+        }}></unit-button>
+        <unit-button data-idx=0 .state=${ {
+          id:"nothing", "value": "width 350px", "icon1": boxes, "icon2": { src: boxes, fill:"green", height: "50px" }
+        }}></unit-button>
+        <p style="padding-left:.5rem;">Paragraph</p>
+        <span style="padding-left:.5rem;">Span</span>
       </section>
+
+      <h2>Example Farben</h2>
+        <unit-button @action=${onFarben} data-idx="0" value="Klick mich" .state=${ {
+          "id": "localFarben", "icon2": boxes
+        }}></unit-button>
+
+      <h2>Example</h2>
+      <section style="display:flex;">
+        <unit-button style="padding-right: 1rem;" value="Set Attribute Value"></unit-button>
+        <unit-button style="flex:1" .state=${{
+          id: "breite", value: "Set flex 1", icon1: boxes, className: "blue"
+        }}></unit-button>
+      </section>
+
     </article>
     `
 }
