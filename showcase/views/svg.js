@@ -19,9 +19,12 @@ export function svg( state ) {
   return html `
     <article class=svg hidden="false">
       <h1>Element unit-svg</h1>
-      <unit-md .state=${{raw:unitSVG.documentation}}></unit-md>
-      <h3>icon from view-types with variable fill</h3>
-      <section>
+      <unit-md .state=${{raw:unitSVG.signature}}></unit-md>
+
+      <h2>Example</h2>
+      <h3>Folder Icon from view-types</h3>
+      <p>Click on the icons to see the reference of the file name.</p>
+      <section style="border: .5rem solid #ccc;border-radius:.5rem;">
         ${
           Object.values(icon).map(createIcon)
         }
