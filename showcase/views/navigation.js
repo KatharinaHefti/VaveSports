@@ -7,7 +7,6 @@ export function navigation( state ) {
   const onNavi = ( e ) => {
     e.stopPropagation()
 
-    console.log( state.value, e.detail.value )
     if ( state.value == e.detail.value ) {
       const pathname = `/showcase/`
       history.pushState( null, null, pathname )
@@ -16,9 +15,11 @@ export function navigation( state ) {
       const pathname = `/showcase/${e.detail.value}/`
       history.pushState( null, null, pathname )
       state.value = e.detail.value
+      // Yeah no virtual dom
+      document.querySelector( "main>article" ).scrollTop = 0
     }
-    store.dispatch( { type: "navigation", data: state } )
 
+    store.dispatch( { type: "navigation", data: state } )
   }
 
   return html `

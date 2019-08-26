@@ -1,32 +1,31 @@
 import { html, render } from 'lit-html'
-import "view-units/unit-md"
+import unitMD from 'view-units/unit-md'
 import mds from '../asset/*.mdown'
 
 export function md( state ) {
 
-  const theme = Math.random() > 0.7 ? "twilight" : Math.random() > 0.5 ? "tomorrow" : "default"
-
-  const manual = [
-    "# Kapitel Manual",
-    "Es ist möglich den String manuell zu übergehen.",
-    "```javascript",
-    "  console.log('hallo')",
-    "```"
-  ]
+  const onAction = ( e ) => {
+    if ( e.detail.type == "hash" ) {
+      location.hash = e.detail.href
+    } else {
+      console.log( "Detail", e.detail )
+    }
+  }
 
   return html `
-    <article class=mdown hidden=false>
+    <article @action=${onAction} class="mdown" hidden="false">
 
-      <h1>Element unit-md with theme ${theme}</h1>
-      <h3>Show some example mds - Width is limited for readability</h3>
+      <h1>Element unit-md</h1>
+      <unit-md .state=${{ raw: unitMD.signature, theme:"tomorrow" }}></unit-md>
 
-      <hr>
-      <unit-md .state=${{ raw: manual.join("\n") }}></unit-md>
+      <h2 style="padding-top:3rem;">Example from assets</h2>
+      <p>Code styling with theme twilight and loaded from assets.</p>
+      <unit-md .state=${{ src: mds.twilight, theme: "twilight" }}></unit-md>
 
-      <hr>
-      <unit-md .state=${{ src: mds.code, theme: theme }}></unit-md>
+      <h2 style="padding-top:3rem;">Example from assets</h2>
+      <unit-md .state=${{ src: mds.default, theme: "default" }}></unit-md>
 
-      <hr>
+      <h2 style="padding-top:3rem;">Example from outside</h2>
       <unit-md src="https://epha.io/akte/recht/nutzung.md" hidden="false"></unit-md>
 
     </article>

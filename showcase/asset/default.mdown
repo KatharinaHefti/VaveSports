@@ -1,0 +1,38 @@
+# Header1
+
+## Header2
+
+### Header 3
+
+Header styling, [External link](https://www.google.com "@blank") and theme "default".
+
+```html
+<span class=datum></span>
+<script>
+  ( () => {    
+    var id = setInterval( () => {    
+      var date = new Date().toLocaleTimeString("de")
+      if(document.querySelector("span.datum")) {
+        document.querySelector("span.datum").innerHTML = `Uhrzeit: ${date}`
+      }else {
+        clearInterval(id)
+      }
+    }, 1000)
+  })()
+</script>
+```
+
+<span class=datum></span>
+
+<script>
+( () => {    
+  var id = setInterval( () => {    
+    var date = new Date().toLocaleTimeString("de")
+    if(document.querySelector("span.datum")) {
+      document.querySelector("span.datum").innerHTML = `Uhrzeit: ${date}`
+    }else {
+      clearInterval(id)
+    }
+  }, 1000)
+})()
+</script>

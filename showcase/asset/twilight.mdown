@@ -1,6 +1,4 @@
-# View Element
-
-## Javascript
+### Javascript
 
 ```javascript
 for(var i = 0; i < 10; i++) {
@@ -8,17 +6,13 @@ for(var i = 0; i < 10; i++) {
 }
 ```
 
-## Bash
+### Bash
 
 ```bash
 rm -f node_modules
 ```
 
-<script>
- console.log("hallo from code.mdown")
-</script>
-
-## Stylesheet
+### Stylesheet
 
 ```css
 body {
@@ -26,7 +20,7 @@ body {
 }
 ```
 
-## Pyhton
+### Pyhton
 
 ```python
 for i in l:

@@ -10,6 +10,7 @@ import { store } from './provider'
 import { html, render } from 'lit-html'
 import { cache } from 'lit-html/directives/cache.js'
 import { until } from 'lit-html/directives/until.js'
+import debounce from 'lodash/debounce'
 //
 import { navigation } from './views'
 import { svg, md, choice, button } from './views'
@@ -54,9 +55,9 @@ window.onload = async () => {
     `
   }
 
-  const refresh = () => {
+  const refresh = async () => {
     console.time( "render app" )
-    render( app( store.getState() ), document.body )
+    await render( app( store.getState() ), document.body )
     console.timeEnd( "render app" )
   }
 
@@ -74,5 +75,17 @@ window.onload = async () => {
       ]
     }
   } )
+
+  // ---------------------------------------
+  // Give some time for resources too load
+  // and then try to scroll or reset hash
+  // ---------------------------------------
+  setTimeout( () => {
+    if ( location.hash && document.querySelector( location.hash ) ) {
+      document.querySelector( location.hash ).scrollIntoView( { block: "start", behavior: "smooth" } )
+    } else {
+      history.replaceState( null, null, location.pathname.split( "#" )[ 0 ] )
+    }
+  }, 250 )
 
 }
