@@ -8,7 +8,7 @@
     "prestart": "rm -rf dist/* && rm -rf .cache",
     "start": "parcel showcase/index.html --public-url /showcase",
     "prebuild": "rm -rf dist/* && rm -rf .cache",
-    "build": "NODE_ENV=production parcel build showcase/index.html --public-url /showcase  --detailed-report",
+    "build": "NODE_ENV=production parcel build showcase/index.html --public-url /showcase --detailed-report",
     "staging": "bash ./scripts/deploy.sh staging",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
