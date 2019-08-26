@@ -29,7 +29,7 @@ then
   pth="/showcase/index.html"
   echo "Invalidating index.html"
   iid=$(aws cloudfront create-invalidation --distribution-id $did --paths $pth | grep Id | awk -F '"' '{print $4}')
-  aws cloudfront invalidation-completed --distribution-id $did --id $iid && notfiy "Invalidation complete"
+  # aws cloudfront invalidation-completed --distribution-id $did --id $iid && notfiy "Invalidation complete"
 
 fi
 
