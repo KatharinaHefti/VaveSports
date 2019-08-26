@@ -1,3 +1,4 @@
+import { version } from '../package.json'
 import 'regenerator-runtime/runtime'
 //
 import './index.css'
@@ -35,7 +36,10 @@ window.onload = async () => {
       <main @action=${onMain}>
         ${
           ( state.navigation.value == "showcase" )
-          ? html `<article><h1>Showcase</h1></article>` :
+          ? html `<article hidden=false>
+            <h1>Showcase</h1>
+            <h3>Version: ${version}</h3>
+          </article>` :
 
           ( state.navigation.value == "unit-svg")
           ? cache( svg(state.svg) ) :
