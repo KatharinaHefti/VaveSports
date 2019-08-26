@@ -1,6 +1,7 @@
 import { html, render } from 'lit-html'
 
-import 'view-units/unit-svg'
+import unitSVG from 'view-units/unit-svg'
+import 'view-units/unit-md'
 import { icon } from 'view-types'
 
 export function svg( state ) {
@@ -18,6 +19,7 @@ export function svg( state ) {
   return html `
     <article class=svg hidden="false">
       <h1>Element unit-svg</h1>
+      <unit-md .state=${{raw:unitSVG.documentation}}></unit-md>
       <h3>icon from view-types with variable fill</h3>
       <section>
         ${

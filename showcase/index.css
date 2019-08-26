@@ -51,12 +51,14 @@ main {
   scroll-behavior: smooth;
 }
 
-main article {
+main>article {
   display: block;
   padding: 2vw 5vw;
+  max-width: 56rem;
+  margin: 0 auto;
 }
 
-main article h1 {
+main>article h1 {
   color: #555;
   font-size: 2rem;
 }
