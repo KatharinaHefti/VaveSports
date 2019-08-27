@@ -1,9 +1,9 @@
-import { version } from '../package.json'
 import 'regenerator-runtime/runtime'
 //
 import './index.css'
 import 'view-types/style/hidden.css'
-import 'view-types/font/ibm.regular.css'
+import 'view-types/style/color-fresh.css'
+import 'view-types/font/ibm.css'
 //
 import { store } from './provider'
 //
@@ -13,7 +13,7 @@ import { until } from 'lit-html/directives/until.js'
 import debounce from 'lodash/debounce'
 //
 import { navigation } from './views'
-import { svg, md, choice, button } from './views'
+import { svg, md, choice, button, colors, literature, textarea } from './views'
 
 window.onload = async () => {
 
@@ -25,10 +25,12 @@ window.onload = async () => {
       if ( e.target.nodeName == "UNIT-SVG" ) {
         store.dispatch( { type: "svg", data: e.target.state.src } )
       }
-
       if ( e.target.nodeName == "UNIT-BUTTON" && e.target.id == "counter" ) {
         const value = parseInt( e.target.state.value ) + 1
         store.dispatch( { type: "button", data: value } )
+      }
+      if ( e.target.nodeName == "UNIT-CHOICE" ) {
+        store.dispatch( { type: "choice", data: e.detail.value } )
       }
 
     }
@@ -40,10 +42,7 @@ window.onload = async () => {
       <main @action=${onMain}>
         ${
           ( state.navigation.value == "showcase" )
-          ? html `<article hidden=false>
-            <h1>Showcase</h1>
-            <h3>Version: ${version}</h3>
-          </article>` :
+          ? colors() :
 
           ( state.navigation.value == "unit-svg")
           ? cache( svg(state.svg) ) :
@@ -52,7 +51,11 @@ window.onload = async () => {
           ( state.navigation.value == "unit-button")
           ? button( state.button ) :
           ( state.navigation.value == "unit-choice")
-          ? choice( state.choice ) : ''
+          ? choice( state.choice ) :
+          ( state.navigation.value == "unit-literature")
+          ? literature( state.literature ) :
+          ( state.navigation.value == "unit-textarea")
+          ? textarea( state.textarea ) : ''
         }
       </main>
     `
@@ -74,7 +77,9 @@ window.onload = async () => {
         { label: "unit-svg", value: "unit-svg" },
         { label: "unit-md", value: "unit-md" },
         { label: "unit-button", value: "unit-button" },
-        { label: "unit-choice", value: "unit-choice" }
+        { label: "unit-choice", value: "unit-choice" },
+        { label: "unit-literature", value: "unit-literature" },
+        { label: "unit-textarea", value: "unit-textarea" }
       ]
     }
   } )

@@ -1,8 +1,8 @@
 import { html, render } from 'lit-html'
 
-import unitSVG from 'view-units/unit-svg'
-import 'view-units/unit-md'
-import { icon } from 'view-types'
+import unitSVG from 'view-units/unit-svg/'
+import 'view-units/unit-md/'
+import { icon, team } from 'view-types'
 
 export function svg( state ) {
 
@@ -16,12 +16,22 @@ export function svg( state ) {
     return html `<unit-svg src=${src} .state=${state}></unit-svg>`
   }
 
+  const createTeam = ( src ) => {
+    const state = {
+      width: "100px",
+      height: "40px",
+      distort: true,
+      padding: "10px"
+    }
+    return html `<unit-svg src=${src} .state=${state}></unit-svg>`
+  }
+
   return html `
     <article class=svg hidden="false">
       <h1>Element unit-svg</h1>
-      <unit-md .state=${{raw:unitSVG.signature}}></unit-md>
 
-      <h2>Example</h2>
+      <h2>Examples</h2>
+
       <h3>Folder Icon from view-types</h3>
       <p>Click on the icons to see the reference of the file name.</p>
       <section style="border: .5rem solid #ccc;border-radius:.5rem;">
@@ -30,7 +40,18 @@ export function svg( state ) {
         }
         <span>Baseline Text</span>
       </section>
-      <h3>${state}</h3>
+      <p>${state}</p>
+
+      <h3>Folder Team from view-types</h3>
+      <section style="border: .5rem solid #ccc;border-radius:.5rem;">
+        ${
+          Object.values(team).map(createTeam)
+        }
+      </section>
+
+      <h2>Signature</h2>
+      <unit-md .state=${{raw:unitSVG.signature}}></unit-md>
+
     </article>
     `
 }

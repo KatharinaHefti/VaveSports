@@ -1,85 +1,71 @@
 import { html, render } from 'lit-html'
-import { styleMap } from 'lit-html/directives/style-map.js'
-
-// Layz import units
-import 'view-units/unit-button/'
-import 'view-units/unit-choice/'
-
+import unitChoice from 'view-units/unit-choice/'
 // Assets
-import { boxes } from '../asset/*.svg'
+import { icon } from 'view-types'
+const { boxes } = icon;
 
-export function choice( state = {} ) {
-
-  const onAction = ( e ) => {
-    e.stopPropagation()
-
-    switch ( e.detail.id ) {
-      case "counter":
-        state.counter = parseInt( e.detail.value ) + 1
-        break;
-      case "symptom":
-        state.symptom = e.detail.value
-        break;
-      default:
-        return console.log( "Unknowm action from id", e.detail.id )
-    }
-
-    e.target.dispatchEvent( new CustomEvent( 'action', {
-      bubbles: true,
-      detail: { ...state }
-    } ) )
-  }
-
-  const onFarben = ( e ) => {
-    e.stopPropagation()
-    const farben = [ "green", "blue", "orange", "red" ]
-
-    if ( Number( e.target.dataset.idx ) > farben.length - 1 ) {
-      e.target.dataset.idx = 0
-    }
-    e.target.className = farben[ e.target.dataset.idx ]
-    e.target.state.value = farben[ e.target.dataset.idx ]
-    e.target.dataset.idx++
-  }
-
+export function choice( state ) {
 
   return html `
-    <article>
-    <h1>Choice</h1>
-    <hr>
+    <article hidden=false>
+
+    <h1>Element unit-choice</h1>
+
+    <h2>Examples</h2>
+    <h3>Icon, item-width and no multiline</h3>
     <unit-choice .state=${{
       "id": "symptom",
-      "item-width": "150px",
+      "item-width": "200px",
       'items': [
-        { 'label': 'Giemen', 'value': 'giemen', icon1:boxes },
-        { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen', icon2: boxes},
+        { 'label': 'Giemen', 'value': 'giemen', 'icon1':boxes },
+        { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen' },
         { 'label': 'Pfeifen', 'value': 'pfeifen' },
         { 'label': 'Stridor', 'value': 'stridor' }
       ].map( item => {
-        item.selected = state.symptom == item.value
+        item.selected = state == item.value
         return item
       })
     }}></unit-choice>
-    <hr>
+
+    <h3>Icon, height and no multiline</h3>
     <unit-choice .state=${{
       "id": "symptom",
-      "wrap": true,
+      "height": "70px",
       'items': [
-        { 'label': 'Giemen', 'value': 'giemen', icon1:boxes },
-        { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen', icon2: boxes},
-        { 'label': 'Pfeifen', 'value': 'pfeifen' },
-        { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen', icon2: boxes},
-        { 'label': 'Pfeifen', 'value': 'pfeifen' },
-        { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen', icon2: boxes},
-        { 'label': 'Pfeifen', 'value': 'pfeifen' },
-        { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen', icon2: boxes},
+        { 'label': 'Giemen', 'value': 'giemen', 'icon1':boxes },
+        { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen' },
         { 'label': 'Pfeifen', 'value': 'pfeifen' },
         { 'label': 'Stridor', 'value': 'stridor' }
       ].map( item => {
-        item.selected = state.symptom == item.value
+        item.selected = state == item.value
         return item
       })
     }}></unit-choice>
+
+    <h3>Icon and multiline</h3>
+    <unit-choice .state=${{
+      "id": "symptom",
+      "multi": true,
+      'items': [
+        { 'label': 'Giemen', 'value': 'giemen', icon1: boxes },
+        { 'label': 'Brummeasdfasdfasf', 'value': 'brummen', icon2: boxes},
+        { 'label': 'Pfeifen', 'value': 'pfeifen' },
+        { 'label': 'Brummeasdfasdfasf', 'value': 'brummen', icon2: boxes},
+        { 'label': 'Pfeifen', 'value': 'pfeifen' },
+        { 'label': 'Brummeasdfasdfasf', 'value': 'brummen', icon2: boxes},
+        { 'label': 'Pfeifen', 'value': 'pfeifen' },
+        { 'label': 'Brummeasdfdfn', 'value': 'brummen', icon2: boxes},
+        { 'label': 'Pfeifen', 'value': 'pfeifen' },
+        { 'label': 'Stridor', 'value': 'stridor' }
+      ].map( item => {
+        item.selected = state == item.value
+        return item
+      })
+    }}></unit-choice>
+
+    <h2>Signature</h2>
+    <unit-md .state=${{ raw: unitChoice.signature, theme:"tomorrow" }}></unit-md>
+
     </article>
     `
 }

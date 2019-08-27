@@ -16,16 +16,20 @@ export function md( state ) {
     <article @action=${onAction} class="mdown" hidden="false">
 
       <h1>Element unit-md</h1>
+
+      <h2>Signature</h2>
       <unit-md .state=${{ raw: unitMD.signature, theme:"tomorrow" }}></unit-md>
 
-      <h2 style="padding-top:3rem;">Example from assets</h2>
+      <h2>Example</h2>
+
+      <h3>From assets</h3>
       <p>Code styling with theme twilight and loaded from assets.</p>
       <unit-md .state=${{ src: mds.twilight, theme: "twilight" }}></unit-md>
 
-      <h2 style="padding-top:3rem;">Example from assets</h2>
+      <h3>From assets</h3>
       <unit-md .state=${{ src: mds.default, theme: "default" }}></unit-md>
 
-      <h2 style="padding-top:3rem;">Example from outside</h2>
+      <h3>From external resource</h3>
       <unit-md src="https://epha.io/akte/recht/nutzung.md" hidden="false"></unit-md>
 
     </article>
