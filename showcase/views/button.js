@@ -41,15 +41,17 @@ export function button( state = 0 ) {
       </section>
 
       <h3>Farben</h3>
-      <unit-button data-idx=0 .state=${ {
-        id:"nothing", "value": "width 350px",
-        "className": "blue",
-        "icon1": { src: boxes, fill:"var(--red2)", height: "40px" },
-        "icon2": { src: boxes, fill:"var(--green2)", height: "40px" }
-      }}></unit-button>
-      <unit-button @action=${onFarben} data-idx="0" value="Klick für nächste Farbe" .state=${ {
-        "id": "localFarben", "icon2": boxes, "height": "70px"
-      }}></unit-button>
+      <section style="display:flex;align-items:center;flex-wrap:nowrap;">
+        <unit-button .state=${ {
+          id:"nothing", "value": "width 350px",
+          "className": "blue",
+          "icon1": { src: boxes, fill:"var(--red2)", height: "40px" },
+          "icon2": { src: boxes, fill:"var(--green2)", height: "40px" }
+        }}></unit-button>
+        <unit-button style="padding-left:10px;" @action=${onFarben} data-idx="0" value="Klick for Color" .state=${ {
+          "id": "localFarben", "icon2": boxes, "height": "70px"
+        }}></unit-button>
+      </section>
 
       <h3>Attributes</h3>
       <section style="display:flex;">
