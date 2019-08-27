@@ -32,6 +32,9 @@ window.onload = async () => {
       if ( e.target.nodeName == "UNIT-CHOICE" ) {
         store.dispatch( { type: "choice", data: e.detail.value } )
       }
+      if ( e.target.nodeName == "UNIT-TEXTAREA" ) {
+        store.dispatch( { type: "textarea", data: e.detail.value } )
+      }
 
     }
 
