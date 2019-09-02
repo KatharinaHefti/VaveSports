@@ -12,7 +12,7 @@ export function choice( state ) {
     <h1>Element unit-choice</h1>
 
     <h2>Examples</h2>
-    <h3>Icon, item-width and no multiline</h3>
+    <h3>icons, item-width: 200px</h3>
     <unit-choice .state=${{
       "id": "symptom",
       "item-width": "200px",
@@ -27,10 +27,11 @@ export function choice( state ) {
       })
     }}></unit-choice>
 
-    <h3>Icon, height and no multiline</h3>
+    <h3>icons, height:70px, font-size:26px</h3>
     <unit-choice .state=${{
-      "id": "symptom",
+      "id": "syiptosm",
       "height": "70px",
+      "font-size": "26px",
       'items': [
         { 'label': 'Giemen', 'value': 'giemen', 'icon1':boxes },
         { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen' },
@@ -42,7 +43,7 @@ export function choice( state ) {
       })
     }}></unit-choice>
 
-    <h3>Icon and multiline</h3>
+    <h3>icons, multi:true</h3>
     <unit-choice .state=${{
       "id": "symptom",
       "multi": true,
