@@ -10,7 +10,7 @@ import { createStore } from "redux"
 // ---------------------
 // Reducer
 // ---------------------
-function reducer( state = {}, action ) {
+function reducer( state = cloneDeep( {} ), action ) {
   // type state part
   return immu.set( state, action.type, cloneDeep( action.data ) )
 }
