@@ -8,6 +8,7 @@ import 'core-js/stable';
 
 import '@webcomponents/custom-elements'
 import '@webcomponents/template'
+import 'custom-event-polyfill'
 //
 //
 import './index.css'
