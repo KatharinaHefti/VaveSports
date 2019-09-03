@@ -26,6 +26,8 @@ export function svg( state ) {
     return html `<unit-svg src=${src} .state=${state}></unit-svg>`
   }
 
+
+
   return html `
     <article class=svg hidden="false">
       <h1>Element unit-svg</h1>
@@ -35,18 +37,14 @@ export function svg( state ) {
       <h3>Folder Icon from view-types</h3>
       <p>Click on the icons to see the reference of the file name.</p>
       <section style="border: .5rem solid #ccc;border-radius:.5rem;">
-        ${
-          Object.values(icon).map(createIcon)
-        }
+        ${ Object.values(icon).map(createIcon) }
         <span>Baseline Text</span>
       </section>
       <p>${state}</p>
 
       <h3>Folder Team from view-types</h3>
       <section style="border: .5rem solid #ccc;border-radius:.5rem;">
-        ${
-          Object.values(team).map(createTeam)
-        }
+        ${ Object.values(team).map(createTeam) }
       </section>
 
       <h2>Signature</h2>

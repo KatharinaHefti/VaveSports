@@ -1,16 +1,3 @@
-import 'regenerator-runtime/runtime'
-
-import 'core-js/features/array/from';
-import 'core-js/features/array/flat';
-import 'core-js/features/set';
-import 'core-js/stable';
-
-
-import '@webcomponents/custom-elements'
-import '@webcomponents/template'
-import 'custom-event-polyfill'
-//
-//
 import './index.css'
 import 'view-types/style/hidden.css'
 import 'view-types/style/color-fresh.css'
@@ -105,12 +92,12 @@ window.onload = async () => {
   // Give some time for resources too load
   // and then try to scroll or reset hash
   // ---------------------------------------
-  setTimeout( () => {
-    if ( location.hash && document.querySelector( location.hash ) ) {
-      document.querySelector( location.hash ).scrollIntoView( { block: "start", behavior: "smooth" } )
-    } else {
-      history.replaceState( null, null, location.pathname.split( "#" )[ 0 ] )
-    }
-  }, 250 )
+  // setTimeout( () => {
+  //   if ( location.hash && document.querySelector( location.hash ) ) {
+  //     document.querySelector( location.hash ).scrollIntoView( { block: "start", behavior: "smooth" } )
+  //   } else {
+  //     history.replaceState( null, null, location.pathname.split( "#" )[ 0 ] )
+  //   }
+  // }, 250 )
 
 }
