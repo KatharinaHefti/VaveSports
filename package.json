@@ -20,6 +20,9 @@
     "view-units": "../view-units",
     "view-types": "../view-types"
   },
+  "browserslist": [
+    "IE 11"
+  ],
   "author": "Marco Egbring",
   "license": "ISC",
   "bugs": {

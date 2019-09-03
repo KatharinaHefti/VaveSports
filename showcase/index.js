@@ -1,6 +1,6 @@
 import "core-js/stable"
-
 import 'regenerator-runtime/runtime'
+
 import '@webcomponents/custom-elements'
 import '@webcomponents/template'
 //
