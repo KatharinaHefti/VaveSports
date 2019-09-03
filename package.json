@@ -27,6 +27,9 @@
   },
   "homepage": "https://github.com/epha/view-showcase#readme",
   "dependencies": {
+    "@webcomponents/custom-elements": "^1.2.4",
+    "@webcomponents/template": "^1.4.0",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
     "core-js": "^3.2.1",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",

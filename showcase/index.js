@@ -1,4 +1,6 @@
 import 'regenerator-runtime/runtime'
+import '@webcomponents/custom-elements'
+import '@webcomponents/template'
 //
 import './index.css'
 import 'view-types/style/hidden.css'

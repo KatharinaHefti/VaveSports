@@ -43,8 +43,8 @@ export function choice( state ) {
       })
     }}></unit-choice>
 
-    <h3>icons, multi:true</h3>
-    <unit-choice .state=${{
+    <h3>icons, multi:true, class: prodigy</h3>
+    <unit-choice class=prodigy .state=${{
       "id": "symptom",
       "multi": true,
       'items': [

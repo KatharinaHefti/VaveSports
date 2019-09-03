@@ -7,13 +7,7 @@ export function textarea( state = "" ) {
   const state1 = { "value": state, label: "Label", spellcheck: true, "chars": 100, "font-size": "1.4rem" }
   const state2 = { "value": state, label: "You can also type here", badge: false }
   const state3 = { "value": state.split( "" ).reverse().join( "" ), disabled: true, label: "Mirror above area" }
-  const state4 = {
-    "value": `Erste Zeile
-Ein Satz zum Teilselektieren
-    `,
-    disabled: true,
-    label: "Mirror above area"
-  }
+  const state4 = { "value": `Erste Zeil\nEin Satz zum Teilselektieren`, readonly: true }
 
   return html `
     <article class="textarea" hidden="false">
@@ -29,7 +23,7 @@ Ein Satz zum Teilselektieren
       <unit-textarea id="2" .state=${state2}></unit-textarea>
       <unit-textarea id="3" .state=${state3}></unit-textarea>
 
-      <h3>"label":"You can also type here"</h3>
+      <h3>readonly: true</h3>
       <unit-textarea id="3" .state=${state4}></unit-textarea>
 
       <h2>Signature</h2>

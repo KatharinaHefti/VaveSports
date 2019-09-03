@@ -4,8 +4,8 @@ import 'view-units/unit-md'
 
 export function input( state = "" ) {
 
-  const state1 = { "value": state, spellcheck: true, "chars": 100, "font-size": "1.4rem" }
-  const state2 = { "value": state, label: "You can also type here", badge: false }
+  const state1 = { "value": state, "height": "40px", "font-size": "1.4rem" }
+  const state2 = { "value": state, label: "You can also type here" }
   const state3 = { "value": state.split( "" ).reverse().join( "" ), disabled: true, label: "Mirror above area" }
 
   return html `
@@ -14,7 +14,7 @@ export function input( state = "" ) {
       <h1>Element unit-input</h1>
 
       <h2>Example</h2>
-      <h3>value, chars:100, font-size:1.4rem</h3>
+      <h3>value, chars:100, font-size:1.4rem, height: 30px</h3>
       <unit-input id="1" .state=${state1}></unit-input>
       <h3>"label":"You can also type here"</h3>
       <unit-input id="2" .state=${state2}></unit-input>
