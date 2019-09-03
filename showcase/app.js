@@ -1,6 +1,5 @@
 import './index.css'
 import 'view-types/style/hidden.css'
-import 'view-types/style/color-fresh.css'
 import 'view-types/font/ibm.css'
 //
 import { store } from './provider'

@@ -16,7 +16,9 @@ export function navigation( state ) {
       history.pushState( null, null, pathname )
       state.value = e.detail.value
       // Yeah no virtual dom
-      document.querySelector( "main>article" ).scrollTop = 0
+      if ( document.querySelector( "main>article" ) ) {
+        document.querySelector( "main>article" ).scrollTop = 0
+      }
     }
 
     store.dispatch( { type: "navigation", data: state } )

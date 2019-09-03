@@ -4,35 +4,36 @@
 
 ### Header 3
 
-Header styling, [External link](https://www.google.com "@blank") and theme "default".
+Header styling, [External link](https://www.google.com "@blank") and theme
+"default". Demonstrate **script** execution.
 
 ```html
 <span class=datum></span>
 <script>
-  ( () => {    
-    var id = setInterval( () => {    
-      var date = new Date().toLocaleTimeString("de")
-      if(document.querySelector("span.datum")) {
-        document.querySelector("span.datum").innerHTML = `Uhrzeit: ${date}`
-      }else {
-        clearInterval(id)
-      }
-    }, 1000)
-  })()
+( function() {    
+  var id = setInterval( function() {    
+    var date = new Date().toLocaleTimeString("de")
+    if(document.querySelector("span.datum")) {
+      document.querySelector("span.datum").innerHTML = "Uhrzeit: "+ date
+    }else {
+      clearInterval(id)
+    }
+  }, 1000);
+})()
 </script>
 ```
 
 <span class=datum></span>
 
 <script>
-( () => {    
-  var id = setInterval( () => {    
+( function() {    
+  var id = setInterval( function() {    
     var date = new Date().toLocaleTimeString("de")
     if(document.querySelector("span.datum")) {
-      document.querySelector("span.datum").innerHTML = `Uhrzeit: ${date}`
+      document.querySelector("span.datum").innerHTML = "Uhrzeit: "+ date
     }else {
       clearInterval(id)
     }
-  }, 1000)
+  }, 1000);
 })()
 </script>

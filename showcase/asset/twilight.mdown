@@ -6,10 +6,6 @@ for(var i = 0; i < 10; i++) {
 }
 ```
 
-<script>
-  console.log("View md: Hello from mdown script")
-</script>
-
 ### Bash
 
 ```bash
