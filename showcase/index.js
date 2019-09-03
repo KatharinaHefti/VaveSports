@@ -1,9 +1,9 @@
 import 'regenerator-runtime/runtime'
 import 'core-js/stable';
 
-
-import '@webcomponents/custom-elements'
-import '@webcomponents/template'
+// 
+// import '@webcomponents/custom-elements'
+// import '@webcomponents/template'
 //
 //
 import './index.css'
