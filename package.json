@@ -3,7 +3,7 @@
   "version": "5.0.30",
   "description": "Show custom elements in action",
   "main": "main/index.js",
-  "source": "source/index.js",
+  "private": true,
   "scripts": {
     "prestart": "rm -rf dist/* && rm -rf .cache",
     "start": "parcel showcase/index.html --public-url /showcase",
@@ -18,11 +18,14 @@
   },
   "alias": {
     "view-units": "../view-units",
-    "view-types": "../view-types"
+    "view-types": "../view-types",
+    "lit-html": "../lit-html/lit-html.js",
+    "lit-html/directives/cache.js": "../lit-html/directives/cache.js",
+    "lit-html/directives/until.js": "../lit-html/directives/until.js",
+    "lit-html/directives/style-map.js": "../lit-html/directives/style-map.js",
+    "lit-html/directives/unsafe-html.js": "../lit-html/directives/unsafe-html.js",
+    "lit-html/directives/class-map.js": "../lit-html/directives/class-map.js"
   },
-  "browserslist": [
-    "IE 11"
-  ],
   "author": "Marco Egbring",
   "license": "ISC",
   "bugs": {
@@ -32,9 +35,6 @@
   "dependencies": {
     "@webcomponents/custom-elements": "^1.2.4",
     "@webcomponents/template": "^1.4.0",
-    "@webcomponents/webcomponentsjs": "^2.2.10",
-    "core-js": "^3.2.1",
-    "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",
     "lodash": "^4.17.15",
     "object-path-immutable": "^3.1.1",
@@ -43,6 +43,7 @@
     "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
     "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
     "htmlnano": "^0.2.4",
