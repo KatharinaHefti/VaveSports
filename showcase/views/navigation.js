@@ -1,10 +1,13 @@
 import { html, render } from 'lit-html'
 import { store } from '../provider'
-import 'view-units/unit-liste'
+import { version } from '../../package.json'
+import 'view-units/unit-liste/'
+import 'view-units/unit-svg/'
 
 export function navigation( state ) {
 
   const onNavi = ( e ) => {
+
     e.stopPropagation()
 
     if ( state.value == e.detail.value ) {
@@ -22,9 +25,14 @@ export function navigation( state ) {
     }
 
     store.dispatch( { type: "navigation", data: state } )
+
   }
 
   return html `
+    <section style="color: white;padding:1rem;">
+      <span>Showcase</span>
+      <span>${version}</span>
+    </section>
     <unit-liste @action=${onNavi} .state=${{
       items: state.paths.map(item => {
         return { ...item, selected: item.value == state.value }

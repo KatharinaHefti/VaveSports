@@ -5,6 +5,8 @@ import mds from '../asset/*.mdown'
 export function md( state ) {
 
   const onAction = ( e ) => {
+    e.stopPropagation()
+
     if ( e.detail.type == "hash" ) {
       location.hash = e.detail.href
     } else {
@@ -22,14 +24,15 @@ export function md( state ) {
 
       <h2>Example</h2>
 
-      <h3>From assets</h3>
+      <h3>Show Markdown in Preview Mode</h3>
       <unit-md .state=${{ src: mds.default, theme: "default" }}></unit-md>
+      <h3>Show Markdown in Edit Mode</h3>
+      <unit-md .state=${{ edit: true, src: mds.default, theme: "default" }}></unit-md>
 
-      <h3>From external resource</h3>
+      <h3>Markdown from external resource</h3>
       <unit-md id=2 src="https://epha.io/akte/recht/nutzung.md" hidden="false"></unit-md>
 
-      <h3>From assets</h3>
-      <p>Code styling with theme twilight and loaded from assets.</p>
+      <h3>Code styling with theme twilight and loaded from assets.</h3>
       <unit-md id=3 .state=${{ src: mds.twilight, theme: "twilight" }}></unit-md>
 
 

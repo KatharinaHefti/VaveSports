@@ -19,9 +19,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -32,18 +29,29 @@ body {
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   width: 26vw;
   background: #555;
   border-right: 1px solid #555;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 main {
-  flex: 1;
-  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 26vw;
+  right: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 main>article {

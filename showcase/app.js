@@ -32,6 +32,9 @@ window.onload = async () => {
       if ( e.target.nodeName == "UNIT-TEXTAREA" ) {
         store.dispatch( { type: "textarea", data: e.detail.value } )
       }
+      if ( e.target.nodeName == "UNIT-INPUT" ) {
+        store.dispatch( { type: "input", data: e.detail.value } )
+      }
 
     }
 

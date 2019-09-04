@@ -1,4 +1,3 @@
-import { version } from '../../package.json'
 import { html } from 'lit-html'
 
 export function colors() {
@@ -55,8 +54,8 @@ export function colors() {
       }
     </style>
     <article hidden=false>
-      <h1>Showcase</h1>
-      <h2>Version: ${version}</h2>
+      <h1>Colors</h1>
+      <h2>Computed style guide</h2>
       <table class=colors>
         ${ rows }
       </table>
