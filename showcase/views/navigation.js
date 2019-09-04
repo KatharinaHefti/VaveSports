@@ -29,9 +29,9 @@ export function navigation( state ) {
   }
 
   return html `
-    <section style="color: white;padding:1rem;">
-      <span>Showcase</span>
-      <span>${version}</span>
+    <section style="color: white;padding:1rem; display:flex; align-items: center; justify-content: space-between;flex-wrap: wrap;">
+      <span style="font-size:2rem; font-weight: 600;color:orange;">Showcase</span>
+      <span style="font-size: .8rem; border:1px solid #fff;padding:0 .2rem;">${version}</span>
     </section>
     <unit-liste @action=${onNavi} .state=${{
       items: state.paths.map(item => {

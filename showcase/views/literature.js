@@ -14,7 +14,7 @@ export function literature( state ) {
       <h1>Element unit-literature</h1>
 
       <h2>Example Theme nice (default)</h2>
-      <unit-literature style="border:1px solid tomato;" @action=${onAction} .state=${{ auto:false, items:example }}></unit-literature>
+      <unit-literature @action=${onAction} .state=${{ auto:false, items:example }}></unit-literature>
 
       <h2>Example Theme pubmed</h2>
       <unit-literature style="border:1px solid tomato;" @action=${onAction} theme="pubmed" .state=${{ auto:false, items:example }}></unit-literature>

@@ -47,18 +47,25 @@ export function colors() {
 
   return html `
     <style>
+      article.colors section {
+        overflow-x: auto;
+        padding: 2rem 0;
+      }
+
       table.colors th, table.colors td {
         padding: 5px 20px;
         border:1px solid #555;
         color: #555;
       }
     </style>
-    <article hidden=false>
+    <article class=colors hidden=false>
       <h1>Colors</h1>
       <h2>Computed style guide</h2>
-      <table class=colors>
-        ${ rows }
-      </table>
+      <section>
+        <table class=colors>
+          ${ rows }
+        </table>
+      </section>
     </article>`
 }
 
