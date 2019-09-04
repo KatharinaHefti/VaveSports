@@ -64,9 +64,9 @@ window.onload = async () => {
   }
 
   const refresh = async () => {
-    console.time( "render app" )
+    console.time( "Rendering" )
     await render( app( store.getState() ), document.body )
-    console.timeEnd( "render app" )
+    console.timeEnd( "Rendering" )
   }
 
   store.subscribe( refresh )

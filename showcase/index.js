@@ -1,3 +1,7 @@
 import { polyfill } from 'view-utils'
 
-polyfill().then( () => import( "./app.js" ) )
+console.time( "Polyfills" )
+polyfill().then( async () => {
+  await import( "./app.js" )
+  console.timeEnd( "Polyfills" )
+} )
