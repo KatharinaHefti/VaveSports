@@ -34,11 +34,12 @@ export function colors() {
         ${ colors[color].map( (c,i ) => {
             const hsl = `hsl(${c.h},${c.s}%,${c.l}%)`
             const hex = HSLToHex(c.h,c.s,c.l)
+            const con = ["#fff","#333","#555"]
             return html `
               <td>
-                <span style="padding:2px 10px;background:${hsl};color:white;">${hsl}</span>
+                <span style="padding:2px 10px;background:${hsl};color:${con[i]};">${hsl}</span>
                 <br>
-                <span style="padding:2px 10px;background:white;color:${hex};">${hex}</span>
+                <span style="padding:2px 10px;background:${con[i]};color:${hex};">${hex}</span>
               </td>`
           })
         }
