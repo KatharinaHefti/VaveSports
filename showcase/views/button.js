@@ -4,7 +4,7 @@ import immu from 'object-path-immutable'
 
 // Layz import units
 import unitButton from 'view-units/unit-button/'
-import 'view-units/unit-md'
+import 'view-units/unit-md/'
 // Assets
 import { icon } from 'view-types'
 const { boxes } = icon;

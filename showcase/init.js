@@ -43,5 +43,5 @@ import 'core-js/features/promise';
     await import( '@webcomponents/template' )
   }
 
-  await import( "./app.js" )
+  return Promise.resolve()
 } )()
