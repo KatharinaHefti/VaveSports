@@ -13,11 +13,11 @@ export function literature( state ) {
 
       <h1>Element unit-literature</h1>
 
-      <h2>Example Theme nice (default)</h2>
+      <h2>Example with Abstract</h2>
       <unit-literature @action=${onAction} .state=${{ auto:false, items:example }}></unit-literature>
 
-      <h2>Example Theme pubmed</h2>
-      <unit-literature style="border:1px solid tomato;" @action=${onAction} theme="pubmed" .state=${{ auto:false, items:example }}></unit-literature>
+      <h2>Example no data</h2>
+      <unit-literature></unit-literature>
 
       <h2>Signature</h2>
       <unit-md .state=${{ raw: unitLiterature.signature, theme:"tomorrow" }}></unit-md>

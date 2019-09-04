@@ -36,7 +36,7 @@ nav {
   display: flex;
   flex-direction: column;
   width: 26vw;
-  background: #555;
+  background: rgb(30, 42, 49);
   border-right: 1px solid #555;
   box-sizing: border-box;
   overflow-y: auto;
