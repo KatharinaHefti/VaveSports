@@ -10,6 +10,7 @@
     "prebuild": "rm -rf dist/* && rm -rf .cache",
     "build": "NODE_ENV=production parcel build showcase/index.html --public-url /showcase --detailed-report --no-source-maps",
     "staging": "bash ./scripts/deploy.sh staging",
+    "release": "bash ./scripts/deploy.sh release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
