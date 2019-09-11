@@ -14,7 +14,7 @@ export function literature( state ) {
       <h1>Element unit-literature</h1>
 
       <h2>Example with Abstract</h2>
-      <unit-literature @action=${onAction} .state=${{ auto:false, items:example }}></unit-literature>
+      <unit-literature @action=${onAction} .state=${{ auto:false, pmid: "1611900,3052987,3481439"}}></unit-literature>
 
       <h2>Example no data</h2>
       <unit-literature></unit-literature>
