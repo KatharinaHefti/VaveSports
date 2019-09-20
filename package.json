@@ -2,7 +2,6 @@
   "name": "view-showcase",
   "version": "5.0.48",
   "description": "Show custom elements in action",
-  "main": "main/index.js",
   "private": true,
   "scripts": {
     "prestart": "rm -rf dist/* && rm -rf .cache",
