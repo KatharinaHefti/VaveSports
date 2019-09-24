@@ -37,7 +37,7 @@ export function input( state = "" ) {
         "icon1": edit,
         "icon2": { src: edit, fill: "tomato" },
         "badge": false,
-        "width": "400px",
+        "width": "100%",
         "label": "You can also type here truncated truncated"
       }}></unit-input>
 

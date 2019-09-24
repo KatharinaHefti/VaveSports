@@ -26,6 +26,7 @@ export function button( state = 0 ) {
 
   const onSwitch = ( e ) => {
     e.stopPropagation()
+
     if ( e.target.state.value === "On" ) {
       e.target.state = immu.set( e.target.state, "value", "Off" )
       e.target.className = "switch-off blue"
@@ -74,7 +75,7 @@ export function button( state = 0 ) {
 
       <h3>Switch button</h3>
       <section style="display:flex;">
-        <unit-button style="padding-right: 1rem;" @action=${onSwitch} .state=${{
+        <unit-button @click="${onSwitch}" style="padding-right: 1rem;" @action="${onSwitch}" .state=${{
           id: "switch", width: "50px", className: "switch-on blue"}} value="On"></unit-button>
       </section>
 

@@ -10,7 +10,7 @@ import { until } from 'lit-html/directives/until.js'
 import debounce from 'lodash/debounce'
 //
 import { navigation } from './views'
-import { svg, md, choice, button, colors, literature, textarea, input, toggle } from './views'
+import { svg, md, choice, button, colors, literature, textarea, input, toggle, sidebar } from './views'
 
 window.onload = async () => {
 
@@ -37,6 +37,9 @@ window.onload = async () => {
       }
       if ( e.target.nodeName == "UNIT-TOGGLE" ) {
         store.dispatch( { type: "toggle", data: e.detail.value } )
+      }
+      if ( e.target.nodeName == "UNIT-SIDEBAR" ) {
+        store.dispatch( { type: "sidebar", data: e.detail.value } )
       }
 
     }
@@ -65,7 +68,9 @@ window.onload = async () => {
           ( state.navigation.value == "unit-input")
           ? input( state.input ) :
           ( state.navigation.value == "unit-toggle")
-          ? toggle( state.toggle ) :''
+          ? toggle( state.toggle ) :
+          ( state.navigation.value == "unit-sidebar")
+          ? sidebar( state.sidebar ) :''
         }
       </main>
     `
@@ -82,7 +87,7 @@ window.onload = async () => {
   store.dispatch( {
     type: "navigation",
     data: {
-      value: location.pathname.split( "/" ).filter( p => !!p ).pop(),
+      value: location.pathname.split( "/" ).filter( p => !!p ).pop() || "showcase",
       paths: [
         { label: "unit-svg", value: "unit-svg" },
         { label: "unit-md", value: "unit-md" },
@@ -91,7 +96,8 @@ window.onload = async () => {
         { label: "unit-literature", value: "unit-literature" },
         { label: "unit-textarea", value: "unit-textarea" },
         { label: "unit-input", value: "unit-input" },
-        { label: "unit-toggle", value: "unit-toggle" }
+        { label: "unit-toggle", value: "unit-toggle" },
+        { label: "unit-sidebar", value: "unit-sidebar" }
       ]
     }
   } )

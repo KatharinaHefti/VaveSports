@@ -26,8 +26,7 @@ export function toggle( state = 0 ) {
       <section>
         <unit-toggle .state=${ {
           id:"toggle2",
-          "className": "disabled",
-          "disabled": "disabled"
+          "disabled": true
         }}></unit-toggle>
       </section>
 
