@@ -24,6 +24,18 @@ export function button( state = 0 ) {
     e.target.dataset.idx++
   }
 
+  const onSwitch = ( e ) => {
+    e.stopPropagation()
+
+    if ( e.target.state.value === "On" ) {
+      e.target.state = immu.set( e.target.state, "value", "Off" )
+      e.target.className = "switch-off blue"
+    } else {
+      e.target.state = immu.set( e.target.state, "value", "On" )
+      e.target.className = "switch-on blue"
+    }
+  }
+
   return html `
     <article hidden=false>
 
@@ -59,6 +71,12 @@ export function button( state = 0 ) {
         <unit-button style="flex:1" .state=${{
           id: "breite", value: "Set flex 1", icon1: boxes, icon2: boxes, className: "blue"
         }}></unit-button>
+      </section>
+
+      <h3>Switch button</h3>
+      <section style="display:flex;">
+        <unit-button @click="${onSwitch}" style="padding-right: 1rem;" @action="${onSwitch}" .state=${{
+          id: "switch", width: "50px", className: "switch-on blue"}} value="On"></unit-button>
       </section>
 
       <h2>Signature</h2>
