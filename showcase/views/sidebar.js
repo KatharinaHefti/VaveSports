@@ -17,15 +17,15 @@ export function sidebar( state ) {
         "heading": "Heading",
         "links": [ {
             "title": "Link one",
-            "link": ""
+            "link": "link.html"
           },
           {
             "title": "Link two",
-            "link": ""
+            "link": "link.html"
           },
           {
             "title": "Link three",
-            "link": ""
+            "link": "link.html"
           }
         ]
       },
@@ -33,15 +33,15 @@ export function sidebar( state ) {
         "heading": "Heading two",
         "links": [ {
             "title": "Link one",
-            "link": ""
+            "link": "link.html"
           },
           {
             "title": "Link two",
-            "link": ""
+            "link": "link.html"
           },
           {
             "title": "Link three",
-            "link": ""
+            "link": "link.html"
           }
         ]
       },
@@ -49,15 +49,15 @@ export function sidebar( state ) {
         "heading": "Heading three",
         "links": [ {
             "title": "Link one",
-            "link": ""
+            "link": "link.html"
           },
           {
             "title": "Link two",
-            "link": ""
+            "link": "link.html"
           },
           {
             "title": "Link three",
-            "link": ""
+            "link": "link.html"
           }
         ]
       },

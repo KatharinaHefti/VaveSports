@@ -26,8 +26,6 @@ export function md( state ) {
 
       <h3>Show Markdown in Preview Mode</h3>
       <unit-md .state=${{ src: mds.default, theme: "default" }}></unit-md>
-      <h3>Show Markdown in Edit Mode</h3>
-      <unit-md .state=${{ edit: true, raw: mds.default, theme: "default" }}></unit-md>
 
       <h3>Markdown from external resource</h3>
       <unit-md id=2 src="https://epha.io/akte/recht/nutzung.md" hidden="false"></unit-md>
