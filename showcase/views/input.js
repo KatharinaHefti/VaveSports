@@ -16,18 +16,21 @@ export function input( state = "" ) {
       <unit-input id="1" .state=${{
         "value": state,
         "height": "40px",
-        "font-size": "1.4rem"
+        "font-size": "1.4rem",
+        "type": "text"
       }}></unit-input>
 
       <h3>Show label, value and display inline</h3>
       <unit-input id="2" .state=${{
         "value": state,
-        "label": "You can also type here"
+        "label": "You can also type here",
+        "type": "text"
       }}></unit-input>
       <unit-input id="3" .state=${{
         "value": state.split( "" ).reverse().join( "" ),
         "disabled": true,
-        "label": "Mirror above area"
+        "label": "Mirror above area",
+        "type": "text"
       }}></unit-input>
       <span>Baseline</span>
 
@@ -38,7 +41,8 @@ export function input( state = "" ) {
         "icon2": { src: edit, fill: "tomato" },
         "badge": false,
         "width": "400px",
-        "label": "You can also type here truncated truncated"
+        "label": "You can also type here truncated truncated",
+        "type": "text"
       }}></unit-input>
 
       <h2>Signature</h2>
