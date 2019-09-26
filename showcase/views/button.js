@@ -81,6 +81,11 @@ export function button( state = 0 ) {
           id: "switch", width: "90px", className: "switch-on blue"}} value="On"></unit-button>
       </section>
 
+      <h3>White button (on a dark background)</h3>
+      <section style="display:flex; background-color:purple; padding:10px;">
+        <unit-button style="padding-right: 1rem;" .state=${{width: "300px", value: "White Button", className: "white"}}></unit-button>
+      </section>
+
       <h2>Signature</h2>
       <unit-md .state=${{ raw: unitButton.signature, theme:"tomorrow" }}></unit-md>
 
