@@ -20,18 +20,18 @@ export function button( state = 0 ) {
       e.target.dataset.idx = 0
     }
     e.target.className = farben[ e.target.dataset.idx ]
-    e.target.state = immu.set( e.target.state, "value", "FARBEN " + farben[ e.target.dataset.idx ].toUpperCase() )
+    e.target.state = immu.set( e.target.state, "label", "FARBEN " + farben[ e.target.dataset.idx ].toUpperCase() )
     e.target.dataset.idx++
   }
 
   const onSwitch = ( e ) => {
     e.stopPropagation()
 
-    if ( e.target.state.value === "On" ) {
-      e.target.state = immu.set( e.target.state, "value", "Off" )
+    if ( e.target.state.label === "On" ) {
+      e.target.state = immu.set( e.target.state, "label", "Off" )
       e.target.className = "switch-off blue"
     } else {
-      e.target.state = immu.set( e.target.state, "value", "On" )
+      e.target.state = immu.set( e.target.state, "label", "On" )
       e.target.className = "switch-on blue"
     }
   }
@@ -46,7 +46,7 @@ export function button( state = 0 ) {
       <h3>Default height will increment with store</h3>
       <section style="display:flex;align-items:center;">
         <unit-button style="margin-right:10px;" .state=${{
-          id: "counter", value: state, width: "90px"
+          id: "counter", label: state, width: "90px"
         }}></unit-button>
         <p style="padding-left:.5rem;">Paragraph</p>
         <span style="padding-left:.5rem;">Span</span>
@@ -56,34 +56,34 @@ export function button( state = 0 ) {
       <section style="display:flex;align-items:center;flex-wrap:nowrap;">
         <unit-button .state=${ {
           id:"nothing",
-          "value": "width 350px",
+          "label": "width 350px",
           "className": "blue",
           "width": "350px",
           "icon1": { src: boxes, fill:"var(--red2)", height: "40px" },
           "icon2": { src: boxes, fill:"var(--green2)", height: "40px" }
         }}></unit-button>
-        <unit-button style="padding-left:10px;" @action=${onFarben} data-idx="0" value="Klick for Color" .state=${ {
+        <unit-button style="padding-left:10px;" @action=${onFarben} data-idx="0" label="Klick for Color" value="Klick for Color" .state=${ {
           "id": "localFarben", "icon2": boxes, "height": "70px"
         }}></unit-button>
       </section>
 
       <h3>Attributes</h3>
       <section style="display:flex;">
-        <unit-button style="padding-right: 1rem;" value="Set Attribute Value"></unit-button>
+        <unit-button style="padding-right: 1rem;" label="Set Attribute Value" value="Set Attribute Value"></unit-button>
         <unit-button style="flex:1" .state=${{
-          id: "breite", value: "Set flex 1", icon1: boxes, icon2: boxes, className: "blue"
+          id: "breite", label: "Set flex 1", value: "Set flex 1", icon1: boxes, icon2: boxes, className: "blue"
         }}></unit-button>
       </section>
 
       <h3>Switch button</h3>
       <section style="display:flex;">
         <unit-button @click="${onSwitch}" style="padding-right: 1rem;" @action="${onSwitch}" .state=${{
-          id: "switch", width: "90px", className: "switch-on blue"}} value="On"></unit-button>
+          id: "switch", width: "90px", className: "switch-on blue"}} label="On" value="On"></unit-button>
       </section>
 
       <h3>White button (on a dark background)</h3>
       <section style="display:flex; background-color:purple; padding:10px;">
-        <unit-button style="padding-right: 1rem;" .state=${{width: "300px", value: "White Button", className: "white"}}></unit-button>
+        <unit-button style="padding-right: 1rem;" .state=${{width: "300px", label: "White Button", value: "white button", className: "white"}}></unit-button>
       </section>
 
       <h2>Signature</h2>

@@ -23,7 +23,7 @@ window.onload = async () => {
         store.dispatch( { type: "svg", data: e.target.state.src } )
       }
       if ( e.target.nodeName == "UNIT-BUTTON" && e.target.id == "counter" ) {
-        const value = parseInt( e.target.state.value ) + 1
+        const value = parseInt( e.target.state.label ) + 1
         store.dispatch( { type: "button", data: value } )
       }
       if ( e.target.nodeName == "UNIT-CHOICE" ) {
