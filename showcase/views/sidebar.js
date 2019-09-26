@@ -83,6 +83,9 @@ export function sidebar( state ) {
       <h2>Signature</h2>
       <unit-md .state=${{ raw: unitSidebar.signature, theme:"tomorrow" }}></unit-md>
 
+      <h2>Test</h2>
+      <unit-md .state=${{ raw: unitSidebar.links }}></unit-md>
+
     </article>
   `
 }

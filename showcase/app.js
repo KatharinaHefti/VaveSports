@@ -10,7 +10,7 @@ import { until } from 'lit-html/directives/until.js'
 import debounce from 'lodash/debounce'
 //
 import { navigation } from './views'
-import { svg, md, choice, button, colors, literature, textarea, input, toggle, sidebar } from './views'
+import { svg, md, choice, button, colors, literature, textarea, input, toggle, sidebar, dropdown } from './views'
 
 window.onload = async () => {
 
@@ -41,6 +41,9 @@ window.onload = async () => {
       if ( e.target.nodeName == "UNIT-SIDEBAR" ) {
         store.dispatch( { type: "sidebar", data: e.detail.value } )
       }
+      if ( e.target.nodeName == "UNIT-DROPDOWN" ) {
+        store.dispatch( { type: "dropdown", data: e.detail.value } )
+      }
 
     }
 
@@ -70,7 +73,9 @@ window.onload = async () => {
           ( state.navigation.value == "unit-toggle")
           ? toggle( state.toggle ) :
           ( state.navigation.value == "unit-sidebar")
-          ? sidebar( state.sidebar ) :''
+          ? sidebar( state.sidebar ) :
+          ( state.navigation.value == "unit-dropdown")
+          ? dropdown( state.dropdown ) :''
         }
       </main>
     `
@@ -97,7 +102,8 @@ window.onload = async () => {
         { label: "unit-textarea", value: "unit-textarea" },
         { label: "unit-input", value: "unit-input" },
         { label: "unit-toggle", value: "unit-toggle" },
-        { label: "unit-sidebar", value: "unit-sidebar" }
+        { label: "unit-sidebar", value: "unit-sidebar" },
+        { label: "unit-dropdown", value: "unit-dropdown" }
       ]
     }
   } )
