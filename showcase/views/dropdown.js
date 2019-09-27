@@ -8,31 +8,34 @@ import 'view-units/unit-md/'
 
 export function dropdown( state = 0 ) {
 
-  const test = [ {
-      "value": "1",
-      "title": "Option one"
-    },
-    {
-      "value": "2",
-      "title": "Option two"
-    },
-    {
-      "value": "3",
-      "title": "Option three"
-    },
-    {
-      "value": "4",
-      "title": "Option four"
-    },
-    {
-      "value": "5",
-      "title": "Option five"
-    },
-    {
-      "value": "6",
-      "title": "Option six"
-    }
-  ]
+  const test = {
+    "name": "countries",
+    "items": [ {
+        "value": "1",
+        "name": "Afghanistan"
+      },
+      {
+        "value": "2",
+        "name": "Belgien"
+      },
+      {
+        "value": "3",
+        "name": "Deustchland"
+      },
+      {
+        "value": "4",
+        "name": "England"
+      },
+      {
+        "value": "5",
+        "name": "Kanada"
+      },
+      {
+        "value": "6",
+        "name": "Schweiz"
+      }
+    ]
+  }
 
   return html `
     <article hidden=false>
@@ -44,7 +47,8 @@ export function dropdown( state = 0 ) {
       <h3>Dropdown</h3>
       <section>
         <unit-dropdown .state=${{
-          items: test.map(item => {
+          "name": test.name,
+          items: test.items.map(item => {
             return { ...item }
           })
         }}></unit-dropdown>
