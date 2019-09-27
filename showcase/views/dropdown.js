@@ -11,28 +11,28 @@ export function dropdown( state = 0 ) {
   const test = {
     "name": "countries",
     "items": [ {
-        "value": "1",
-        "name": "Afghanistan"
+        "id": "1",
+        "value": "Afghanistan"
       },
       {
-        "value": "2",
-        "name": "Belgien"
+        "id": "2",
+        "value": "Belgien"
       },
       {
-        "value": "3",
-        "name": "Deustchland"
+        "id": "3",
+        "value": "Deutschland"
       },
       {
-        "value": "4",
-        "name": "England"
+        "id": "4",
+        "value": "England"
       },
       {
-        "value": "5",
-        "name": "Kanada"
+        "id": "5",
+        "value": "Kanada"
       },
       {
-        "value": "6",
-        "name": "Schweiz"
+        "id": "6",
+        "value": "Schweiz"
       }
     ]
   }
