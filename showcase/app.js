@@ -10,7 +10,7 @@ import { until } from 'lit-html/directives/until.js'
 import debounce from 'lodash/debounce'
 //
 import { navigation } from './views'
-import { svg, md, choice, button, colors, literature, textarea, input, toggle, sidebar, dropdown } from './views'
+import { svg, md, choice, button, colors, literature, textarea, input, toggle, sidebar, dropdown, numbers } from './views'
 
 window.onload = async () => {
 
@@ -44,6 +44,9 @@ window.onload = async () => {
       if ( e.target.nodeName == "UNIT-DROPDOWN" ) {
         store.dispatch( { type: "dropdown", data: e.detail.value } )
       }
+      if ( e.target.nodeName == "UNIT-NUMBERS" ) {
+        store.dispatch( { type: "numbers", data: e.detail.value } )
+      }
 
     }
 
@@ -75,7 +78,9 @@ window.onload = async () => {
           ( state.navigation.value == "unit-sidebar")
           ? sidebar( state.sidebar ) :
           ( state.navigation.value == "unit-dropdown")
-          ? dropdown( state.dropdown ) :''
+          ? dropdown( state.dropdown ) :
+          ( state.navigation.value == "unit-numbers")
+          ? numbers( state.numbers ) :''
         }
       </main>
     `
@@ -103,7 +108,8 @@ window.onload = async () => {
         { label: "unit-input", value: "unit-input" },
         { label: "unit-toggle", value: "unit-toggle" },
         { label: "unit-sidebar", value: "unit-sidebar" },
-        { label: "unit-dropdown", value: "unit-dropdown" }
+        { label: "unit-dropdown", value: "unit-dropdown" },
+        { label: "unit-numbers", value: "unit-numbers" }
       ]
     }
   } )
