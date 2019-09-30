@@ -45,8 +45,8 @@ export function button( state = 0 ) {
 
       <h3>Default height will increment with store</h3>
       <section style="display:flex;align-items:center;">
-        <unit-button style="margin-right:10px;" .state=${{
-          id: "counter", label: state, width: "90px"
+        <unit-button style="margin-right:10px;" width="90px" .state=${{
+          id: "counter", label: state
         }}></unit-button>
         <p style="padding-left:.5rem;">Paragraph</p>
         <span style="padding-left:.5rem;">Span</span>
@@ -54,11 +54,10 @@ export function button( state = 0 ) {
 
       <h3>Farben</h3>
       <section style="display:flex;align-items:center;flex-wrap:nowrap;">
-        <unit-button .state=${ {
+        <unit-button width="350px" .state=${ {
           id:"nothing",
           "label": "width 350px",
           "className": "blue",
-          "width": "350px",
           "icon1": { src: boxes, fill:"var(--red2)", height: "40px" },
           "icon2": { src: boxes, fill:"var(--green2)", height: "40px" }
         }}></unit-button>
@@ -77,13 +76,13 @@ export function button( state = 0 ) {
 
       <h3>Switch button</h3>
       <section style="display:flex;">
-        <unit-button @click="${onSwitch}" style="padding-right: 1rem;" @action="${onSwitch}" .state=${{
-          id: "switch", width: "90px", className: "switch-on blue"}} label="On" value="On"></unit-button>
+        <unit-button @click="${onSwitch}" width="90px" style="padding-right: 1rem;" @action="${onSwitch}" .state=${{
+          id: "switch", className: "switch-on blue"}} label="On" value="On"></unit-button>
       </section>
 
       <h3>White button (on a dark background)</h3>
       <section style="display:flex; background-color:purple; padding:10px;">
-        <unit-button style="padding-right: 1rem;" .state=${{width: "300px", label: "White Button", value: "white button", className: "white"}}></unit-button>
+        <unit-button style="padding-right: 1rem;" width="200px" height="60px" .state=${{label: "White Button", value: "white button", className: "white"}}></unit-button>
       </section>
 
       <h2>Signature</h2>
