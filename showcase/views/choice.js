@@ -27,11 +27,11 @@ export function choice( state ) {
       })
     }}></unit-choice>
 
-    <h3>icons, height:70px, font-size:26px</h3>
+    <h3>icons, height: 3em, font-size: 1.5em</h3>
     <unit-choice .state=${{
       "id": "syiptosm",
-      "height": "70px",
-      "font-size": "26px",
+      "height": "3em",
+      "font-size": "1.5em",
       'items': [
         { 'label': 'Giemen', 'value': 'giemen', 'icon1':boxes },
         { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen' },

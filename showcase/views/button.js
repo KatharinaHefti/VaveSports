@@ -54,15 +54,15 @@ export function button( state = 0 ) {
 
       <h3>Farben</h3>
       <section style="display:flex;align-items:center;flex-wrap:nowrap;">
-        <unit-button width="350px" .state=${ {
+        <unit-button .state=${ {
           id:"nothing",
           "label": "width 350px",
           "className": "blue",
-          "icon1": { src: boxes, fill:"var(--red2)", height: "40px" },
-          "icon2": { src: boxes, fill:"var(--green2)", height: "40px" }
+          "icon1": { src: boxes, fill:"var(--red2)", height: "2rem" },
+          "icon2": { src: boxes, fill:"var(--green2)", height: "2rem" }
         }}></unit-button>
         <unit-button style="padding-left:10px;" @action=${onFarben} data-idx="0" label="Klick for Color" value="Klick for Color" .state=${ {
-          "id": "localFarben", "icon2": boxes, "height": "70px"
+          "id": "localFarben", "icon2": boxes
         }}></unit-button>
       </section>
 
@@ -82,7 +82,18 @@ export function button( state = 0 ) {
 
       <h3>White button (on a dark background)</h3>
       <section style="display:flex; background-color:purple; padding:10px;">
-        <unit-button style="padding-right: 1rem;" width="200px" height="60px" .state=${{label: "White Button", value: "white button", className: "white"}}></unit-button>
+        <unit-button style="padding-right: 1rem;" width="200px" .state=${{label: "White Button", value: "white button", className: "white"}}></unit-button>
+      </section>
+
+      <h2>Helsana style examples</h2>
+      <p>Add class ".helsana" to unit-button tag for the styles to be applied.</p>
+      <h3>Normal</h3>
+      <section style="display:flex;">
+        <unit-button class="helsana" style="padding-right: 1rem;" label="Medicheck durchführen" value="Medicheck durchführen" height="56px"></unit-button>
+      </section>
+      <h3>Disabled</h3>
+      <section style="display:flex;">
+        <unit-button class="helsana" style="padding-right: 1rem;" label="Medicheck durchführen" value="Medicheck durchführen" height="56px" disabled=true></unit-button>
       </section>
 
       <h2>Signature</h2>

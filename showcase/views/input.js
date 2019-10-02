@@ -12,11 +12,11 @@ export function input( state = "" ) {
 
       <h2>Example</h2>
 
-      <h3>Show value, chars:100, font-size:1.4rem, height: 30px</h3>
+      <h3>Show value, chars:100, font-size:1.4em, height: 30px</h3>
       <unit-input id="1" .state=${{
         "value": state,
-        "height": "40px",
-        "font-size": "1.4rem",
+        "height": "2.5em",
+        "font-size": "1em",
         "type": "text"
       }}></unit-input>
 
@@ -42,6 +42,17 @@ export function input( state = "" ) {
         "badge": false,
         "width": "400px",
         "label": "You can also type here truncated truncated",
+        "type": "text"
+      }}></unit-input>
+
+      <h2>Helsana style example</h2>
+      <p>Add class ".helsana" to unit-input tag for the styles to be applied.</p>
+      <h3>Search input</h3>
+      <unit-input id="4" class="helsana" .state=${{
+        "value": state,
+        "badge": false,
+        "width": "400px",
+        "label": "Search",
         "type": "text"
       }}></unit-input>
 
