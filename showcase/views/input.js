@@ -35,7 +35,7 @@ export function input( state = "" ) {
       <span>Baseline</span>
 
       <h3>Show Icons</h3>
-      <unit-input id="2" .state=${{
+      <unit-input id="4" .state=${{
         "value": state,
         "icon1": edit,
         "icon2": { src: edit, fill: "tomato" },
@@ -46,13 +46,13 @@ export function input( state = "" ) {
       }}></unit-input>
 
       <h2>Helsana style example</h2>
-      <p>Add class ".helsana" to unit-input tag for the styles to be applied.</p>
+      <p>Add class ".helsana" to unit-input tag in order for the styles to be applied.</p>
       <h3>Search input</h3>
-      <unit-input id="4" class="helsana" .state=${{
+      <unit-input id="5" class="helsana" .state=${{
         "value": state,
-        "badge": false,
-        "width": "400px",
-        "label": "Search",
+        "label": "Medikament suchen",
+        "icon2": { src: "/showcase/search-view.a575c0a3.svg", fill: "black" },
+        "height": "56px",
         "type": "text"
       }}></unit-input>
 

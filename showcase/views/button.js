@@ -86,7 +86,7 @@ export function button( state = 0 ) {
       </section>
 
       <h2>Helsana style examples</h2>
-      <p>Add class ".helsana" to unit-button tag for the styles to be applied.</p>
+      <p>Add class ".helsana" to unit-button tag in order for the styles to be applied.</p>
       <h3>Normal</h3>
       <section style="display:flex;">
         <unit-button class="helsana" style="padding-right: 1rem;" label="Medicheck durchführen" value="Medicheck durchführen" height="56px"></unit-button>
