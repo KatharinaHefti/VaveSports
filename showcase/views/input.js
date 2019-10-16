@@ -45,6 +45,39 @@ export function input( state = "" ) {
         "type": "text"
       }}></unit-input>
 
+      <h2>Number inputs</h2>
+      <h3>Date input</h3>
+      <unit-input id="1" .state=${{
+        "value": state,
+        "height": "2.5em",
+        "font-size": "1em",
+        "type": "date"
+      }}></unit-input>
+
+      <h2>Glass style</h2>
+      <h3>Input</h3>
+      <section>
+        <unit-input id="1" class="glass" .state=${{
+          "value": state,
+          "height": "2.5em",
+          "badge": false,
+          "label": "Name",
+          "font-size": "1em",
+          "type": "text"
+        }}></unit-input>
+      </section>
+
+      <section>
+        <unit-input id="1" class="glass" .state=${{
+          "value": state,
+          "height": "2.5em",
+          "badge": false,
+          "label": "Password",
+          "font-size": "1em",
+          "type": "text"
+        }}></unit-input>
+      </section>
+
       <h2>Helsana style example</h2>
       <p>Add class ".helsana" to unit-input tag in order for the styles to be applied.</p>
       <h3>Search input</h3>
