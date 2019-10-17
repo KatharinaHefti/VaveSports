@@ -41,12 +41,12 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "autoprefixer": "^9.6.1",
+    "@babel/core": "^7.6.4",
+    "autoprefixer": "^9.6.5",
     "cssnano": "^4.1.10",
     "htmlnano": "^0.2.4",
     "marked": "^0.7.0",
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.4.1"
   }
 }
