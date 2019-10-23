@@ -56,6 +56,7 @@ export function input( state = "" ) {
 
       <h2>Glass style</h2>
       <h3>Input</h3>
+      <p>Add class ".glass" to unit-input in order for the styles to be applied.</p>
       <section>
         <unit-input id="1" class="glass" .state=${{
           "value": state,

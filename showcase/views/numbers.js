@@ -14,24 +14,48 @@ export function numbers( state = 0 ) {
 
       <h2>Examples</h2>
       <section style="padding-top:15px">
-        <span>Atemfrequenz</span>
+        <span>Atemfrequenz: </span>
         <unit-numbers .state=${{
           "id": "numbers1",
-          "items": [1,2,3]
+          "items": ["_", "_"]
         }}></unit-numbers>
       </section>
       <section style="padding-top:15px">
-        <span>Herzfrequenz</span>
+        <span>Herzfrequenz: </span>
         <unit-numbers .state=${{
           "id": "numbers2",
-          "items": [1,2,3]
+          "items": ["_","_","_"]
         }}></unit-numbers>
       </section>
       <section style="padding-top:15px">
-        <span>Temperatur</span>
+        <span>Temperatur: </span>
         <unit-numbers .state=${{
           "id": "numbers3",
-          "items": [1,2,3]
+          "items": ["_","_",".","_"]
+        }}></unit-numbers>
+      </section>
+      <section style="padding-top:15px">
+        <span>Systolischer Blutdruck: </span>
+        <unit-numbers .state=${{
+          "id": "numbers4",
+          "items": ["_","_","_","_",".","_", "_"]
+        }}></unit-numbers>
+      </section>
+
+      <h2>Glass style</h2>
+      <p>Add class ".glass" to element in order for the styles to be applied.</p>
+      <section style="padding-top:15px">
+        <span>Systolischer Blutdruck: </span>
+        <unit-numbers class="glass" .state=${{
+          "id": "numbers5",
+          "items": ["_","_","_","_",".","_", "_"]
+        }}></unit-numbers>
+      </section>
+      <section style="padding-top:15px">
+        <span>Telefonnummer: </span>
+        <unit-numbers class="glass" .state=${{
+          "id": "numbers6",
+          "items": ["_","_","_","-","_", "_", "_","-","_","_","-","_","_"]
         }}></unit-numbers>
       </section>
 
