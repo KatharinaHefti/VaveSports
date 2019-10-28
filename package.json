@@ -1,6 +1,6 @@
 {
   "name": "view-showcase",
-  "version": "5.0.50",
+  "version": "5.0.52",
   "description": "Show custom elements in action",
   "private": true,
   "scripts": {
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
-    "autoprefixer": "^9.6.5",
+    "autoprefixer": "^9.7.0",
     "cssnano": "^4.1.10",
     "htmlnano": "^0.2.4",
     "marked": "^0.7.0",
