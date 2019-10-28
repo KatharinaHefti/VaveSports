@@ -125,3 +125,15 @@ main>article p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
+
+@media print {
+  main {
+    position: relative;
+    width: 100vw;
+    left: 0;
+  }
+
+  nav {
+    display: none;
+  }
+}
