@@ -10,7 +10,7 @@ import { until } from 'lit-html/directives/until.js'
 import debounce from 'lodash/debounce'
 //
 import { navigation } from './views'
-import { svg, md, choice, button, colors, literature, textarea, input, toggle, sidebar, dropdown, numbers } from './views'
+import { svg, md, choice, button, colors, literature, textarea, input, toggle, sidebar, dropdown, numbers, fontcombos } from './views'
 
 window.onload = async () => {
 
@@ -47,6 +47,9 @@ window.onload = async () => {
       if ( e.target.nodeName == "UNIT-NUMBERS" ) {
         store.dispatch( { type: "numbers", data: e.detail.value } )
       }
+      if ( e.target.nodeName == "FONTCOMBOS" ) {
+        store.dispatch( { type: "fontcombos", data: e.detail.value } )
+      }
 
     }
 
@@ -80,7 +83,9 @@ window.onload = async () => {
           ( state.navigation.value == "unit-dropdown")
           ? dropdown( state.dropdown ) :
           ( state.navigation.value == "unit-numbers")
-          ? numbers( state.numbers ) :''
+          ? numbers( state.numbers ) :
+          ( state.navigation.value == "fontcombos")
+          ? fontcombos( state.numbers ) :''
         }
       </main>
     `

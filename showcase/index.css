@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,600,700|Source+Serif+Pro:400,600,700&display=swap');
+
+/* font-family: 'Lora', serif;
+font-family: 'Source Serif Pro', serif;
+font-family: 'Open Sans', sans-serif; */
 html {
   font-family: 'IBM Plex Sans', sans-serif;
   line-height: 30px;
@@ -97,4 +102,26 @@ main>article h3 {
 
 main>article p {
   font-size: 1rem;
+}
+
+.lora h1, .lora h2, .lora p, .lora unit-button {
+  font-family: 'Lora', serif;
+  border: 0 none;
+}
+
+.ssp h1, .ssp h2, .ssp p, .ssp unit-button {
+  font-family: 'Source Serif Pro', serif;
+}
+
+.lora-opensans h1, .lora-opensans h2 {
+  font-family: 'Lora', serif;
+}
+
+.ssp-opensans h1, .ssp-opensans h2 {
+  font-family: 'Source Serif Pro', serif;
+}
+
+.ssp-opensans p, .ssp-opensans unit-button, .lora-opensans p, .lora-opensans unit-button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
