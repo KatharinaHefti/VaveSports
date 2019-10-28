@@ -1,42 +1,12 @@
 import { html, render } from 'lit-html'
-import Unit from 'view-units/unit-input/'
-import 'view-units/unit-md'
-import { edit } from 'view-types/icon/'
 
 // Layz import units
 import unitButton from 'view-units/unit-button/'
 
-// Assets
-import { icon } from 'view-types'
-const { boxes } = icon;
-
 export function fontcombos( state = "" ) {
-  const onFarben = ( e ) => {
-    e.stopPropagation()
-    const farben = [ "green", "blue", "orange", "red" ]
-
-    if ( Number( e.target.dataset.idx ) > farben.length - 1 ) {
-      e.target.dataset.idx = 0
-    }
-    e.target.className = farben[ e.target.dataset.idx ]
-    e.target.state = immu.set( e.target.state, "label", "FARBEN " + farben[ e.target.dataset.idx ].toUpperCase() )
-    e.target.dataset.idx++
-  }
-
-  const onSwitch = ( e ) => {
-    e.stopPropagation()
-
-    if ( e.target.state.label === "On" ) {
-      e.target.state = immu.set( e.target.state, "label", "Off" )
-      e.target.className = "switch-off blue"
-    } else {
-      e.target.state = immu.set( e.target.state, "label", "On" )
-      e.target.className = "switch-on blue"
-    }
-  }
 
   return html `
-    <article class="input" hidden="false">
+    <article class="fontcombos" hidden="false">
 
       <h1>Font combinations</h1>
 
@@ -55,8 +25,8 @@ export function fontcombos( state = "" ) {
 
         </section>
       <div>
+      <hr/>
 
-<hr/>
       <div class="ssp">
         <h1>"Source Serif Pro" header and text</h1>
         <h2>This is a smaller header</h2>
@@ -72,9 +42,7 @@ export function fontcombos( state = "" ) {
 
         </section>
       <div>
-
       <hr/>
-
 
       <div class="lora-opensans">
         <h1>"Lora" header and "Open Sans" text</h1>
@@ -93,7 +61,6 @@ export function fontcombos( state = "" ) {
         </section>
       <div>
       <hr/>
-
 
       <div class="ssp-opensans">
         <h1>"Source Serif Pro" header and "Open Sans" text</h1>

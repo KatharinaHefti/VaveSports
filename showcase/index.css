@@ -104,6 +104,10 @@ main>article p {
   font-size: 1rem;
 }
 
+.fontcombos {
+  background-color: #fff6e8;
+}
+
 .lora h1, .lora h2, .lora p, .lora unit-button {
   font-family: 'Lora', serif;
   border: 0 none;
