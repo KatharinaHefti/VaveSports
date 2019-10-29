@@ -1,6 +1,9 @@
 import './index.css'
 import 'view-types/style/hidden.css'
 import 'view-types/font/ibm.css'
+import 'view-types/font/lora.css'
+import 'view-types/font/opensans.css'
+import 'view-types/font/sourceserifpro.css'
 //
 import { store } from './provider'
 //
