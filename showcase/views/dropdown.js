@@ -12,27 +12,33 @@ export function dropdown( state = 0 ) {
     "name": "countries",
     "items": [ {
         "id": "1",
-        "value": "Afghanistan"
+        "value": "af",
+        "label": "Afghanistan"
       },
       {
         "id": "2",
-        "value": "Belgien"
+        "value": "be",
+        "label": "Belgien"
       },
       {
         "id": "3",
-        "value": "Deutschland"
+        "value": "de",
+        "label": "Deutschland"
       },
       {
         "id": "4",
-        "value": "England"
+        "value": "en",
+        "label": "England"
       },
       {
         "id": "5",
-        "value": "Kanada"
+        "value": "ca",
+        "label": "Kanada"
       },
       {
         "id": "6",
-        "value": "Schweiz"
+        "value": "ch",
+        "label": "Schweiz"
       }
     ]
   }
@@ -48,7 +54,7 @@ export function dropdown( state = 0 ) {
       <section>
         <unit-dropdown .state=${{
           "name": test.name,
-          items: test.items.map(item => {
+          "items": test.items.map(item => {
             return { ...item }
           })
         }}></unit-dropdown>
