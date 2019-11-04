@@ -76,7 +76,7 @@ export function button( state = 0 ) {
 
       <h3>Switch button</h3>
       <section style="display:flex;">
-        <unit-button @click="${onSwitch}" width="90px" style="padding-right: 1rem;" @action="${onSwitch}" .state=${{
+        <unit-button @click="${onSwitch}" width="90px" style="padding-right: 1rem;" @action="${onSwitch}" selected="false" .state=${{
           id: "switch", className: "switch-on blue"}} label="On" value="On"></unit-button>
       </section>
 
