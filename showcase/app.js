@@ -13,7 +13,7 @@ import { until } from 'lit-html/directives/until.js'
 import debounce from 'lodash/debounce'
 //
 import { navigation } from './views'
-import { svg, md, choice, button, colors, literature, textarea, input, toggle, sidebar, dropdown, numbers, fontcombos } from './views'
+import { svg, md, choice, button, colors, literature, textarea, input, toggle, sidebar, dropdown, numbers, panel, fontcombos } from './views'
 
 window.onload = async () => {
 
@@ -49,6 +49,9 @@ window.onload = async () => {
       }
       if ( e.target.nodeName == "UNIT-NUMBERS" ) {
         store.dispatch( { type: "numbers", data: e.detail.value } )
+      }
+      if ( e.target.nodeName == "UNIT-PANEL" ) {
+        store.dispatch( { type: "panel", data: e.detail.value } )
       }
       if ( e.target.nodeName == "FONTCOMBOS" ) {
         store.dispatch( { type: "fontcombos", data: e.detail.value } )
@@ -87,6 +90,8 @@ window.onload = async () => {
           ? dropdown( state.dropdown ) :
           ( state.navigation.value == "unit-numbers")
           ? numbers( state.numbers ) :
+          ( state.navigation.value == "unit-panel")
+          ? panel( state.panel ) :
           ( state.navigation.value == "fontcombos")
           ? fontcombos( state.numbers ) :''
         }
@@ -117,7 +122,8 @@ window.onload = async () => {
         { label: "unit-toggle", value: "unit-toggle" },
         { label: "unit-sidebar", value: "unit-sidebar" },
         { label: "unit-dropdown", value: "unit-dropdown" },
-        { label: "unit-numbers", value: "unit-numbers" }
+        { label: "unit-numbers", value: "unit-numbers" },
+        { label: "unit-panel", value: "unit-panel" }
       ]
     }
   } )

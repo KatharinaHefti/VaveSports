@@ -3,7 +3,7 @@ import { styleMap } from 'lit-html/directives/style-map.js'
 import immu from 'object-path-immutable'
 
 // Layz import units
-import unitToggle from 'view-units/unit-numbers/'
+import unitNumbers from 'view-units/unit-numbers/'
 import 'view-units/unit-md/'
 
 export function numbers( state = 0 ) {
@@ -54,7 +54,7 @@ export function numbers( state = 0 ) {
       </section>
 
       <h2>Signature</h2>
-      <unit-md .state=${{ raw: unitToggle.signature, theme:"tomorrow" }}></unit-md>
+      <unit-md .state=${{ raw: unitNumbers.signature, theme:"tomorrow" }}></unit-md>
 
     </article>
   `
