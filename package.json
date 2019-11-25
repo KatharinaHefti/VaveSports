@@ -4,6 +4,7 @@
   "description": "Show custom elements in action",
   "private": true,
   "scripts": {
+    "postinstall": "bash ./scripts/postinstall.sh",
     "prestart": "rm -rf dist/* && rm -rf .cache",
     "start": "parcel showcase/index.html --public-url /showcase",
     "prebuild": "rm -rf dist/* && rm -rf .cache",
