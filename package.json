@@ -17,16 +17,7 @@
     "url": "git+https://github.com/epha/view-showcase.git"
   },
   "alias": {
-    "view-units": "../view-units",
-    "view-units/unit-svg/": "../view-units/unit-svg/",
-    "view-types": "../view-types",
-    "view-utils": "../view-utils",
-    "lit-html": "../lit-html/lit-html.js",
-    "lit-html/directives/cache.js": "../lit-html/directives/cache.js",
-    "lit-html/directives/until.js": "../lit-html/directives/until.js",
-    "lit-html/directives/style-map.js": "../lit-html/directives/style-map.js",
-    "lit-html/directives/unsafe-html.js": "../lit-html/directives/unsafe-html.js",
-    "lit-html/directives/class-map.js": "../lit-html/directives/class-map.js"
+    "view-base": "../view-base"
   },
   "author": "Marco Egbring",
   "license": "ISC",
