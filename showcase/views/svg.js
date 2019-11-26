@@ -1,10 +1,16 @@
 import { html, render } from 'lit-html'
 
-import unitSVG from 'view-units/unit-svg/'
-import 'view-units/unit-md/'
-import { icon, team } from 'view-types'
+import unitSVG from 'view-base/unit-svg/'
+import 'view-base/unit-md/'
+import * as icon from 'view-base/type-icon'
+import * as team from 'view-base/type-avatar'
 
 export function svg( state ) {
+
+  const onAction = ( e ) => {
+    e.stopPropagation()
+    store.dispatch( { type: "svg", data: e.target.state.src } )
+  }
 
   const createIcon = ( src, idx ) => {
     const state = {
@@ -29,7 +35,7 @@ export function svg( state ) {
 
 
   return html `
-    <article class=svg hidden="false">
+    <article class=svg hidden="false" onAction=${onAction}>
       <h1>Element unit-svg</h1>
 
       <h2>Examples</h2>

@@ -28,4 +28,4 @@ function middleware() {
 // ---------------------
 // Store
 // ---------------------
-export const store = createStore( reducer, middleware() )
+export default createStore( reducer, middleware() )

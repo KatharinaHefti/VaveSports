@@ -7,11 +7,11 @@
     "postinstall": "bash ./scripts/postinstall.sh",
     "prestart": "rm -rf dist/* && rm -rf .cache",
     "start": "parcel showcase/index.html --public-url /showcase",
-    "prebuild": "rm -rf dist/* && rm -rf .cache",
+    "prebuild": "rm -rf .cache/* && rm -rf dist/*",
     "build": "NODE_ENV=production parcel build showcase/index.html --public-url /showcase --detailed-report --no-source-maps",
     "staging": "bash ./scripts/deploy.sh staging",
     "release": "bash ./scripts/deploy.sh release",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test/suite.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -27,18 +27,23 @@
   },
   "homepage": "https://github.com/epha/view-showcase#readme",
   "dependencies": {
+    "lit-html": "^1.1.2",
     "lodash": "^4.17.15",
     "object-path-immutable": "^3.1.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "view-base": "github:epha/view-base#semver:5.x.x",
+    "view-units": "^0.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
     "autoprefixer": "^9.7.1",
+    "core-js": "^3.4.1",
     "cssnano": "^4.1.10",
-    "htmlnano": "^0.2.5",
-    "marked": "^0.7.0",
-    "parcel-bundler": "^1.12.4",
-    "postcss-modules": "^1.4.1"
+    "fs-extra": "^8.1.0",
+    "htmlnano": "^0.2.4",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
   }
 }

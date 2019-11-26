@@ -1,6 +1,6 @@
 import { html, render } from 'lit-html'
-import unitMD from 'view-units/unit-md'
-import mds from '../asset/*.mdown'
+import unitMD from 'view-base/unit-md'
+import * as mds from '../asset/*.mdown'
 
 export function md( state ) {
 
