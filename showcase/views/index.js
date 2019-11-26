@@ -4,8 +4,8 @@ import { navigation } from './navigation'
 import { showcase } from './showcase'
 import { svg } from './svg'
 import { md } from './md'
+import { button } from './button'
 
-// import { button } from './button'
 // import { choice } from './choice'
 // import { textarea } from './textarea'
 // import { input } from './input'
@@ -31,8 +31,8 @@ export default function () {
         ? svg() :
         ( state.navigation == "md")
         ? md() :
-        // ( state.navigation == "button")
-        // ? button() :
+        ( state.navigation == "button")
+        ? button() :
         // ( state.navigation == "choice")
         // ? choice( ) :
         // ( state.navigation == "textarea")

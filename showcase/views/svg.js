@@ -1,11 +1,13 @@
 import { html, render } from 'lit-html'
-
+import store from '../data-store'
 import unitSVG from 'view-base/unit-svg/'
 import 'view-base/unit-md/'
 import * as icon from 'view-base/type-icon'
 import * as team from 'view-base/type-avatar'
 
-export function svg( state ) {
+export function svg() {
+
+  const state = store.getState()
 
   const onAction = ( e ) => {
     e.stopPropagation()
@@ -31,8 +33,6 @@ export function svg( state ) {
     }
     return html `<unit-svg src=${src} .state=${state}></unit-svg>`
   }
-
-
 
   return html `
     <article class=svg hidden="false" onAction=${onAction}>

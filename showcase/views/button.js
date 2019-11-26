@@ -1,15 +1,16 @@
 import { html, render } from 'lit-html'
 import { styleMap } from 'lit-html/directives/style-map.js'
 import immu from 'object-path-immutable'
-
+import store from '../data-store'
 // Layz import units
-import unitButton from 'view-units/unit-button/'
-import 'view-units/unit-md/'
+import unitButton from 'view-base/unit-button/'
+import 'view-base/unit-md/'
 // Assets
-import { icon } from 'view-types'
-const { boxes } = icon;
+import * as boxes from 'view-base/type-icon'
 
-export function button( state = 0 ) {
+export function button() {
+
+  const state = store.getState().button || 0
 
   // Only locally without state
   const onFarben = ( e ) => {

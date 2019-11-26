@@ -4,7 +4,9 @@ import { version } from '../../package.json'
 import 'view-base/unit-liste/'
 import 'view-base/unit-svg/'
 
-export function navigation( state ) {
+export function navigation() {
+
+  const state = store.getState()
 
   const onNavi = ( e ) => {
 
