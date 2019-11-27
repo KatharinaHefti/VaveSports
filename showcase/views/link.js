@@ -25,15 +25,15 @@ export function link() {
       <i>Add class "negative" to unit-link in order for the style to be applied.</i>
       <section style="background-color: #696969; padding: 20px; box-sizing: border-box; color: white">
         This is a body text with a negative <unit-link class="negative" .state=${ {
-          id: "link2", value: "#", label: "link",
+          id: "link2", value: "#", label: "link"
         }}></unit-link>.
       </section>
 
       <h3>Prominent link</h3>
-      <i>Add class "prominent" to unit-link.</i>
+      <i>Add class "prominent" to unit-link. Padding-attribute is set to "10px 20px" as an example.</i>
       <section>
         <unit-link class="prominent" .state=${ {
-          id: "link3", value: "#", label: "Prominent link"
+          id: "link3", value: "#", label: "Prominent link", padding: "10px 20px"
         }}></unit-link>
       </section>
 
@@ -56,13 +56,13 @@ export function link() {
       <i>Add class "prominent blue" or "prominent green" to unit-link in order to achieve a different prominent link color.</i>
       <section style="display: flex; align-items: center">
         <unit-link class="prominent" .state=${ {
-          id: "link5", value: "#", label: "Abbrechen", width: "250px"
+          id: "link5", value: "#", label: "Abbrechen"
         }}></unit-link>
         <unit-link class="prominent blue" .state=${ {
-          id: "link6", value: "#", label: "Link", width: "250px"
+          id: "link6", value: "#", label: "Link"
         }}></unit-link>
         <unit-link class="prominent green" .state=${ {
-          id: "link7", value: "#", label: "Input", width: "250px"
+          id: "link7", value: "#", label: "Input"
         }}></unit-link>
       </section>
 

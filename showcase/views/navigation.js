@@ -35,7 +35,8 @@ export function navigation() {
     { label: "unit-toggle", value: "toggle" },
     { label: "unit-dropdown", value: "dropdown" },
     { label: "unit-numbers", value: "numbers" },
-    { label: "unit-link", value: "link" }
+    { label: "unit-link", value: "link" },
+    { label: "colors", value: "colors" }
 
   ].map( item => {
     return { ...item, selected: item.value == state.navigation }

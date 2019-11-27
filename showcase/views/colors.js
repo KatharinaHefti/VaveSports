@@ -7,14 +7,26 @@ export function colors() {
 
   const colors = {
     // Computed colors
-    green: hsl( 110 ),
-    yellow: hsl( 60 ),
-    orange: hsl( 25 ),
-    red: hsl( 355 ),
-    purple: hsl( 270 ),
-    pink: hsl( 315 ),
-    turkis: hsl( 180 ),
-    blue: hsl( 210 )
+    // green: hsl( 110 ),
+    // yellow: hsl( 60 ),
+    // orange: hsl( 25 ),
+    // red: hsl( 355 ),
+    // purple: hsl( 270 ),
+    // pink: hsl( 315 ),
+    // turkis: hsl( 180 ),
+    // blue: hsl( 210 )
+    teal: hsl( 202 ),
+    steel: hsl( 205 ),
+    sky: hsl( 198 ),
+    ice: hsl( 183 ),
+    sage: hsl( 123 ),
+    sun: hsl( 42 ),
+    coral: hsl( 1 ),
+    flamingo: hsl( 327 ),
+    lavender: hsl( 263 ),
+    smoke: hsl( 0 ),
+    silver: hsl( 0 ),
+    snow: hsl( 207 )
   }
 
   const rows = [
