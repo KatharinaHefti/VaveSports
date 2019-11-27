@@ -1,6 +1,6 @@
 {
   "name": "view-showcase",
-  "version": "5.0.58",
+  "version": "5.0.59",
   "description": "Show custom elements in action",
   "private": true,
   "scripts": {
