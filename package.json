@@ -17,6 +17,9 @@
     "type": "git",
     "url": "git+https://github.com/epha/view-showcase.git"
   },
+  "alias": {
+    "view-base": "../view-base"
+  },
   "author": "Marco Egbring",
   "license": "ISC",
   "bugs": {

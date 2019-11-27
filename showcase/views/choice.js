@@ -1,10 +1,17 @@
 import { html, render } from 'lit-html'
-import unitChoice from 'view-units/unit-choice/'
+import { styleMap } from 'lit-html/directives/style-map.js'
+import immu from 'object-path-immutable'
+import store from '../data-store'
+// Layz import units
+import unitChoice from 'view-base/unit-choice/'
+import 'view-base/unit-md/'
 // Assets
-import { icon } from 'view-types'
-const { boxes } = icon;
+import * as boxes from 'view-base/type-icon'
+import { icon } from 'view-base/type-icon'
 
-export function choice( state ) {
+export function choice() {
+
+  const state = store.getState().choice
 
   return html `
     <article hidden=false>

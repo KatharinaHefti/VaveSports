@@ -1,12 +1,15 @@
 import { html, render } from 'lit-html'
 import { styleMap } from 'lit-html/directives/style-map.js'
 import immu from 'object-path-immutable'
-
+import store from '../data-store'
 // Layz import units
-import unitNumbers from 'view-units/unit-numbers/'
-import 'view-units/unit-md/'
+import unitNumbers from 'view-base/unit-numbers/'
+import 'view-base/unit-md/'
 
-export function numbers( state = 0 ) {
+export function numbers() {
+
+  const state = store.getState().numbers || 0
+
   return html `
     <article hidden=false>
 

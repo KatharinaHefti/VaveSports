@@ -1,12 +1,12 @@
 import { html, render } from 'lit-html'
-import { styleMap } from 'lit-html/directives/style-map.js'
-import immu from 'object-path-immutable'
-
+import store from '../data-store'
 // Layz import units
-import unitToggle from 'view-units/unit-toggle/'
-import 'view-units/unit-md/'
+import unitToggle from 'view-base/unit-toggle/'
+import 'view-base/unit-md/'
 
-export function toggle( state = 0 ) {
+export function toggle() {
+
+  const state = store.getState().toggle || 0
 
   return html `
     <article hidden=false>

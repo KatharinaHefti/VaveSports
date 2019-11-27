@@ -5,15 +5,15 @@ import { showcase } from './showcase'
 import { svg } from './svg'
 import { md } from './md'
 import { button } from './button'
-
-// import { choice } from './choice'
-// import { textarea } from './textarea'
-// import { input } from './input'
-// import { toggle } from './toggle'
-// import { dropdown } from './dropdown'
-// import { numbers } from './numbers'
-// import { colors } from './colors'
-// import { fonts } from './fonts'
+import { choice } from './choice'
+import { textarea } from './textarea'
+import { input } from './input'
+import { toggle } from './toggle'
+import { dropdown } from './dropdown'
+import { numbers } from './numbers'
+import { colors } from './colors'
+import { fonts } from './fonts'
+import { link } from './link'
 
 export default function () {
 
@@ -33,22 +33,24 @@ export default function () {
         ? md() :
         ( state.navigation == "button")
         ? button() :
-        // ( state.navigation == "choice")
-        // ? choice( ) :
-        // ( state.navigation == "textarea")
-        // ? textarea(  ) :
-        // ( state.navigation == "input")
-        // ? input() :
-        // ( state.navigation == "toggle")
-        // ? toggle( ) :
-        // ( state.navigation == "dropdown")
-        // ? dropdown() :
-        // ( state.navigation == "numbers")
-        // ? numbers() :
-        // ( state.navigation == "colors")
-        // ? colors() :
-        // ( state.navigation == "fonts")
-        // ? fonts( ) :''
+        ( state.navigation == "choice")
+        ? choice( ) :
+        ( state.navigation == "textarea")
+        ? textarea(  ) :
+        ( state.navigation == "input")
+        ? input() :
+        ( state.navigation == "toggle")
+        ? toggle( ) :
+        ( state.navigation == "dropdown")
+        ? dropdown() :
+        ( state.navigation == "numbers")
+        ? numbers() :
+        ( state.navigation == "colors")
+        ? colors() :
+        ( state.navigation == "fonts")
+        ? fonts( ) :
+        ( state.navigation == "link")
+        ? link( ) :
         ''
       }
     </main>

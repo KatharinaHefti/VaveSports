@@ -1,12 +1,14 @@
 import { html, render } from 'lit-html'
 import { styleMap } from 'lit-html/directives/style-map.js'
 import immu from 'object-path-immutable'
-
+import store from '../data-store'
 // Layz import units
-import unitDropdown from 'view-units/unit-dropdown/'
-import 'view-units/unit-md/'
+import unitDropdown from 'view-base/unit-dropdown/'
+import 'view-base/unit-md/'
 
-export function dropdown( state = 0 ) {
+export function dropdown() {
+
+  const state = store.getState().dropdown || 0
 
   const test = {
     "name": "countries",

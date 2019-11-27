@@ -1,8 +1,12 @@
 import { html, render } from 'lit-html'
-import Unit from 'view-units/unit-textarea/'
-import 'view-units/unit-md'
+import store from '../data-store'
+// Layz import units
+import Unit from 'view-base/unit-textarea/'
+import 'view-base/unit-md/'
 
-export function textarea( state = "" ) {
+export function textarea() {
+
+  const state = store.getState().textarea || ""
 
   const state1 = { "value": state, label: "Label", spellcheck: true, "chars": 100, "font-size": "1.4rem" }
   const state2 = { "value": state, label: "You can also type here", badge: false }

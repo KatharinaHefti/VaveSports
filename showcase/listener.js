@@ -29,3 +29,6 @@ if ( e.target.nodeName == "UNIT-PANEL" ) {
 if ( e.target.nodeName == "FONTCOMBOS" ) {
   store.dispatch( { type: "fontcombos", data: e.detail.value } )
 }
+if ( e.target.nodeName == "UNIT-LINK" ) {
+  store.dispatch( { type: "link", data: e.detail.value } )
+}

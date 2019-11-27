@@ -1,9 +1,13 @@
 import { html, render } from 'lit-html'
-import Unit from 'view-units/unit-input/'
-import 'view-units/unit-md'
-import { edit } from 'view-types/icon/'
+import store from '../data-store'
+// Layz import units
+import Unit from 'view-base/unit-input/'
+import 'view-base/unit-md/'
+// Assets
+import { edit } from 'view-base/type-icon'
 
-export function input( state = "" ) {
+export function input() {
+  const state = store.getState().input || ""
 
   return html `
     <article class="input" hidden="false">

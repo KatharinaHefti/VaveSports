@@ -1,9 +1,11 @@
 import { html, render } from 'lit-html'
 
 // Layz import units
-import unitButton from 'view-units/unit-button/'
+import unitButton from 'view-base/unit-button/'
 
-export function fontcombos( state = "" ) {
+export function fontcombos() {
+
+  const state = store.getState().fonts || ""
 
   return html `
     <article class="fontcombos" hidden="false">
