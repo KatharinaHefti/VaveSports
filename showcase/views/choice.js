@@ -13,8 +13,12 @@ export function choice() {
 
   const state = store.getState().choice
 
+  const onAction = ( e ) => {
+    store.dispatch( { type: "choice", data: e.detail.value } )
+  }
+
   return html `
-    <article hidden=false>
+    <article hidden=false @action=${onAction}>
 
     <h1>Element unit-choice</h1>
 
