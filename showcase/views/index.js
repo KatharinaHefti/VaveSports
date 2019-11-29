@@ -25,7 +25,7 @@ export default function () {
     </nav>
     <main>
       ${
-        ( !state.navigation )
+        ( !state.navigation || state.navigation == "showcase" )
         ? showcase() :
         ( state.navigation == "svg")
         ? svg() :

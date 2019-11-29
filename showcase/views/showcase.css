@@ -1,0 +1,25 @@
+article.showcase section.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+article.showcase section.row>section {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  flex-grow: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+article.showcase section.row section.positive {
+  border: 1px solid #555;
+}
+
+article.showcase section.row section.negative {
+  background: #555;
+}
+
+article.showcase section.row>section unit-link {
+  flex-grow: 0;
+}
