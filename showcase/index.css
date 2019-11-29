@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 html {
   font-family: 'IBM Plex Sans', sans-serif;
   line-height: 30px;
@@ -135,4 +137,63 @@ main>article p {
   nav {
     display: none;
   }
+}
+
+/* links*/
+.linkPos {
+  color: #6CBCFF;
+}
+
+section.multiSelect {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  color: #696969;
+  border: 1px solid #696969;
+  display: flex;
+}
+
+section.multiSelect a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  color: #696969;
+  text-decoration: none;
+  margin: 0 25px 0 25px;
+}
+
+section.uniSelect {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  color: #696969;
+  border: 1px solid #696969;
+  display: flex;
+}
+
+section.uniSelect a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  color: #696969;
+  text-decoration: none;
+  margin: 0 12.5px 0 12.5px;
+}
+
+section.toggleSwitch {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  color: #696969;
+  border: 1px solid #696969;
+  display: flex;
+}
+
+section.toggleSwitch a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  color: #696969;
+  text-decoration: none;
+  margin: 0 12.5px 0 12.5px;
 }
