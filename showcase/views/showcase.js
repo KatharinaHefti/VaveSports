@@ -9,6 +9,7 @@ export function showcase() {
   <article class=showcase>
     <h1>Inventory</h1>
 
+<!-- action button-->
     <h2>Action button</h2>
     <p>Usually appears at the end of popup input.</p>
     <section class=row>
@@ -21,6 +22,14 @@ export function showcase() {
         <unit-link label="Speichern" class="negative prominent green"></unit-link>
       </section>
     </section>
+
+<!-- text-area -->
+
+<!-- choice -->
+
+<!-- buttons -->
+
+<!-- colors -->
 
   </article>
   `
