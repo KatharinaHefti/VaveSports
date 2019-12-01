@@ -83,17 +83,6 @@ export function input() {
         }}></unit-input>
       </section>
 
-      <h2>Helsana style example</h2>
-      <p>Add class ".helsana" to unit-input tag in order for the styles to be applied.</p>
-      <h3>Search input</h3>
-      <unit-input id="5" class="helsana" .state=${{
-        "value": state,
-        "label": "Medikament suchen",
-        "icon2": { src: "/showcase/search-view.a575c0a3.svg", fill: "black" },
-        "height": "56px",
-        "type": "text"
-      }}></unit-input>
-
       <h2>Signature</h2>
       <unit-md .state=${{ raw: Unit.signature, theme:"tomorrow" }}></unit-md>
     </article>

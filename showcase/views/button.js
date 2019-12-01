@@ -86,17 +86,6 @@ export function button() {
         <unit-button style="padding-right: 1rem;" width="200px" .state=${{label: "White Button", value: "white button", className: "white"}}></unit-button>
       </section>
 
-      <h2>Helsana style examples</h2>
-      <p>Add class ".helsana" to unit-button tag in order for the styles to be applied.</p>
-      <h3>Normal</h3>
-      <section style="display:flex;">
-        <unit-button class="helsana" style="padding-right: 1rem;" label="Medicheck durchführen" value="Medicheck durchführen" height="56px"></unit-button>
-      </section>
-      <h3>Disabled</h3>
-      <section style="display:flex;">
-        <unit-button class="helsana" style="padding-right: 1rem;" label="Medicheck durchführen" value="Medicheck durchführen" height="56px" disabled=true></unit-button>
-      </section>
-
       <h2>Signature</h2>
       <unit-md .state=${{ raw: unitButton.signature, theme:"tomorrow" }}></unit-md>
 
