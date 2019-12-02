@@ -83,7 +83,7 @@ export function button() {
 
       <h3>White button (on a dark background)</h3>
       <section style="display:flex; background-color:purple; padding:10px;">
-        <unit-button style="padding-right: 1rem;" width="200px" .state=${{label: "White Button", value: "white button", className: "white"}}></unit-button>
+        <unit-button style="padding-right: 1rem;" width="200px" .state=${{label: "White Button", value: "white button", className: "dark"}}></unit-button>
       </section>
 
       <h2>Signature</h2>
