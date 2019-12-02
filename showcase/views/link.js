@@ -17,7 +17,7 @@ export function link() {
       <h3>Prominent link</h3>
       <i>Padding-attribute is set to "10px 20px" as an example.</i>
       <section>
-        <unit-link class="prominent" .state=${ {
+        <unit-link .state=${ {
           id: "link3", value: "#", label: "Prominent link", padding: "10px 20px"
         }}></unit-link>
       </section>
