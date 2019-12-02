@@ -36,6 +36,8 @@ export function navigation() {
     { label: "unit-dropdown", value: "dropdown" },
     { label: "unit-numbers", value: "numbers" },
     { label: "unit-link", value: "link" },
+    { label: "unit-text-link", value: "textlink" },
+    { label: "unit-slider", value: "slider" },
     { label: "colors", value: "colors" }
 
   ].map( item => {

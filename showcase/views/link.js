@@ -14,23 +14,8 @@ export function link() {
 
       <h2>Examples</h2>
 
-      <h3>Link</h3>
-      <section>
-        This is a body text with a <unit-link .state=${ {
-          id: "link1", value: "#", label: "link"
-        }}></unit-link>.
-      </section>
-
-      <h3>Negative link</h3>
-      <i>Add class "negative" to unit-link in order for the style to be applied.</i>
-      <section style="background-color: #696969; padding: 20px; box-sizing: border-box; color: white">
-        This is a body text with a negative <unit-link class="negative" .state=${ {
-          id: "link2", value: "#", label: "link"
-        }}></unit-link>.
-      </section>
-
       <h3>Prominent link</h3>
-      <i>Add class "prominent" to unit-link. Padding-attribute is set to "10px 20px" as an example.</i>
+      <i>Padding-attribute is set to "10px 20px" as an example.</i>
       <section>
         <unit-link class="prominent" .state=${ {
           id: "link3", value: "#", label: "Prominent link", padding: "10px 20px"
@@ -39,29 +24,29 @@ export function link() {
 
       <h3>Disabled prominent link</h3>
       <section>
-        <unit-link class="prominent" .state=${ {
+        <unit-link .state=${ {
           id: "link3", value: "#", label: "Disabled prominent", disabled: "true"
         }}></unit-link>
       </section>
 
       <h3>Prominent negative link</h3>
-      <i>Add class "prominent negative" to unit-link.</i>
+      <i>Add class "negative" to unit-link.</i>
       <section style="background-color: #696969; padding: 20px; box-sizing: border-box; color: white">
-        <unit-link class="prominent negative" .state=${ {
+        <unit-link class="dark" .state=${ {
           id: "link4", value: "#", label: "Prominent negative"
         }}></unit-link>
       </section>
 
       <h3>Prominent links in a row</h3>
-      <i>Add class "prominent blue" or "prominent green" to unit-link in order to achieve a different prominent link color.</i>
+      <i>Add class "blue" or "green" to unit-link in order to achieve a different prominent link color.</i>
       <section style="display: flex; align-items: center">
-        <unit-link class="prominent" .state=${ {
+        <unit-link .state=${ {
           id: "link5", value: "#", label: "Abbrechen"
         }}></unit-link>
-        <unit-link class="prominent blue" .state=${ {
+        <unit-link class="blue" .state=${ {
           id: "link6", value: "#", label: "Link"
         }}></unit-link>
-        <unit-link class="prominent green" .state=${ {
+        <unit-link class="green" .state=${ {
           id: "link7", value: "#", label: "Input"
         }}></unit-link>
       </section>
