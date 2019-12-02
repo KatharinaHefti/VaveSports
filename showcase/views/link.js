@@ -29,11 +29,11 @@ export function link() {
         }}></unit-link>
       </section>
 
-      <h3>Prominent negative link</h3>
-      <i>Add class "negative" to unit-link.</i>
+      <h3>Prominent dark theme link</h3>
+      <i>Add class "dark" to unit-link.</i>
       <section style="background-color: #696969; padding: 20px; box-sizing: border-box; color: white">
         <unit-link class="dark" .state=${ {
-          id: "link4", value: "#", label: "Prominent negative"
+          id: "link4", value: "#", label: "Prominent dark"
         }}></unit-link>
       </section>
 

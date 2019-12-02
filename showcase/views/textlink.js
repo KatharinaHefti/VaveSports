@@ -21,10 +21,10 @@ export function textlink() {
         }}></unit-text-link>.
       </section>
 
-      <h3>Negative link</h3>
-      <i>Add class "negative" to unit-textlink in order for the style to be applied.</i>
+      <h3>Dark theme link</h3>
+      <i>Add class "dark" to unit-textlink in order for the style to be applied.</i>
       <section style="background-color: #696969; padding: 20px; box-sizing: border-box; color: white">
-        This is a body text with a negative <unit-text-link class="dark" .state=${ {
+        This is a body text with a dark theme <unit-text-link class="dark" .state=${ {
           id: "link2", value: "#", label: "link"
         }}></unit-text-link>.
       </section>
