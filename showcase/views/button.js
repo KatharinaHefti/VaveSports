@@ -25,18 +25,6 @@ export function button() {
     e.target.dataset.idx++
   }
 
-  const onSwitch = ( e ) => {
-    e.stopPropagation()
-
-    if ( e.target.state.label === "On" ) {
-      e.target.state = immu.set( e.target.state, "label", "Off" )
-      e.target.className = "switch-off blue"
-    } else {
-      e.target.state = immu.set( e.target.state, "label", "On" )
-      e.target.className = "switch-on blue"
-    }
-  }
-
   return html `
     <article hidden=false>
 
@@ -75,10 +63,11 @@ export function button() {
         }}></unit-button>
       </section>
 
-      <h3>Switch button</h3>
+      <h3>Button with "href" attribute</h3>
       <section style="display:flex;">
-        <unit-button @click="${onSwitch}" width="90px" style="padding-right: 1rem;" @action="${onSwitch}" selected="false" .state=${{
-          id: "switch", className: "switch-on blue"}} label="On" value="On"></unit-button>
+        <unit-button .state=${{
+          id: "link", href:"#", label: "This is a link-button", value: "link", className: "link"
+        }}></unit-button>
       </section>
 
       <h3>White button (on a dark background)</h3>
