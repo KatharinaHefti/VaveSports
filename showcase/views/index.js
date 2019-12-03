@@ -15,7 +15,6 @@ import { colors } from './colors'
 import { fonts } from './fonts'
 import { link } from './link'
 import { slider } from './slider'
-import { textlink } from './textlink'
 
 export default function () {
 
@@ -55,8 +54,6 @@ export default function () {
         ? link( ) :
         ( state.navigation == "slider")
         ? slider( ) :
-        ( state.navigation == "textlink")
-        ? textlink( ) :
         ''
       }
     </main>

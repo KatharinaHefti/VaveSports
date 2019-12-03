@@ -32,9 +32,6 @@ if ( e.target.nodeName == "FONTCOMBOS" ) {
 if ( e.target.nodeName == "UNIT-LINK" ) {
   store.dispatch( { type: "link", data: e.detail.value } )
 }
-if ( e.target.nodeName == "UNIT-TEXT-LINK" ) {
-  store.dispatch( { type: "textlink", data: e.detail.value } )
-}
 if ( e.target.nodeName == "UNIT-SLIDER" ) {
   store.dispatch( { type: "slider", data: e.detail.value } )
 }

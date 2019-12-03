@@ -19,7 +19,7 @@ export function showcase() {
       </section>
       <section class=negative>
         <unit-link label="Abbrechen" class="dark" style="margin-right:1rem;"></unit-link>
-        <unit-link label="Speichern" class="green"></unit-link>
+        <unit-link label="Speichern" class="dark green"></unit-link>
       </section>
     </section>
 
