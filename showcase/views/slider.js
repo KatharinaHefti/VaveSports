@@ -19,9 +19,10 @@ export function slider() {
       <section>
         <unit-slider .state=${ {
           id: "slider1",
-          min: "1",
+          min: "0",
           max: "100",
-          value: "0",
+          step: "1",
+          value: "77",
         }}></unit-slider>
       </section>
 
