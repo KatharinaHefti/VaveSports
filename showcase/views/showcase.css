@@ -14,12 +14,47 @@ article.showcase section.row>section {
 
 article.showcase section.row section.positive {
   border: 1px solid #555;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 article.showcase section.row section.negative {
   background-image: linear-gradient(#2B5779, #1C3659);
+  flex-wrap: wrap;
 }
 
 article.showcase section.row>section unit-link {
   flex-grow: 0;
+}
+
+article.showcase .ColorBox {
+  margin: 5px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+article.showcase .ColorBoxNoGo {
+  margin: 5px;
+  padding: 15px;
+  border: 1px solid hotpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+unit-choice.prodigy section {
+  background: none !important;
+}
+
+.positive unit-choice.prodigy section {
+  background: pink !important;
+}
+
+b {
+  line-height: 0;
+  margin: 20px 0 0 0;
 }
