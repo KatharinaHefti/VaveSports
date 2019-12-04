@@ -21,20 +21,23 @@ export function input() {
         "value": state,
         "height": "2.5em",
         "font-size": "1em",
-        "type": "text"
+        "type": "text",
+        "placeholder": "Placeholder"
       }}></unit-input>
 
       <h3>Show label, value and display inline</h3>
       <unit-input id="2" .state=${{
         "value": state,
-        "label": "You can also type here",
-        "type": "text"
+        "label": "Name",
+        "type": "text",
+        "placeholder": "Placeholder"
       }}></unit-input>
       <unit-input id="3" .state=${{
         "value": state.split( "" ).reverse().join( "" ),
         "disabled": true,
-        "label": "Mirror above area",
-        "type": "text"
+        "label": "Disabled",
+        "type": "text",
+        "placeholder": "Placeholder"
       }}></unit-input>
       <span>Baseline</span>
 
