@@ -70,6 +70,18 @@ export function button() {
         }}></unit-button>
       </section>
 
+      <section style="display:flex; background-color: #696969">
+        <unit-button class="dark" .state=${{
+          id: "link", href:"#", label: "This is a link-button", value: "link", className: "dark link"
+        }}></unit-button>
+      </section>
+
+      <section style="display:flex;">
+        <unit-button class="blue" .state=${{
+          id: "link", href:"#", label: "This is a link-button", value: "link", className: "blue link"
+        }}></unit-button>
+      </section>
+
       <h3>White button (on a dark background)</h3>
       <section style="display:flex; background-color:purple; padding:10px;">
         <unit-button style="padding-right: 1rem;" width="200px" .state=${{label: "White Button", value: "white button", className: "dark"}}></unit-button>

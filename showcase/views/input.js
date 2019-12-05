@@ -21,24 +21,27 @@ export function input() {
         "value": state,
         "height": "2.5em",
         "font-size": "1em",
-        "type": "text"
+        "type": "text",
+        "placeholder": "Placeholder"
       }}></unit-input>
 
       <h3>Show label, value and display inline</h3>
       <unit-input id="2" .state=${{
         "value": state,
-        "label": "You can also type here",
-        "type": "text"
+        "label": "Name",
+        "type": "text",
+        "placeholder": "Placeholder"
       }}></unit-input>
       <unit-input id="3" .state=${{
         "value": state.split( "" ).reverse().join( "" ),
         "disabled": true,
-        "label": "Mirror above area",
-        "type": "text"
+        "label": "Disabled",
+        "type": "text",
+        "placeholder": "Placeholder"
       }}></unit-input>
       <span>Baseline</span>
 
-      <h3>Show Icons</h3>
+      <!-- <h3>Show Icons</h3>
       <unit-input id="4" .state=${{
         "value": state,
         "icon1": edit,
@@ -47,7 +50,7 @@ export function input() {
         "width": "400px",
         "label": "You can also type here truncated truncated",
         "type": "text"
-      }}></unit-input>
+      }}></unit-input> -->
 
       <h2>Number inputs</h2>
       <h3>Date input</h3>
@@ -65,7 +68,6 @@ export function input() {
         <unit-input id="1" class="glass" .state=${{
           "value": state,
           "height": "2.5em",
-          "badge": false,
           "label": "Name",
           "font-size": "1em",
           "type": "text"
@@ -76,7 +78,6 @@ export function input() {
         <unit-input id="1" class="glass" .state=${{
           "value": state,
           "height": "2.5em",
-          "badge": false,
           "label": "Password",
           "font-size": "1em",
           "type": "text"

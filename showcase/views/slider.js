@@ -22,7 +22,7 @@ export function slider() {
           min: "0",
           max: "100",
           step: "1",
-          value: "77",
+          value: "73",
         }}></unit-slider>
       </section>
 
