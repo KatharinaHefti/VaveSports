@@ -11,9 +11,6 @@ if ( e.target.nodeName == "UNIT-TEXTAREA" ) {
 if ( e.target.nodeName == "UNIT-INPUT" ) {
   store.dispatch( { type: "input", data: e.detail.value } )
 }
-if ( e.target.nodeName == "UNIT-TOGGLE" ) {
-  store.dispatch( { type: "toggle", data: e.detail.value } )
-}
 if ( e.target.nodeName == "UNIT-SIDEBAR" ) {
   store.dispatch( { type: "sidebar", data: e.detail.value } )
 }

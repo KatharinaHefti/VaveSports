@@ -28,8 +28,8 @@ export function choice() {
       "id": "symptom",
       "item-width": "200px",
       'items': [
-        { 'label': 'Giemen', 'value': 'giemen', 'icon1':boxes },
-        { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen' },
+        { 'label': 'Giemen', 'value': 'giemen' },
+        { 'label': 'Auskultation der Lungedßn', 'value': 'brummen' },
         { 'label': 'Pfeifen', 'value': 'pfeifen' },
         { 'label': 'Stridor', 'value': 'stridor' }
       ].map( item => {
@@ -37,6 +37,23 @@ export function choice() {
         return item
       })
     }}></unit-choice>
+
+    <h3>Unit-choice .dark</h3>
+    <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 10px; box-sizing: border-box">
+    <unit-choice class="dark" .state=${{
+      "id": "symptom",
+      "item-width": "200px",
+      'items': [
+        { 'label': 'Giemen', 'value': 'giemen' },
+        { 'label': 'Auskultation der Lungedßn', 'value': 'brummen' },
+        { 'label': 'Pfeifen', 'value': 'pfeifen' },
+        { 'label': 'Stridor', 'value': 'stridor' }
+      ].map( item => {
+        item.selected = state == item.value
+        return item
+      })
+    }}></unit-choice>
+    </section>
 
     <h3>icons, height: 3em, font-size: 1.5em</h3>
     <unit-choice .state=${{
@@ -44,8 +61,8 @@ export function choice() {
       "height": "3em",
       "font-size": "1.5em",
       'items': [
-        { 'label': 'Giemen', 'value': 'giemen', 'icon1':boxes },
-        { 'label': 'Brummeasdfasdfasfdßn', 'value': 'brummen' },
+        { 'label': 'Giemen', 'value': 'giemen' },
+        { 'label': 'Auskultation der Lunge', 'value': 'brummen' },
         { 'label': 'Pfeifen', 'value': 'pfeifen' },
         { 'label': 'Stridor', 'value': 'stridor' }
       ].map( item => {
@@ -54,26 +71,51 @@ export function choice() {
       })
     }}></unit-choice>
 
-    <h3>icons, multi:true, class: prodigy</h3>
-    <unit-choice class=prodigy .state=${{
-      "id": "symptom",
-      "multi": true,
-      'items': [
-        { 'label': 'Giemen', 'value': 'giemen', icon1: boxes },
-        { 'label': 'Brummeasdfasdfasf', 'value': 'brummen', icon2: boxes},
-        { 'label': 'Pfeifen', 'value': 'pfeifen' },
-        { 'label': 'Brummeasdfasdfasf', 'value': 'brummen', icon2: boxes},
-        { 'label': 'Pfeifen', 'value': 'pfeifen' },
-        { 'label': 'Brummeasdfasdfasf', 'value': 'brummen', icon2: boxes},
-        { 'label': 'Pfeifen', 'value': 'pfeifen' },
-        { 'label': 'Brummeasdfdfn', 'value': 'brummen', icon2: boxes},
-        { 'label': 'Pfeifen', 'value': 'pfeifen' },
-        { 'label': 'Stridor', 'value': 'stridor' }
-      ].map( item => {
-        item.selected = state == item.value
-        return item
-      })
-    }}></unit-choice>
+    <h3>icons, multi:true, class: multiselect</h3>
+    <section>
+      <unit-choice class="multiselect" .state=${{
+        "id": "symptom",
+        "multi": true,
+        'items': [
+          { 'label': 'Giemen', 'value': 'giemen'},
+          { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
+          { 'label': 'Pfeifen', 'value': 'pfeifen' },
+          { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
+          { 'label': 'Pfeifen', 'value': 'pfeifen' },
+          { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
+          { 'label': 'Pfeifen', 'value': 'pfeifen' },
+          { 'label': 'Brummen', 'value': 'brummen'},
+          { 'label': 'Pfeifen', 'value': 'pfeifen' },
+          { 'label': 'Stridor', 'value': 'stridor' }
+        ].map( item => {
+          item.selected = state == item.value
+          return item
+        })
+      }}></unit-choice>
+      </section>
+
+    <h3>Multiselect .dark</h3>
+    <section style="background-image: linear-gradient(#2B5779, #1C3659)">
+      <unit-choice class="multiselect dark" .state=${{
+        "id": "symptom",
+        "multi": true,
+        'items': [
+          { 'label': 'Giemen', 'value': 'giemen'},
+          { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
+          { 'label': 'Pfeifen', 'value': 'pfeifen' },
+          { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
+          { 'label': 'Pfeifen', 'value': 'pfeifen' },
+          { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
+          { 'label': 'Pfeifen', 'value': 'pfeifen' },
+          { 'label': 'Brummen', 'value': 'brummen'},
+          { 'label': 'Pfeifen', 'value': 'pfeifen' },
+          { 'label': 'Stridor', 'value': 'stridor' }
+        ].map( item => {
+          item.selected = state == item.value
+          return item
+        })
+      }}></unit-choice>
+    </section>
 
     <h2>Signature</h2>
     <unit-md .state=${{ raw: unitChoice.signature, theme:"tomorrow" }}></unit-md>

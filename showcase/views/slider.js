@@ -26,6 +26,17 @@ export function slider() {
         }}></unit-slider>
       </section>
 
+      <h3>Range slider .dark</h3>
+      <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 20px; box-sizing: border-box">
+        <unit-slider class="dark" .state=${ {
+          id: "slider2",
+          min: "0",
+          max: "100",
+          step: "1",
+          value: "15",
+        }}></unit-slider>
+      </section>
+
       <h2>Signature</h2>
       <unit-md .state=${{ raw: unitSlider.signature, theme:"tomorrow" }}></unit-md>
 

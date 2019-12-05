@@ -43,21 +43,21 @@ export function dropdown() {
   ]
 
   const negative = [ {
-    "id": "one",
-    "value": "one",
-    "label": "Option one"
-  },
-  {
-    "id": "two",
-    "value": "two",
-    "label": "Option two"
-  },
-  {
-    "id": "three",
-    "value": "three",
-    "label": "Option three"
-  }
-]
+      "id": "one",
+      "value": "one",
+      "label": "Option one"
+    },
+    {
+      "id": "two",
+      "value": "two",
+      "label": "Option two"
+    },
+    {
+      "id": "three",
+      "value": "three",
+      "label": "Option three"
+    }
+  ]
 
   return html `
     <article hidden=false>
@@ -73,6 +73,17 @@ export function dropdown() {
           "value": "de",
           "name": "countries",
           "items": items.map(item => {
+            return { ...item }
+          })
+        }}></unit-dropdown>
+      </section>
+
+      <h3>Dropdown .dark</h3>
+      <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 20px; box-sizing: border-box; height: 300px">
+        <unit-dropdown class="dark" .state=${{
+          "placeholder": "Select option",
+          "name": "negative",
+          "items": negative.map(item => {
             return { ...item }
           })
         }}></unit-dropdown>

@@ -8,7 +8,6 @@ import { button } from './button'
 import { choice } from './choice'
 import { textarea } from './textarea'
 import { input } from './input'
-import { toggle } from './toggle'
 import { dropdown } from './dropdown'
 import { numbers } from './numbers'
 import { colors } from './colors'
@@ -40,8 +39,6 @@ export default function () {
         ? textarea(  ) :
         ( state.navigation == "input")
         ? input() :
-        ( state.navigation == "toggle")
-        ? toggle( ) :
         ( state.navigation == "dropdown")
         ? dropdown() :
         ( state.navigation == "numbers")

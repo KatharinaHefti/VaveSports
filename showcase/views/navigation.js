@@ -32,7 +32,6 @@ export function navigation() {
     { label: "unit-choice", value: "choice" },
     { label: "unit-textarea", value: "textarea" },
     { label: "unit-input", value: "input" },
-    { label: "unit-toggle", value: "toggle" },
     { label: "unit-dropdown", value: "dropdown" },
     { label: "unit-numbers", value: "numbers" },
     { label: "unit-link", value: "link" },

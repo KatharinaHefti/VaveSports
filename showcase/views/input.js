@@ -41,6 +41,24 @@ export function input() {
       }}></unit-input>
       <span>Baseline</span>
 
+      <h3>Unit-input with class dark</h3>
+      <section style="background-image: linear-gradient(#2B5779, #1C3659); padding-left: 20px; box-sizing: border-box; color: white">
+        <unit-input class="dark" id="dark" .state=${{
+          "value": state,
+          "label": "Name",
+          "type": "text",
+          "placeholder": "Placeholder"
+        }}></unit-input>
+        <unit-input id="dark-disabled" class="dark" .state=${{
+          "value": state.split( "" ).reverse().join( "" ),
+          "disabled": true,
+          "label": "Disabled",
+          "type": "text",
+          "placeholder": "Placeholder"
+        }}></unit-input>
+        <span>Baseline</span>
+      </section>
+
       <!-- <h3>Show Icons</h3>
       <unit-input id="4" .state=${{
         "value": state,
@@ -52,14 +70,14 @@ export function input() {
         "type": "text"
       }}></unit-input> -->
 
-      <h2>Number inputs</h2>
+      <!-- <h2>Number inputs</h2>
       <h3>Date input</h3>
       <unit-input id="1" .state=${{
         "value": state,
         "height": "2.5em",
         "font-size": "1em",
         "type": "date"
-      }}></unit-input>
+      }}></unit-input> -->
 
       <h2>Glass style</h2>
       <h3>Input</h3>
