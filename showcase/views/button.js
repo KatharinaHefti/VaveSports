@@ -70,7 +70,7 @@ export function button() {
         }}></unit-button>
       </section>
 
-      <section style="display:flex; background-color: #696969">
+      <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 5px; box-sizing: border-box;">
         <unit-button class="dark" .state=${{
           id: "link", href:"#", label: "This is a link-button", value: "link", className: "dark link"
         }}></unit-button>

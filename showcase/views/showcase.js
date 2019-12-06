@@ -72,7 +72,7 @@ export function showcase() {
     <p>“unit-textarea” will be used for long user inputs.</p>
     <section class=row>
       <section class=positive>
-      <unit-textarea id="1" spellcheck="true" placeholder="Placeholder" content="true"><!---->
+      <unit-textarea id="1" label="Textarea" spellcheck="true" placeholder="Placeholder" content="true"><!---->
         <section style="height: 190px;">
           <textarea autocomplete="off" autocorrect="off" autocapitalize="off" maxlength="100" spellcheck="true" style="font-size: 1.4rem; line-height: 1.4; height: 150px;"></textarea>
           <label class="badge"><!---->Label<!----></label>
@@ -81,7 +81,7 @@ export function showcase() {
       </unit-textarea>
       </section>
       <section class=negative>
-        <unit-textarea class="dark" id="5" placeholder="Placeholder" content="false"><!---->
+        <unit-textarea class="dark" id="5" label="Textarea" placeholder="Placeholder" content="false"><!---->
         <section>
           <textarea autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Placeholder" spellcheck="false" style="font-size: 1rem; line-height: 1.4; height: 112px;"></textarea>
           <label class="nobadge"><!---->You can also type here<!----></label>
