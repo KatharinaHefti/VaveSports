@@ -34,6 +34,7 @@ export function navigation() {
     { label: "unit-input", value: "input" },
     { label: "unit-dropdown", value: "dropdown" },
     { label: "unit-numbers", value: "numbers" },
+    { label: "unit-code", value: "code" },
     { label: "unit-link", value: "link" },
     { label: "unit-slider", value: "slider" },
     { label: "colors", value: "colors" }

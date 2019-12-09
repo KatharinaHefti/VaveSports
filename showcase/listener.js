@@ -32,3 +32,6 @@ if ( e.target.nodeName == "UNIT-LINK" ) {
 if ( e.target.nodeName == "UNIT-SLIDER" ) {
   store.dispatch( { type: "slider", data: e.detail.value } )
 }
+if ( e.target.nodeName == "UNIT-CODE" ) {
+  store.dispatch( { type: "code", data: e.detail.value } )
+}

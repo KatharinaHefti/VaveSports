@@ -14,6 +14,7 @@ import { colors } from './colors'
 import { fonts } from './fonts'
 import { link } from './link'
 import { slider } from './slider'
+import { code } from './code'
 
 export default function () {
 
@@ -51,6 +52,8 @@ export default function () {
         ? link( ) :
         ( state.navigation == "slider")
         ? slider( ) :
+        ( state.navigation == "code")
+        ? code( ) :
         ''
       }
     </main>
