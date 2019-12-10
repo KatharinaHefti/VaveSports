@@ -9,18 +9,18 @@ export function showcase() {
   // textarea
   // const state = store.getState().textarea || ""
   const state = store.getState().choice
-
-  const state1 = { "value": "value", label: "Label", spellcheck: true, "chars": 100, "font-size": "1.4rem" }
-  const state2 = { "value": "value", label: "You can also type here", badge: false }
-  const state3 = { "value": "value", disabled: true, label: "Mirror above area" }
-  const state4 = { "value": `Erste Zeil\nEin Satz zum Teilselektieren`, readonly: true }
+  //
+  // const state1 = { "value": "value", label: "Label", spellcheck: true, "chars": 100, "font-size": "1.4rem" }
+  // const state2 = { "value": "value", label: "You can also type here", badge: false }
+  // const state3 = { "value": "value", disabled: true, label: "Mirror above area" }
+  // const state4 = { "value": `Erste Zeil\nEin Satz zum Teilselektieren`, readonly: true }
 
   return html `
   <article class=showcase>
     <h1>Inventory</h1>
 
 <!-- links-->
-    <p>“Unit-link” will be used in the Darktheme only for example the Footer. Multiple links are divided by an interpunct with 1em margin.</p>
+    <p>“Unit-link” will be used in the dark theme only, for example the footer. Multiple links are divided by an interpunct with 1em margin.</p>
     <section class=row>
       <section class=empty>
       </section>
@@ -48,7 +48,7 @@ export function showcase() {
     </section>
 
 <!-- input-->
-    <p>“unit-input” for all user input.</p>
+    <p>“Unit-input” for all user input.</p>
     <section class=row>
       <section class=positive>
         <unit-input id="2" value="" label="Name" type="text" placeholder="Placeholder" content="false"><!---->
@@ -69,7 +69,7 @@ export function showcase() {
     </section>
 
 <!-- text-area -->
-    <p>“unit-textarea” will be used for long user inputs.</p>
+    <p>“Unit-textarea” will be used for long user inputs.</p>
     <section class=row>
       <section class=positive>
       <unit-textarea id="1" label="Textarea" spellcheck="true" placeholder="Placeholder" content="true"><!---->
@@ -91,126 +91,91 @@ export function showcase() {
     </section>
 
 <!-- choice -->
-    <p>“unit-choice” will be used to single select.</p>
+    <p>“Unit-choice” will be used to single select.</p>
     <section class=row>
       <section class=positive>
-        <unit-choice id="symptom"><!---->
-          <section style="font-size: 1.1rem; flex-wrap: nowrap;">
-          <div class="item" data-value="giemen" style="width: 100px;">
-            <span class="main"><!---->A<!----></span>
-          </div>
-          <div class="item" data-value="brummen" style="width: 100px;">
-            <span class="main"><!---->B<!----></span>
-          </div>
-          <div class="item" data-value="pfeifen" style="width: 100px;">
-            <span class="main"><!---->C<!----></span>
-          </div>
-          <div class="item" data-value="stridor" style="width: 100px;">
-            <span class="main"><!---->D<!----></span>
-          </div>
-        </section>
-        </unit-choice>
+        <unit-choice .state=${{
+          "id": "symptom",
+          "item-width": "100px",
+          'items': [
+            { 'label': 'A', 'value': 'a' },
+            { 'label': 'B', 'value': 'b' },
+            { 'label': 'C', 'value': 'c' },
+            { 'label': 'D', 'value': 'd' }
+          ].map( item => {
+            item.selected = state == item.value
+            return item
+          })
+        }}></unit-choice>
       </section>
         <section class=negative>
-        <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 10px; box-sizing: border-box">
-        <unit-choice class="dark" id="symptom"><!---->
-          <section style="font-size: 1.1rem; flex-wrap: nowrap;">
-            <div class="item" data-value="giemen" style="width: 100px;">
-              <span class="main"><!---->A<!----></span>
-            </div>
-            <div class="item" data-value="brummen" style="width: 100px;">
-              <span class="main"><!---->B<!----></span>
-            </div>
-            <div class="item" data-value="pfeifen" style="width: 100px;">
-              <span class="main"><!---->C<!----></span>
-            </div>
-            <div class="item" data-value="stridor" style="width: 100px;">
-              <span class="main"><!---->D<!----></span>
-            </div>
-      </section><!----></unit-choice>
-    </section>
+          <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 10px; box-sizing: border-box">
+            <unit-choice class="dark" .state=${{
+              "id": "symptom",
+              "item-width": "100px",
+              'items': [
+                { 'label': 'A', 'value': 'a' },
+                { 'label': 'B', 'value': 'b' },
+                { 'label': 'C', 'value': 'c' },
+                { 'label': 'D', 'value': 'd' }
+              ].map( item => {
+                item.selected = state == item.value
+                return item
+              })
+            }}></unit-choice>
+        </section>
       </section>
     </section>
 
-    <p>“unit choice” will be used as multiselect.</p>
+    <p>“Unit-choice” with class “multiselect” will be used as multiselect.</p>
     <section class=row>
       <section class=positive>
-      <unit-choice class="multiselect" id="symptom"><!---->
-      <section multi="" style="font-size: 1.1rem; flex-wrap: wrap;">
-            <div class="item" data-value="giemen" style="">
-              <span class="main"><!---->Option A<!----></span>
-            </div>
-            <div class="item" data-value="brummen" style="">
-              <span class="main"><!---->Option B<!----></span>
-            </div>
-            <div class="item" data-value="pfeifen" style="">
-              <span class="main"><!---->Option C<!----></span>
-            </div>
-            <div class="item" data-value="brummen" style="">
-              <span class="main"><!---->Option D<!----></span>
-            </div>
-            <div class="item" data-value="pfeifen" style="">
-              <span class="main"><!---->Option E<!----></span>
-            </div>
-            <div class="item" data-value="brummen" style="">
-              <span class="main"><!---->Option F<!----></span>
-            </div>
-            <div class="item" data-value="pfeifen" style="">
-              <span class="main"><!---->Option G<!----></span>
-            </div>
-            <div class="item" data-value="brummen" style="">
-              <span class="main"><!---->Option H<!----></span>
-            </div>
-            <div class="item" data-value="pfeifen" style="">
-              <span class="main"><!---->Option I<!----></span>
-            </div>
-            <div class="item" data-value="stridor" style="">
-              <span class="main"><!---->Option J<!----></span>
-            </div>
-      </section><!----></unit-choice>
+        <unit-choice class="multiselect" .state=${{
+          "id": "symptom",
+          "multi": true,
+          'items': [
+            { 'label': 'Giemen', 'value': 'giemen'},
+            { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
+            { 'label': 'Pfeifen', 'value': 'pfeifen' },
+            { 'label': 'Auskultation der Lunge', 'value': 'auskultation'},
+            { 'label': 'Pfeifen', 'value': 'pfeifen' },
+            { 'label': 'Auskultation der Lunge', 'value': 'auskultation'},
+            { 'label': 'Pfeifen', 'value': 'pfeifen' },
+            { 'label': 'Brummen', 'value': 'brummen'},
+            { 'label': 'Pfeifen', 'value': 'pfeifen' },
+            { 'label': 'Stridor', 'value': 'stridor' }
+          ].map( item => {
+            item.selected = state == item.value
+            return item
+          })
+        }}></unit-choice>
       </section>
 
       <section class=negative>
-      <section style="background-image: linear-gradient(#2B5779, #1C3659)">
-            <unit-choice class="multiselect dark" id="symptom"><!---->
-            <section multi="" style="font-size: 1.1rem; flex-wrap: wrap;">
-                  <div class="item" data-value="giemen" style="">
-                    <span class="main"><!---->Option A<!----></span>
-                  </div>
-                  <div class="item" data-value="brummen" style="" selected="">
-                    <span class="main"><!---->Option B<!----></span>
-                  </div>
-                  <div class="item" data-value="pfeifen" style="">
-                    <span class="main"><!---->Option C<!----></span>
-                  </div>
-                  <div class="item" data-value="brummen" style="" selected="">
-                    <span class="main"><!---->Option D<!----></span>
-                  </div>
-                  <div class="item" data-value="pfeifen" style="">
-                    <span class="main"><!---->Option E<!----></span>
-                  </div>
-                  <div class="item" data-value="brummen" style="" selected="">
-                    <span class="main"><!---->Option F<!----></span>
-                  </div>
-                  <div class="item" data-value="pfeifen" style="">
-                    <span class="main"><!---->Option G<!----></span>
-                  </div>
-                  <div class="item" data-value="brummen" style="" selected="">
-                    <span class="main"><!---->Option H<!----></span>
-                  </div>
-                  <div class="item" data-value="pfeifen" style="">
-                    <span class="main"><!---->Option I<!----></span>
-                  </div>
-                  <div class="item" data-value="stridor" style="">
-                    <span class="main"><!---->Option J<!----></span>
-                  </div>
-            </section><!----></unit-choice>
-          </section>
+          <unit-choice class="multiselect dark" .state=${{
+            "id": "symptom",
+            "multi": true,
+            'items': [
+              { 'label': 'Giemen', 'value': 'giemen'},
+              { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
+              { 'label': 'Pfeifen', 'value': 'pfeifen' },
+              { 'label': 'Auskultation der Lunge', 'value': 'auskultation'},
+              { 'label': 'Pfeifen', 'value': 'pfeifen' },
+              { 'label': 'Auskultation der Lunge', 'value': 'auskultation'},
+              { 'label': 'Pfeifen', 'value': 'pfeifen' },
+              { 'label': 'Brummen', 'value': 'brummen'},
+              { 'label': 'Pfeifen', 'value': 'pfeifen' },
+              { 'label': 'Stridor', 'value': 'stridor' }
+            ].map( item => {
+              item.selected = state == item.value
+              return item
+            })
+          }}></unit-choice>
       </section>
     </section>
 
 <!-- buttons -->
-    <p>Cancel or Confirm “Buttons” appear after a user input.</p>
+    <p>Cancel or confirm “buttons” appear after a user input.</p>
     <section class=row>
       <section class=positive>
       <unit-button .state=${{
@@ -236,7 +201,7 @@ export function showcase() {
     </div>
 
 <!-- modal -->
-<p>“Modal windows will appear to show more information like the contact page.</p>
+<p>“Modal windows” will appear to show more information like the contact page.</p>
 <div class="Modal">
   <div>
     <h3 class="Lora">Kontakt</h3>
@@ -251,16 +216,16 @@ export function showcase() {
 </div>
 
 <!-- gradient -->
-    <p>The Gradient will be used in the “Dialog”.</p>
+    <p>The gradient will be used in the “dialog”.</p>
     <div class="Gradient"></div>
-    <p>The Footer also have a Gradient with the same colors, but a bigger percentage of navy</p>
+    <p>The footer also have a gradient with the same colors, but a bigger percentage of navy</p>
     <div class="Gradient-Footer"></div>
     <div class="Solid-Footer"></div>
 
 <!-- colors -->
-    <p>This is our “Color Palette”.
+    <p>This is our “color palette”.
     <br>Don't use navy, steel or smoke in negative layouts because of low contrast.
-    <br>You also can see what font color to use on what Hue for best Accessibility.
+    <br>You also can see what font color to use on what hue for best accessibility.
     </p>
     <section class=row>
       <section class=positive>
