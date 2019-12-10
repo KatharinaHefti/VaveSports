@@ -189,6 +189,81 @@ export function showcase() {
       </section>
     </section>
 
+<!-- code -->
+    <p>"Unit-code" will be used for SMS codes or telephone numbers, for example.</p>
+    <section class=row>
+      <section class=positive>
+        <unit-code pattern="____"></unit-code>
+      </section>
+      <section class=negative>
+        <unit-code class="dark" pattern="____"></unit-code>
+      </section>
+    </section>
+
+<!-- slider -->
+    <p>"Unit-slider"</p>
+    <section class=row>
+      <section class=positive>
+        <unit-slider id="slider1" min="0" max="100" step="1" value="45"></unit-slider>
+      </section>
+      <section class=negative>
+        <unit-slider class="dark" id="slider2" min="0" max="100" step="1" value="73"></unit-slider>
+      </section>
+    </section>
+
+<!-- dropdown -->
+    <p>"Unit-dropdown"</p>
+    <section class=row>
+      <section class=positive>
+        <unit-dropdown .state=${{
+          "placeholder": "Select option",
+          "name": "options",
+          "items": [ {
+              "id": "one",
+              "value": "one",
+              "label": "Option one"
+            },
+            {
+              "id": "two",
+              "value": "two",
+              "label": "Option two"
+            },
+            {
+              "id": "three",
+              "value": "three",
+              "label": "Option three"
+            }
+          ].map(item => {
+            return { ...item }
+          })
+        }}></unit-dropdown>
+      </section>
+      <section class=negative>
+        <unit-dropdown class="dark" .state=${{
+          "placeholder": "Select option",
+          "name": "options-two",
+          "items": [ {
+              "id": "one",
+              "value": "one",
+              "label": "Option one"
+            },
+            {
+              "id": "two",
+              "value": "two",
+              "label": "Option two"
+            },
+            {
+              "id": "three",
+              "value": "three",
+              "label": "Option three"
+            }
+          ].map(item => {
+            return { ...item }
+          })
+        }}></unit-dropdown>
+      </section>
+    </section>
+
 <!-- Cards -->
     <p>“Cards” will be used only in the white theme to store all information in it. Links will be seperated by a line at the very bottom of each card.</p>
     <div class="Card">

@@ -35,3 +35,6 @@ if ( e.target.nodeName == "UNIT-SLIDER" ) {
 if ( e.target.nodeName == "UNIT-CODE" ) {
   store.dispatch( { type: "code", data: e.detail.value } )
 }
+if ( e.target.nodeName == "UNIT-DATE" ) {
+  store.dispatch( { type: "date", data: e.detail.value } )
+}

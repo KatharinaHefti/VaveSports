@@ -15,6 +15,7 @@ import { fonts } from './fonts'
 import { link } from './link'
 import { slider } from './slider'
 import { code } from './code'
+import { date } from './date'
 
 export default function () {
 
@@ -54,6 +55,8 @@ export default function () {
         ? slider( ) :
         ( state.navigation == "code")
         ? code( ) :
+        ( state.navigation == "date")
+        ? date( ) :
         ''
       }
     </main>

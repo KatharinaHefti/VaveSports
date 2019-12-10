@@ -22,7 +22,7 @@ export function slider() {
           min: "0",
           max: "100",
           step: "1",
-          value: "73",
+          value: "73"
         }}></unit-slider>
       </section>
 
@@ -33,7 +33,7 @@ export function slider() {
           min: "0",
           max: "100",
           step: "1",
-          value: "15",
+          value: "15"
         }}></unit-slider>
       </section>
 

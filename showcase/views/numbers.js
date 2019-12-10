@@ -18,35 +18,46 @@ export function numbers() {
       <h2>Examples</h2>
       <p>Inputs for number values.</p>
       <section style="padding-top:15px">
-        <unit-numbers pattern="__" .state=${{
+        <unit-numbers .state=${{
           "id": "numbers1",
           "label": "Atemfrequenz",
           "placeholder": "00"
         }}></unit-numbers>
       </section>
       <section style="padding-top:15px">
-        <unit-numbers pattern="___" .state=${{
+        <unit-numbers .state=${{
           "id": "numbers2",
           "label": "Herzfrequenz",
           "placeholder": "000"
         }}></unit-numbers>
       </section>
       <section style="padding-top:15px">
-        <unit-numbers pattern="__._" .state=${{
+        <unit-numbers .state=${{
           "id": "numbers3",
           "label": "Temperatur",
           "placeholder": "00.0",
           "min": "36.5",
-          "max": "43"
+          "max": "43",
+          "step": "0.1"
         }}></unit-numbers>
       </section>
       <section style="padding-top:15px">
-        <unit-numbers pattern="____.__" .state=${{
+        <unit-numbers .state=${{
           "id": "numbers4",
           "label": "Systolischer Blutdruck",
           "placeholder": "0000.00"
         }}></unit-numbers>
       </section>
+
+      <!-- <h3>Date input</h3>
+      <section style="padding-top:15px">
+        <unit-numbers .state=${{
+          "id": "date",
+          "label": "Datum",
+          "placeholder": "dd.mm.yyyy",
+          "type": "date"
+        }}></unit-numbers>
+      </section> -->
 
       <h3>Dark theme</h3>
       <i>Add class "dark" to unit-numbers.</i>
@@ -57,7 +68,7 @@ export function numbers() {
           "label": "Nummer",
           "placeholder": "Placeholder"
         }}></unit-numbers>
-        <unit-numbers class="dark" id="dark" .state=${{
+        <unit-numbers class="dark" id="darktwo" .state=${{
           "label": "Nummer",
           "placeholder": "000.00",
           "disabled": true

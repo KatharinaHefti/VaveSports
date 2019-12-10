@@ -58,6 +58,10 @@ article.showcase .ColorBoxNoGo {
   color: white;
 }
 
+article.showcase unit-dropdown .dropdown {
+  width: 300px;
+}
+
 unit-choice.prodigy section {
   background: none !important;
 }
