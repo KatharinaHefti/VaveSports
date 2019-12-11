@@ -36,7 +36,7 @@ export function numbers() {
           "id": "numbers3",
           "label": "Temperatur",
           "placeholder": "00.0",
-          "min": "36.5",
+          "min": "35.5",
           "max": "43",
           "step": "0.1"
         }}></unit-numbers>
