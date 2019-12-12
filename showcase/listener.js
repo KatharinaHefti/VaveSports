@@ -38,3 +38,6 @@ if ( e.target.nodeName == "UNIT-CODE" ) {
 if ( e.target.nodeName == "UNIT-DATE" ) {
   store.dispatch( { type: "date", data: e.detail.value } )
 }
+if ( e.target.nodeName == "UNIT-MULTI" ) {
+  store.dispatch( { type: "multi", data: e.detail.value } )
+}

@@ -21,23 +21,29 @@ export function numbers() {
         <unit-numbers .state=${{
           "id": "numbers1",
           "label": "Atemfrequenz",
-          "placeholder": "00"
+          "placeholder": "0",
+          "min": "10",
+          "max": "30",
+          "step": "1"
         }}></unit-numbers>
       </section>
       <section style="padding-top:15px">
         <unit-numbers .state=${{
           "id": "numbers2",
           "label": "Herzfrequenz",
-          "placeholder": "000"
+          "placeholder": "0",
+          "min": "40",
+          "max": "130",
+          "step": "1"
         }}></unit-numbers>
       </section>
       <section style="padding-top:15px">
         <unit-numbers .state=${{
           "id": "numbers3",
           "label": "Temperatur",
-          "placeholder": "00.0",
-          "min": "35.5",
-          "max": "43",
+          "placeholder": "0",
+          "min": "35",
+          "max": "45",
           "step": "0.1"
         }}></unit-numbers>
       </section>
@@ -45,19 +51,12 @@ export function numbers() {
         <unit-numbers .state=${{
           "id": "numbers4",
           "label": "Systolischer Blutdruck",
-          "placeholder": "0000.00"
+          "placeholder": "0",
+          "min": "80",
+          "max": "120",
+          "step": "10"
         }}></unit-numbers>
       </section>
-
-      <!-- <h3>Date input</h3>
-      <section style="padding-top:15px">
-        <unit-numbers .state=${{
-          "id": "date",
-          "label": "Datum",
-          "placeholder": "dd.mm.yyyy",
-          "type": "date"
-        }}></unit-numbers>
-      </section> -->
 
       <h3>Dark theme</h3>
       <i>Add class "dark" to unit-numbers.</i>
@@ -66,30 +65,18 @@ export function numbers() {
         <unit-numbers class="dark" id="dark" .state=${{
           "value": "12.3",
           "label": "Nummer",
-          "placeholder": "Placeholder"
+          "placeholder": "0",
+          "min": "10",
+          "max": "20",
+          "step": "0.1"
         }}></unit-numbers>
         <unit-numbers class="dark" id="darktwo" .state=${{
           "label": "Nummer",
-          "placeholder": "000.00",
+          "placeholder": "0",
           "disabled": true
         }}></unit-numbers>
         <span>Baseline</span>
       </section>
-
-      <!-- <h2>Glass style</h2>
-      <p>Add class ".glass" to element in order for the styles to be applied.</p>
-      <section style="padding-top:15px">
-        <span>Systolischer Blutdruck: </span>
-        <unit-numbers pattern="____.__" class="glass" .state=${{
-          "id": "numbers5"
-        }}></unit-numbers>
-      </section>
-      <section style="padding-top:15px">
-        <span>Telefonnummer: </span>
-        <unit-numbers pattern="___-___-__-__" class="glass" .state=${{
-          "id": "numbers6"
-        }}></unit-numbers>
-      </section> -->
 
       <h2>Signature</h2>
       <unit-md .state=${{ raw: unitNumbers.signature, theme:"tomorrow" }}></unit-md>

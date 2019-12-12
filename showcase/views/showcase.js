@@ -6,14 +6,7 @@ import 'view-base/unit-link'
 
 export function showcase() {
 
-  // textarea
-  // const state = store.getState().textarea || ""
-  const state = store.getState().choice
-  //
-  // const state1 = { "value": "value", label: "Label", spellcheck: true, "chars": 100, "font-size": "1.4rem" }
-  // const state2 = { "value": "value", label: "You can also type here", badge: false }
-  // const state3 = { "value": "value", disabled: true, label: "Mirror above area" }
-  // const state4 = { "value": `Erste Zeil\nEin Satz zum Teilselektieren`, readonly: true }
+  const state = store.getState()
 
   return html `
   <article class=showcase>
@@ -109,7 +102,7 @@ export function showcase() {
         }}></unit-choice>
       </section>
         <section class=negative>
-          <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 10px; box-sizing: border-box">
+          <section>
             <unit-choice class="dark" .state=${{
               "id": "symptom",
               "item-width": "100px",
@@ -127,50 +120,50 @@ export function showcase() {
       </section>
     </section>
 
-    <p>“Unit-choice” with class “multiselect” will be used as multiselect.</p>
+    <p>“Unit-multi" will be used as multiselect.</p>
     <section class=row>
       <section class=positive>
-        <unit-choice class="multiselect" .state=${{
+        <unit-multi .state=${{
           "id": "symptom",
-          "multi": true,
-          'items': [
-            { 'label': 'Giemen', 'value': 'giemen'},
-            { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
-            { 'label': 'Pfeifen', 'value': 'pfeifen' },
-            { 'label': 'Auskultation der Lunge', 'value': 'auskultation'},
-            { 'label': 'Pfeifen', 'value': 'pfeifen' },
-            { 'label': 'Auskultation der Lunge', 'value': 'auskultation'},
-            { 'label': 'Pfeifen', 'value': 'pfeifen' },
-            { 'label': 'Brummen', 'value': 'brummen'},
-            { 'label': 'Pfeifen', 'value': 'pfeifen' },
-            { 'label': 'Stridor', 'value': 'stridor' }
+          "width": "150px",
+          "items": [
+            { "label": "Giemen", "value": "giemen"},
+            { "label": "Auskultation der Lunge", "value": "auskult"},
+            { "label": "Pfeifen", "value": "pfeifen" },
+            { "label": "Auskultation der Lunge", "value": "auskult"},
+            { "label": "Pfeifen", "value": "pfeifen" },
+            { "label": "Brummen", "value": "brummen"},
+            { "label": "Pfeifen", "value": "pfeifen" },
+            { "label": "Brummen", "value": "brummen"},
+            { "label": "Pfeifen", "value": "pfeifen" },
+            { "label": "Stridor", "value": "stridor" }
           ].map( item => {
             item.selected = state == item.value
             return item
           })
-        }}></unit-choice>
+        }}></unit-multi>
       </section>
 
       <section class=negative>
-          <unit-choice class="multiselect dark" .state=${{
-            "id": "symptom",
-            "multi": true,
-            'items': [
-              { 'label': 'Giemen', 'value': 'giemen'},
-              { 'label': 'Auskultation der Lunge', 'value': 'brummen'},
-              { 'label': 'Pfeifen', 'value': 'pfeifen' },
-              { 'label': 'Auskultation der Lunge', 'value': 'auskultation'},
-              { 'label': 'Pfeifen', 'value': 'pfeifen' },
-              { 'label': 'Auskultation der Lunge', 'value': 'auskultation'},
-              { 'label': 'Pfeifen', 'value': 'pfeifen' },
-              { 'label': 'Brummen', 'value': 'brummen'},
-              { 'label': 'Pfeifen', 'value': 'pfeifen' },
-              { 'label': 'Stridor', 'value': 'stridor' }
-            ].map( item => {
-              item.selected = state == item.value
-              return item
-            })
-          }}></unit-choice>
+        <unit-multi class="dark" .state=${{
+          "id": "symptom",
+          "width": "150px",
+          "items": [
+            { "label": "Giemen", "value": "giemen"},
+            { "label": "Auskultation der Lunge", "value": "auskult"},
+            { "label": "Pfeifen", "value": "pfeifen" },
+            { "label": "Auskultation der Lunge", "value": "auskult"},
+            { "label": "Pfeifen", "value": "pfeifen" },
+            { "label": "Brummen", "value": "brummen"},
+            { "label": "Pfeifen", "value": "pfeifen" },
+            { "label": "Brummen", "value": "brummen"},
+            { "label": "Pfeifen", "value": "pfeifen" },
+            { "label": "Stridor", "value": "stridor" }
+          ].map( item => {
+            item.selected = state == item.value
+            return item
+          })
+        }}></unit-multi>
       </section>
     </section>
 
@@ -241,20 +234,20 @@ export function showcase() {
       <section class=negative>
         <unit-dropdown class="dark" .state=${{
           "placeholder": "Select option",
-          "name": "options-two",
+          "name": "optionsdark",
           "items": [ {
-              "id": "one",
-              "value": "one",
+              "id": "eins",
+              "value": "1",
               "label": "Option one"
             },
             {
-              "id": "two",
-              "value": "two",
+              "id": "zwei",
+              "value": "2",
               "label": "Option two"
             },
             {
-              "id": "three",
-              "value": "three",
+              "id": "drei",
+              "value": "3",
               "label": "Option three"
             }
           ].map(item => {

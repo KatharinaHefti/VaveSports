@@ -30,6 +30,7 @@ export function navigation() {
     { label: "unit-md", value: "md" },
     { label: "unit-button", value: "button" },
     { label: "unit-choice", value: "choice" },
+    { label: "unit-multi", value: "multi" },
     { label: "unit-textarea", value: "textarea" },
     { label: "unit-input", value: "input" },
     { label: "unit-dropdown", value: "dropdown" },

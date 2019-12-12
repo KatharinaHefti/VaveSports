@@ -83,6 +83,7 @@ export function dropdown() {
         <unit-dropdown class="dark" .state=${{
           "placeholder": "Select option",
           "name": "negative",
+          "background-color": "#234668",
           "items": negative.map(item => {
             return { ...item }
           })
