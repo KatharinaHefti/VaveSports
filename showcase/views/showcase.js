@@ -197,10 +197,10 @@ export function showcase() {
     <p>"Unit-slider"</p>
     <section class=row>
       <section class=positive>
-        <unit-slider id="slider1" min="0" max="10" step="5" value="45"></unit-slider>
+        <unit-slider id="slider1" min="0" max="10" step="5" value="5"></unit-slider>
       </section>
       <section class=negative>
-        <unit-slider class="dark" id="slider2" min="0" max="10000" step="100" value="73"></unit-slider>
+        <unit-slider class="dark" id="slider2" min="0" max="10000" step="100" value="700"></unit-slider>
       </section>
     </section>
 
