@@ -281,12 +281,17 @@ export function showcase() {
   <svg class="Icon-Close" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11"><defs><style>.cls-1{fill:#707070;}</style></defs><title>close</title><path class="cls-1" d="M512.72,727l4.65-4.65a.5.5,0,0,0-.71-.71L512,726.32l-4.64-4.65a.51.51,0,0,0-.71,0,.5.5,0,0,0,0,.71l4.65,4.65-4.65,4.64a.5.5,0,0,0,0,.71.5.5,0,0,0,.35.15.51.51,0,0,0,.36-.15l4.64-4.65,4.65,4.65a.49.49,0,0,0,.35.15.51.51,0,0,0,.36-.15.51.51,0,0,0,0-.71Z" transform="translate(-506.51 -721.53)"/></svg>
 </div>
 
-<!-- gradient -->
+<!-- gradient clinic -->
     <p>The gradient will be used in the “dialog”.</p>
-    <div class="Gradient"></div>
+    <div class="clinic-gradient"></div>
     <p>The footer also have a gradient with the same colors, but a bigger percentage of navy</p>
-    <div class="Gradient-Footer"></div>
-    <div class="Solid-Footer"></div>
+    <div class="clinic-gradient-footer"></div>
+
+<!-- gradient status -->
+<p>This gradient will be used for the “status”.</p>
+<div class="status-gradient"></div>
+<p>The footer also have a gradient with the same colors, but a bigger percentage of pine</p>
+<div class="status-gradient-footer"></div>
 
 <!-- colors -->
     <p>This is our “color palette”.
@@ -295,34 +300,38 @@ export function showcase() {
     </p>
     <section class=row>
       <section class=positive>
-        <div class="ColorBox" style="background-color:#1C3659;">navy #1C3659</div>
-        <div class="ColorBox" style="background-color:#2B5779;">steel #2B5779</div>
-        <div class="ColorBox" style="background-color:#6CBCFF; color: black;">sky #6CBCFF</div>
-        <div class="ColorBox" style="background-color:#9DF6FA; color: black;">ice #9DF6FA</div>
-        <div class="ColorBox" style="background-color:#3EB147; color: black;">kelly #3EB147</div>
-        <div class="ColorBox" style="background-color:#FFCB4E; color: black;">sun #FFCB4E</div>
-        <div class="ColorBox" style="background-color:#FE8374; color: black;">coral #FE8374</div>
-        <div class="ColorBox" style="background-color:#8C51ED;">lavender #8C51ED</div>
-        <div class="ColorBox" style="background-color:#F7679E; color: black;">flamingo #F7679E</div>
-        <div class="ColorBox" style="background-color:#696969;">smoke #696969</div>
-        <div class="ColorBox" style="background-color:#B5B5B5; color: black;">silver #B5B5B5</div>
-        <div class="ColorBoxNoGo" style="background-color:#F8F8FF; color: black;">ghost #F8F8FF</div>
-        <div class="ColorBox" style="background-color:#EEEAEF; color: black;">snow #EEEAEF</div>
+        <div class="color-box" style="background-color:#1C3659;">navy #1C3659</div>
+        <div class="color-box" style="background-color:#2B5779;">steel #2B5779</div>
+        <div class="color-box" style="background-color:#6CBCFF; color: black;">sky #6CBCFF</div>
+        <div class="color-box" style="background-color:#9DF6FA; color: black;">ice #9DF6FA</div>
+        <div class="color-box" style="background-color:#62c3b7; color: black;">doctor #62c3b7</div>
+        <div class="color-box" style="background-color:#3f6f69; color: white;">pine #3f6f69</div>
+        <div class="color-box" style="background-color:#3EB147; color: black;">kelly #3EB147</div>
+        <div class="color-box" style="background-color:#FFCB4E; color: black;">sun #FFCB4E</div>
+        <div class="color-box" style="background-color:#FE8374; color: black;">coral #FE8374</div>
+        <div class="color-box" style="background-color:#8C51ED;">lavender #8C51ED</div>
+        <div class="color-box" style="background-color:#F7679E; color: black;">flamingo #F7679E</div>
+        <div class="color-box" style="background-color:#606066;">smoke #606066</div>
+        <div class="color-box" style="background-color:#b5b5bc; color: black;">silver #b5b5bc</div>
+        <div class="color-box" style="background-color:#d9d9dd; color: black;">snow #d9d9dd</div>
+        <div class="color-box-nogo" style="background-color:#F8F8FF; color: black;">ghost #F8F8FF</div>
       </section>
       <section class=negative>
-        <div class="ColorBoxNoGo" style="background-color:#1C3659;">navy #1C3659</div>
-        <div class="ColorBoxNoGo" style="background-color:#2B5779;">steel #2B5779</div>
-        <div class="ColorBox" style="background-color:#6CBCFF; color: black;">sky #6CBCFF</div>
-        <div class="ColorBox" style="background-color:#9DF6FA; color: black;">ice #9DF6FA</div>
-        <div class="ColorBox" style="background-color:#3EB147; color: black;">kelly #3EB147</div>
-        <div class="ColorBox" style="background-color:#FFCB4E; color: black;">sun #FFCB4E</div>
-        <div class="ColorBox" style="background-color:#FE8374; color: black;">coral #FE8374</div>
-        <div class="ColorBox" style="background-color:#8C51ED;">lavender #8C51ED</div>
-        <div class="ColorBox" style="background-color:#F7679E; color: black;">flamingo #F7679E</div>
-        <div class="ColorBoxNoGo" style="background-color:#696969;">smoke #696969</div>
-        <div class="ColorBox" style="background-color:#B5B5B5; color: black;">silver #B5B5B5</div>
-        <div class="ColorBox" style="background-color:#F8F8FF; color: black;">ghost #F8F8FF</div>
-        <div class="ColorBox" style="background-color:#EEEAEF; color: black;">snow #EEEAEF</div>
+        <div class="color-box-nogo" style="background-color:#1C3659;">navy #1C3659</div>
+        <div class="color-box-nogo" style="background-color:#2B5779;">steel #2B5779</div>
+        <div class="color-box" style="background-color:#6CBCFF; color: black;">sky #6CBCFF</div>
+        <div class="color-box" style="background-color:#9DF6FA; color: black;">ice #9DF6FA</div>
+        <div class="color-box" style="background-color:#62c3b7; color: black;">doctor #62c3b7</div>
+        <div class="color-box-nogo" style="background-color:#3f6f69; color: white;">pine #3f6f69</div>
+        <div class="color-box" style="background-color:#3EB147; color: black;">kelly #3EB147</div>
+        <div class="color-box" style="background-color:#FFCB4E; color: black;">sun #FFCB4E</div>
+        <div class="color-box" style="background-color:#FE8374; color: black;">coral #FE8374</div>
+        <div class="color-box" style="background-color:#8C51ED;">lavender #8C51ED</div>
+        <div class="color-box" style="background-color:#F7679E; color: black;">flamingo #F7679E</div>
+        <div class="color-box-nogo" style="background-color:#606066;">smoke #606066</div>
+        <div class="color-box" style="background-color:#b5b5bc; color: black;">silver #b5b5bc</div>
+        <div class="color-box" style="background-color:#d9d9dd; color: black;">snow #d9d9dd</div>
+        <div class="color-box" style="background-color:#F8F8FF; color: black;">ghost #F8F8FF</div>
       </section>
     </section>
   </article>

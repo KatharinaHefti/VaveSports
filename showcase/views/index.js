@@ -17,6 +17,7 @@ import { slider } from './slider'
 import { code } from './code'
 import { date } from './date'
 import { multi } from './multi'
+import { animations } from './animations'
 
 export default function () {
 
@@ -60,6 +61,8 @@ export default function () {
         ? date( ) :
         ( state.navigation == "multi")
         ? multi( ) :
+        ( state.navigation == "animations")
+        ? animations( ) :
         ''
       }
     </main>
