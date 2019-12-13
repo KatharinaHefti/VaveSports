@@ -1,8 +1,8 @@
-import './showcase.css'
-import { html } from 'lit-html'
-import store from '../data-store'
-import 'view-base/type-poster'
-import 'view-base/unit-link'
+import "./showcase.css"
+import { html } from "lit-html"
+import store from "../data-store"
+import "view-base/type-poster"
+import "view-base/unit-link"
 
 export function showcase() {
 
@@ -65,7 +65,7 @@ export function showcase() {
     <p>“Unit-textarea” will be used for long user inputs.</p>
     <section class=row>
       <section class=positive>
-      <unit-textarea id="1" label="Textarea" spellcheck="true" placeholder="Placeholder" content="true"><!---->
+      <unit-textarea value="value" id="1" label="Textarea" spellcheck="true" placeholder="Placeholder" content="true"><!---->
         <section style="height: 190px;">
           <textarea autocomplete="off" autocorrect="off" autocapitalize="off" maxlength="100" spellcheck="true" style="font-size: 1.4rem; line-height: 1.4; height: 150px;"></textarea>
           <label class="badge"><!---->Label<!----></label>
@@ -74,7 +74,7 @@ export function showcase() {
       </unit-textarea>
       </section>
       <section class=negative>
-        <unit-textarea class="dark" id="5" label="Textarea" placeholder="Placeholder" content="false"><!---->
+        <unit-textarea value="value" class="dark" id="5" label="Textarea" placeholder="Placeholder" content="false"><!---->
         <section>
           <textarea autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Placeholder" spellcheck="false" style="font-size: 1rem; line-height: 1.4; height: 112px;"></textarea>
           <label class="nobadge"><!---->You can also type here<!----></label>
@@ -89,12 +89,11 @@ export function showcase() {
       <section class=positive>
         <unit-choice .state=${{
           "id": "symptom",
-          "item-width": "100px",
-          'items': [
-            { 'label': 'A', 'value': 'a' },
-            { 'label': 'B', 'value': 'b' },
-            { 'label': 'C', 'value': 'c' },
-            { 'label': 'D', 'value': 'd' }
+          "width": "140px",
+          "items": [
+            { "label": "yes", "value": "a" },
+            { "label": "maybe", "value": "b" },
+            { "label": "no", "value": "c" }
           ].map( item => {
             item.selected = state == item.value
             return item
@@ -105,12 +104,11 @@ export function showcase() {
           <section>
             <unit-choice class="dark" .state=${{
               "id": "symptom",
-              "item-width": "100px",
-              'items': [
-                { 'label': 'A', 'value': 'a' },
-                { 'label': 'B', 'value': 'b' },
-                { 'label': 'C', 'value': 'c' },
-                { 'label': 'D', 'value': 'd' }
+              "width": "140px",
+              "items": [
+                { "label": "yes", "value": "a" },
+                { "label": "maybe", "value": "b" },
+                { "label": "no", "value": "c" }
               ].map( item => {
                 item.selected = state == item.value
                 return item
@@ -200,7 +198,7 @@ export function showcase() {
         <unit-slider id="slider1" min="0" max="10" step="5" value="5"></unit-slider>
       </section>
       <section class=negative>
-        <unit-slider class="dark" id="slider2" min="0" max="10000" step="100" value="700"></unit-slider>
+        <unit-slider class="dark" id="slider2" min="0" max="100" step="1" value="30"></unit-slider>
       </section>
     </section>
 
@@ -292,7 +290,7 @@ export function showcase() {
 
 <!-- colors -->
     <p>This is our “color palette”.
-    <br>Don't use navy, steel or smoke in negative layouts because of low contrast.
+    <br>Don"t use navy, steel or smoke in negative layouts because of low contrast.
     <br>You also can see what font color to use on what hue for best accessibility.
     </p>
     <section class=row>

@@ -32,32 +32,21 @@ export function button() {
 
       <h2>Examples</h2>
 
-      <h3>Default height will increment with store</h3>
-      <section style="display:flex;align-items:center;">
-        <unit-button style="margin-right:10px;" width="90px" .state=${{
-          id: "counter", label: state
-        }}></unit-button>
-        <p style="padding-left:.5rem;">Paragraph</p>
-        <span style="padding-left:.5rem;">Span</span>
-      </section>
-
-      <h3>Farben</h3>
+      <h3>Colors</h3>
       <section style="display:flex;align-items:center;flex-wrap:nowrap;">
         <unit-button .state=${ {
-          id:"nothing",
+          id: "nothing",
           "label": "width 350px",
           "className": "blue",
-          "icon1": { src: boxes, fill:"var(--red2)", height: "2rem" },
-          "icon2": { src: boxes, fill:"var(--green2)", height: "2rem" }
         }}></unit-button>
-        <unit-button style="padding-left:10px;" @action=${onFarben} data-idx="0" label="Klick for Color" value="Klick for Color" .state=${ {
-          "id": "localFarben", "icon2": boxes
+        <unit-button style="padding-left:10px;" @action=${onFarben} data-idx="0" label="Klick for color" value="Klick for color" .state=${ {
+          "id": "localFarben"
         }}></unit-button>
       </section>
 
       <h3>Attributes</h3>
       <section style="display:flex;">
-        <unit-button style="padding-right: 1rem;" label="Set Attribute Value" value="Set Attribute Value"></unit-button>
+        <unit-button style="padding-right: 1rem;" label="Set attribute value" value="Set attribute value"></unit-button>
         <unit-button style="flex:1" .state=${{
           id: "breite", label: "Set flex 1", value: "Set flex 1", icon1: boxes, icon2: boxes, className: "blue"
         }}></unit-button>
@@ -70,21 +59,33 @@ export function button() {
         }}></unit-button>
       </section>
 
+      <i>Add CSS class "dark" to unit-button:</i>
       <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 5px; box-sizing: border-box;">
-        <unit-button class="dark" .state=${{
+        <unit-button .state=${{
           id: "link", href:"#", label: "This is a link-button", value: "link", className: "dark link"
         }}></unit-button>
       </section>
 
+      <i>Add CSS class "blue", "green" or "pink" to achieve a different button color.</i>
       <section style="display:flex;">
-        <unit-button class="blue" .state=${{
-          id: "link", href:"#", label: "This is a link-button", value: "link", className: "blue link"
+        <unit-button .state=${{
+          id: "link", href:"#", label: "Link blue", value: "link", className: "blue link"
+        }}></unit-button>
+        <unit-button .state=${{
+          id: "link", href:"#", label: "Link pink", value: "link", className: "pink link"
+        }}></unit-button>
+        <unit-button .state=${{
+          id: "link", href:"#", label: "Link green", value: "link", className: "green link"
         }}></unit-button>
       </section>
 
-      <h3>White button (on a dark background)</h3>
-      <section style="display:flex; background-color:purple; padding:10px;">
-        <unit-button style="padding-right: 1rem;" width="200px" .state=${{label: "White Button", value: "white button", className: "dark"}}></unit-button>
+      <section style="background-image: linear-gradient(#2B5779, #1C3659); display:flex;">
+        <unit-button .state=${{
+          id: "link", href:"#", label: "Link pink", value: "link", className: "pink link"
+        }}></unit-button>
+        <unit-button .state=${{
+          id: "link", href:"#", label: "Link green", value: "link", className: "green link"
+        }}></unit-button>
       </section>
 
       <h2>Signature</h2>

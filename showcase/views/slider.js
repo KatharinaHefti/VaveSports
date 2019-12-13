@@ -31,9 +31,9 @@ export function slider() {
         <unit-slider class="dark" .state=${ {
           id: "slider2",
           min: "0",
-          max: "100",
-          step: "1",
-          value: "15"
+          max: "10000",
+          step: "100",
+          value: "1500"
         }}></unit-slider>
       </section>
 

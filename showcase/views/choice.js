@@ -26,7 +26,7 @@ export function choice() {
       "width": "200px",
       "items": [
         { "label": "Giemen", "value": "giemen" },
-        { "label": "Auskultation der Lunge", "value": "auskult" },
+        { "label": "Brummen", "value": "brummen" },
         { "label": "Pfeifen", "value": "pfeifen" },
         { "label": "Stridor", "value": "stridor" }
       ].map( item => {
@@ -42,7 +42,7 @@ export function choice() {
       "width": "200px",
       "items": [
         { "label": "Giemen", "value": "giemen" },
-        { "label": "Auskultation der Lunge", "value": "auskult" },
+        { "label": "Brummen", "value": "brummen" },
         { "label": "Pfeifen", "value": "pfeifen" },
         { "label": "Stridor", "value": "stridor" }
       ].map( item => {
