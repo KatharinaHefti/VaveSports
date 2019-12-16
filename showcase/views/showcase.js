@@ -109,7 +109,8 @@ export function showcase() {
 
     <p>Unit-multi</p>
     <section class=row>
-      <section class=positive style=padding:0>
+      <section class=positive style=padding:0;flex-wrap:wrap>
+        <h1 style="padding-left:.5rem;font-weight:200;font-size:2rem;line-height:3rem;margin:1em 0">Meine Frage wäre</h1>
         <unit-multi .state=${{
           "id": "symptom",
           "width": "150px",
@@ -131,7 +132,8 @@ export function showcase() {
         }}></unit-multi>
       </section>
 
-      <section class=negative style=padding:0>
+      <section class=negative style=padding:0;flex-wrap:wrap>
+        <h1 style="color:white;padding-left:.5rem;font-weight:200;font-size:2rem;line-height:3rem;margin:1em 0">Meine Frage wäre</h1>
         <unit-multi class="dark" .state=${{
           "id": "symptom",
           "width": "150px",

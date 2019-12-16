@@ -63,8 +63,8 @@ export function navigation() {
           flex-wrap: wrap;
         }
       </style>
-      <span style="font-size:2rem; font-weight: 600;color:orange;">Showcase</span>
-      <span style="font-size: .8rem; border:1px solid #fff;padding:0 .2rem;">${version}</span>
+      <span style="font-size:2rem;font-weight:600;color:orange;">Showcase</span>
+      <span style="font-size:.8rem;border:1px solid #fff;padding:0 .2rem;">${version}</span>
     </section>
     <div style="display:flex;justify-content:flex-end;color:white;padding:0 1rem 0 0;box-sizing:border-box;font-size:.8rem">Font-size:</div>
     <div style="display:flex;justify-content:flex-end;color:white;padding:0 1rem .5rem 0;box-sizing:border-box;font-size:.8rem;cursor:pointer">
