@@ -61,30 +61,39 @@ export function button() {
 
       <i>Add CSS class "dark" to unit-button:</i>
       <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 5px; box-sizing: border-box;">
+      <unit-button .state=${{
+        id: "link", label: "This is a button", value: "link", className: "dark link"
+      }}></unit-button>
         <unit-button .state=${{
-          id: "link", href:"#", label: "This is a link-button", value: "link", className: "dark link"
+          id: "link", href:"#", label: "This is a link", value: "link", className: "dark link"
         }}></unit-button>
       </section>
 
       <i>Add CSS class "blue", "green" or "pink" to achieve a different button color.</i>
       <section style="display:flex;">
-        <unit-button .state=${{
+        <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Link blue", value: "link", className: "blue link"
         }}></unit-button>
-        <unit-button .state=${{
+        <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Link pink", value: "link", className: "pink link"
         }}></unit-button>
-        <unit-button .state=${{
+        <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Link green", value: "link", className: "green link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Link orange", value: "link", className: "orange link"
         }}></unit-button>
       </section>
 
       <section style="background-image: linear-gradient(#2B5779, #1C3659); display:flex;">
-        <unit-button .state=${{
+        <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Link pink", value: "link", className: "pink link"
         }}></unit-button>
-        <unit-button .state=${{
+        <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Link green", value: "link", className: "green link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Link orange", value: "link", className: "orange link"
         }}></unit-button>
       </section>
 

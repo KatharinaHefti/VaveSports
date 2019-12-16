@@ -16,14 +16,12 @@ article.showcase section.row>section {
   min-height: 100px;
   flex-grow: 0;
   align-items: center;
-  justify-content: center;
+  padding-left: .5rem;
 }
 
 article.showcase section.row section.positive {
   border: 1px solid #555;
-  display: flex;
-  flex-wrap: wrap;
-  background: white;
+  background: ghostwhite;
 }
 
 article.showcase section.row section.empty {
@@ -32,7 +30,6 @@ article.showcase section.row section.empty {
 
 article.showcase section.row section.negative {
   background-image: linear-gradient(#2B5779, #1C3659);
-  flex-wrap: wrap;
 }
 
 article.showcase section.row>section unit-link {
@@ -60,14 +57,6 @@ article.showcase .color-box-nogo {
 
 article.showcase unit-dropdown .dropdown {
   width: 300px;
-}
-
-unit-choice.prodigy section {
-  background: none !important;
-}
-
-.positive unit-choice.prodigy section {
-  background: pink !important;
 }
 
 .Card {

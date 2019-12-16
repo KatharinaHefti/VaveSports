@@ -9,7 +9,7 @@ export function textarea() {
   const state = store.getState().textarea || ""
 
   const state1 = { "value": state, label: "Label", spellcheck: true, "chars": 100, "font-size": "1.4rem", "placeholder": "Placeholder" }
-  const state2 = { "value": state, label: "You can also type here", badge: false, "placeholder": "Placeholder" }
+  const state2 = { "value": state, label: "You can also type here", badge: false, "placeholder": "Placeholder", "wrap": "hard" }
   const state3 = { "value": state.split( "" ).reverse().join( "" ), disabled: true, label: "Mirror above area", "placeholder": "Placeholder" }
   const state4 = { "value": `Erste Zeil\nEin Satz zum Teilselektieren`, readonly: true, "placeholder": "Placeholder" }
   const state5 = { "value": state, label: "You can also type here", badge: false, "placeholder": "Placeholder" }

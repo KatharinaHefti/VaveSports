@@ -25,6 +25,10 @@ export function navigation() {
 
   }
 
+  const changeFont = ( e ) => {
+    document.querySelector( "html" ).style.fontSize = e.target.getAttribute( "data-size" ) + "px"
+  }
+
   const items = [
     { label: "unit-svg", value: "svg" },
     { label: "unit-md", value: "md" },
@@ -60,6 +64,12 @@ export function navigation() {
       <span style="font-size:2rem; font-weight: 600;color:orange;">Showcase</span>
       <span style="font-size: .8rem; border:1px solid #fff;padding:0 .2rem;">${version}</span>
     </section>
+    <div style="display:flex;justify-content:flex-end;color:white;padding:0 1rem 0 0;box-sizing:border-box;font-size:.8rem">Font-size:</div>
+    <div style="display:flex;justify-content:flex-end;color:white;text-decoration:underline;padding:0 1rem .5rem 0;box-sizing:border-box;font-size:.8rem;cursor:pointer">
+      <div @click=${changeFont} data-size="16" style="padding-right:1rem">16px</div>
+      <div @click=${changeFont} data-size="18" style="padding-right:1rem">18px</div>
+      <div @click=${changeFont} data-size="20" >20px</div>
+    </div>
     <unit-liste @action=${onNavi} .state=${{ items }}></unit-liste>
   `
 

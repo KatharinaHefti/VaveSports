@@ -13,20 +13,9 @@ export function showcase() {
     <h1>Inventory</h1>
 
 <!-- links-->
-    <p>“Unit-link” will be used in the dark theme only, for example the footer. Multiple links are divided by an interpunct with 1em margin.</p>
+    <p>In body copy unit-link will be used for all "a" tags. If a link is placed before a punctuation mark please include it to the link.</p>
     <section class=row>
-      <section class=empty>
-      </section>
-      <section class=negative>
-        <unit-link label="Abbrechen" class="negative prominent" style="margin-right:1em;"></unit-link>
-        <p style="color: #fafafa;">&#183</p>
-        <unit-link label="Speichern" class="negative prominent green" style="margin-left:1em;"></unit-link>
-      </section>
-    </section>
-
-    <p>In body copy “unit-link” will be used for all a tags. If a link is placed before a punctuation mark please include it to the link!</p>
-    <section class=row>
-      <section class="positive" style="background-color: #696969; background: white;">
+      <section class="positive">
       <section>
       This is a body text with a <unit-link id="link1" value="#" label="link."><!---->
         <a href="#"><!---->link<!----></a>
@@ -41,7 +30,7 @@ export function showcase() {
     </section>
 
 <!-- input-->
-    <p>“Unit-input” for all user input.</p>
+    <p>Unit-input</p>
     <section class=row>
       <section class=positive>
         <unit-input id="2" value="" label="Name" type="text" placeholder="Placeholder" content="false"><!---->
@@ -62,7 +51,7 @@ export function showcase() {
     </section>
 
 <!-- text-area -->
-    <p>“Unit-textarea” will be used for long user inputs.</p>
+    <p>Unit-textarea</p>
     <section class=row>
       <section class=positive>
       <unit-textarea value="value" id="1" label="Textarea" spellcheck="true" placeholder="Placeholder" content="true"><!---->
@@ -74,7 +63,7 @@ export function showcase() {
       </unit-textarea>
       </section>
       <section class=negative>
-        <unit-textarea value="value" class="dark" id="5" label="Textarea" placeholder="Placeholder" content="false"><!---->
+        <unit-textarea class="dark" id="5" label="Textarea" placeholder="Placeholder" content="false"><!---->
         <section>
           <textarea autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Placeholder" spellcheck="false" style="font-size: 1rem; line-height: 1.4; height: 112px;"></textarea>
           <label class="nobadge"><!---->You can also type here<!----></label>
@@ -84,7 +73,7 @@ export function showcase() {
     </section>
 
 <!-- choice -->
-    <p>“Unit-choice” will be used to single select.</p>
+    <p>Unit-choice</p>
     <section class=row>
       <section class=positive>
         <unit-choice .state=${{
@@ -118,9 +107,9 @@ export function showcase() {
       </section>
     </section>
 
-    <p>“Unit-multi" will be used as multiselect.</p>
+    <p>Unit-multi</p>
     <section class=row>
-      <section class=positive>
+      <section class=positive style=padding:0>
         <unit-multi .state=${{
           "id": "symptom",
           "width": "150px",
@@ -142,7 +131,7 @@ export function showcase() {
         }}></unit-multi>
       </section>
 
-      <section class=negative>
+      <section class=negative style=padding:0>
         <unit-multi class="dark" .state=${{
           "id": "symptom",
           "width": "150px",
@@ -166,7 +155,7 @@ export function showcase() {
     </section>
 
 <!-- buttons -->
-    <p>Cancel or confirm “buttons” appear after a user input.</p>
+    <p>Unit-buttons "cancel" or "confirm" will appear after a user input.</p>
     <section class=row>
       <section class=positive>
       <unit-button .state=${{
@@ -174,14 +163,14 @@ export function showcase() {
       }} ></unit-button>
       </section>
       <section class=negative>
-      <unit-button style="Color:hotpink;" .state=${{
+      <unit-button style="color:hotpink;" .state=${{
         id: "link", href:"#", label: "confirm", value: "link", className: "dark link"
       }}></unit-button>
       </section>
     </section>
 
 <!-- code -->
-    <p>"Unit-code" will be used for SMS codes or telephone numbers, for example.</p>
+    <p>Unit-code</p>
     <section class=row>
       <section class=positive>
         <unit-code pattern="____"></unit-code>
@@ -192,10 +181,10 @@ export function showcase() {
     </section>
 
 <!-- slider -->
-    <p>"Unit-slider"</p>
+    <p>Unit-slider</p>
     <section class=row>
       <section class=positive>
-        <unit-slider id="slider1" min="0" max="10" step="5" value="5"></unit-slider>
+        <unit-slider id="slider1" min="0" max="10" step="2" value="6"></unit-slider>
       </section>
       <section class=negative>
         <unit-slider class="dark" id="slider2" min="0" max="100" step="1" value="30"></unit-slider>
@@ -203,7 +192,7 @@ export function showcase() {
     </section>
 
 <!-- dropdown -->
-    <p>"Unit-dropdown"</p>
+    <p>Unit-dropdown</p>
     <section class=row>
       <section class=positive>
         <unit-dropdown .state=${{
@@ -256,7 +245,7 @@ export function showcase() {
     </section>
 
 <!-- Cards -->
-    <p>“Cards” will be used only in the white theme to store all information in it. Links will be seperated by a line at the very bottom of each card.</p>
+    <!-- <p>"Cards" will be used only in the white theme to store all information in it. Links will be seperated by a line at the very bottom of each card.</p>
     <div class="Card">
       <div>
         <b>2 factor authentication</b>
@@ -264,10 +253,10 @@ export function showcase() {
       </div>
     <hr>
     <unit-link label="einrichten" class="negative prominent" style="margin-right:1em;"></unit-link>
-    </div>
+    </div> -->
 
 <!-- modal -->
-<p>“Modal windows” will appear to show more information like the contact page.</p>
+<!-- <p>“Modal windows” will appear to show more information like the contact page.</p>
 <div class="Modal">
   <div>
     <h3 class="Lora">Kontakt</h3>
@@ -279,61 +268,45 @@ export function showcase() {
     <div class="map"></div>
   </div>
   <svg class="Icon-Close" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11"><defs><style>.cls-1{fill:#707070;}</style></defs><title>close</title><path class="cls-1" d="M512.72,727l4.65-4.65a.5.5,0,0,0-.71-.71L512,726.32l-4.64-4.65a.51.51,0,0,0-.71,0,.5.5,0,0,0,0,.71l4.65,4.65-4.65,4.64a.5.5,0,0,0,0,.71.5.5,0,0,0,.35.15.51.51,0,0,0,.36-.15l4.64-4.65,4.65,4.65a.49.49,0,0,0,.35.15.51.51,0,0,0,.36-.15.51.51,0,0,0,0-.71Z" transform="translate(-506.51 -721.53)"/></svg>
-</div>
+</div> -->
 
-<!-- gradient clinic -->
-    <p>The gradient will be used in the “dialog”.</p>
-    <div class="clinic-gradient"></div>
+<!-- gradient -->
+    <!-- <p>The gradient will be used in the “dialog”.</p>
+    <div class="Gradient"></div>
     <p>The footer also have a gradient with the same colors, but a bigger percentage of navy</p>
-    <div class="clinic-gradient-footer"></div>
-
-<!-- gradient status -->
-<p>This gradient will be used for the “status”.</p>
-<div class="status-gradient"></div>
-<p>The footer also have a gradient with the same colors, but a bigger percentage of pine</p>
-<div class="status-gradient-footer"></div>
+    <div class="Gradient-Footer"></div>
+    <div class="Solid-Footer"></div> -->
 
 <!-- colors -->
-    <p>This is our “color palette”.
-    <br>Don"t use navy, steel or smoke in negative layouts because of low contrast.
-    <br>You also can see what font color to use on what hue for best accessibility.
-    </p>
+    <!-- <p>Color palette</p>
     <section class=row>
-      <section class=positive>
+      <section class=positive style=display:flex;flex-wrap:wrap;>
         <div class="color-box" style="background-color:#1C3659;">navy #1C3659</div>
         <div class="color-box" style="background-color:#2B5779;">steel #2B5779</div>
         <div class="color-box" style="background-color:#6CBCFF; color: black;">sky #6CBCFF</div>
         <div class="color-box" style="background-color:#9DF6FA; color: black;">ice #9DF6FA</div>
-        <div class="color-box" style="background-color:#62c3b7; color: black;">doctor #62c3b7</div>
-        <div class="color-box" style="background-color:#3f6f69; color: white;">pine #3f6f69</div>
         <div class="color-box" style="background-color:#3EB147; color: black;">kelly #3EB147</div>
         <div class="color-box" style="background-color:#FFCB4E; color: black;">sun #FFCB4E</div>
         <div class="color-box" style="background-color:#FE8374; color: black;">coral #FE8374</div>
         <div class="color-box" style="background-color:#8C51ED;">lavender #8C51ED</div>
         <div class="color-box" style="background-color:#F7679E; color: black;">flamingo #F7679E</div>
-        <div class="color-box" style="background-color:#606066;">smoke #606066</div>
-        <div class="color-box" style="background-color:#b5b5bc; color: black;">silver #b5b5bc</div>
-        <div class="color-box" style="background-color:#d9d9dd; color: black;">snow #d9d9dd</div>
-        <div class="color-box-nogo" style="background-color:#F8F8FF; color: black;">ghost #F8F8FF</div>
+        <div class="color-box" style="background-color:#696969;">smoke #696969</div>
+        <div class="color-box" style="background-color:#B5B5B5; color: black;">silver #B5B5B5</div>
+        <div class="color-box" style="background-color:#EEEAEF; color: black;">snow #EEEAEF</div>
       </section>
-      <section class=negative>
-        <div class="color-box-nogo" style="background-color:#1C3659;">navy #1C3659</div>
-        <div class="color-box-nogo" style="background-color:#2B5779;">steel #2B5779</div>
+      <section class=negative style=display:flex;flex-wrap:wrap;>
         <div class="color-box" style="background-color:#6CBCFF; color: black;">sky #6CBCFF</div>
         <div class="color-box" style="background-color:#9DF6FA; color: black;">ice #9DF6FA</div>
-        <div class="color-box" style="background-color:#62c3b7; color: black;">doctor #62c3b7</div>
-        <div class="color-box-nogo" style="background-color:#3f6f69; color: white;">pine #3f6f69</div>
         <div class="color-box" style="background-color:#3EB147; color: black;">kelly #3EB147</div>
         <div class="color-box" style="background-color:#FFCB4E; color: black;">sun #FFCB4E</div>
         <div class="color-box" style="background-color:#FE8374; color: black;">coral #FE8374</div>
         <div class="color-box" style="background-color:#8C51ED;">lavender #8C51ED</div>
         <div class="color-box" style="background-color:#F7679E; color: black;">flamingo #F7679E</div>
-        <div class="color-box-nogo" style="background-color:#606066;">smoke #606066</div>
-        <div class="color-box" style="background-color:#b5b5bc; color: black;">silver #b5b5bc</div>
-        <div class="color-box" style="background-color:#d9d9dd; color: black;">snow #d9d9dd</div>
+        <div class="color-box" style="background-color:#B5B5B5; color: black;">silver #B5B5B5</div>
         <div class="color-box" style="background-color:#F8F8FF; color: black;">ghost #F8F8FF</div>
+        <div class="color-box" style="background-color:#EEEAEF; color: black;">snow #EEEAEF</div>
       </section>
-    </section>
+    </section> -->
   </article>
   `
 }
