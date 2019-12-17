@@ -69,13 +69,13 @@ export function button() {
         }}></unit-button>
       </section>
 
-      <i>Add CSS class "blue", "green" or "pink" to achieve a different button color.</i>
+      <i>Add CSS class "blue", "green", "orange" or "red" to achieve a different button color.</i>
       <section style="display:flex;">
         <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Link blue", value: "link", className: "blue link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link pink", value: "link", className: "pink link"
+          id: "link", href:"#", label: "Link red", value: "link", className: "red link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Link green", value: "link", className: "green link"
@@ -87,7 +87,7 @@ export function button() {
 
       <section style="background-image: linear-gradient(#2B5779, #1C3659); display:flex;">
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link pink", value: "link", className: "pink link"
+          id: "link", href:"#", label: "Link red", value: "link", className: "red link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Link green", value: "link", className: "green link"

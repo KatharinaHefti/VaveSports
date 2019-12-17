@@ -78,7 +78,7 @@ export function showcase() {
       <section class=positive>
         <unit-choice .state=${{
           "id": "symptom",
-          "width": "140px",
+          "width": "7rem",
           "items": [
             { "label": "yes", "value": "a" },
             { "label": "maybe", "value": "b" },
@@ -93,7 +93,7 @@ export function showcase() {
           <section>
             <unit-choice class="dark" .state=${{
               "id": "symptom",
-              "width": "140px",
+              "width": "7rem",
               "items": [
                 { "label": "yes", "value": "a" },
                 { "label": "maybe", "value": "b" },
