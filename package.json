@@ -1,6 +1,6 @@
 {
   "name": "view-showcase",
-  "version": "5.0.93",
+  "version": "5.0.95",
   "description": "Show custom elements in action",
   "private": true,
   "scripts": {
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
-    "core-js": "^3.5.0",
+    "core-js": "^3.6.0",
     "cssnano": "^4.1.10",
     "fs-extra": "^8.1.0",
     "htmlnano": "^0.2.4",
