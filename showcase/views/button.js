@@ -16,7 +16,7 @@ export function button() {
   // Only locally without state
   const onFarben = ( e ) => {
     e.stopPropagation()
-    const farben = [ "green", "blue", "orange", "red" ]
+    const farben = [ "green", "blue", "orange", "pink" ]
 
     if ( Number( e.target.dataset.idx ) > farben.length - 1 ) {
       e.target.dataset.idx = 0
@@ -60,13 +60,13 @@ export function button() {
       </section>
 
       <h3>Colored buttons</h3>
-      <p>Add class "blue", "red", "green" or "orange" to unit-button.</p>
+      <p>Add class "blue", "pink", "green" or "orange" to unit-button.</p>
       <section style="display:flex;">
         <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Blue color", value: "link", className: "blue link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Red color", value: "link", className: "red link"
+          id: "link", href:"#", label: "Pink color", value: "link", className: "pink link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Green color", value: "link", className: "green link"
@@ -78,7 +78,7 @@ export function button() {
 
       <section style="background-image: linear-gradient(#2B5779, #1C3659); display:flex;">
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Red color", value: "link", className: "red link"
+          id: "link", href:"#", label: "Pink color", value: "link", className: "pink link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Green color", value: "link", className: "green link"
