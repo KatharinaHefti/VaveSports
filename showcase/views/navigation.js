@@ -45,7 +45,8 @@ export function navigation() {
     { label: "unit-code", value: "code" },
     { label: "unit-link", value: "link" },
     { label: "unit-slider", value: "slider" },
-    { label: "colors", value: "colors" }
+    { label: "colors", value: "colors" },
+    { label: "animations", value: "animations" }
 
   ].map( item => {
     return { ...item, selected: item.value == state.navigation }
