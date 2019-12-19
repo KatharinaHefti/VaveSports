@@ -6,7 +6,8 @@ import store from '../data-store'
 import unitButton from 'view-base/unit-button/'
 import 'view-base/unit-md/'
 // Assets
-import * as boxes from 'view-base/type-icon'
+import boxes from 'view-base/type-icon/boxes.svg'
+import close from 'view-base/type-icon/close.svg'
 
 export function button() {
 
@@ -32,21 +33,9 @@ export function button() {
 
       <h2>Examples</h2>
 
-      <h3>Colors</h3>
-      <section style="display:flex;align-items:center;flex-wrap:nowrap;">
-        <unit-button .state=${ {
-          id: "nothing",
-          "label": "width 350px",
-          "className": "blue",
-        }}></unit-button>
-        <unit-button style="padding-left:10px;" @action=${onFarben} data-idx="0" label="Klick for color" value="Klick for color" .state=${ {
-          "id": "localFarben"
-        }}></unit-button>
-      </section>
-
-      <h3>Attributes</h3>
+      <h3>Buttons</h3>
       <section style="display:flex;">
-        <unit-button style="padding-right: 1rem;" label="Set attribute value" value="Set attribute value"></unit-button>
+        <unit-button style="padding-right: 1rem;" label="This is a label" value="value"></unit-button>
         <unit-button style="flex:1" .state=${{
           id: "breite", label: "Set flex 1", value: "Set flex 1", icon1: boxes, icon2: boxes, className: "blue"
         }}></unit-button>
@@ -59,7 +48,8 @@ export function button() {
         }}></unit-button>
       </section>
 
-      <i>Add CSS class "dark" to unit-button:</i>
+      <h3>Dark style</h3>
+      <p>Add CSS class "dark" to unit-button.</p>
       <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 5px; box-sizing: border-box;">
       <unit-button .state=${{
         id: "link", label: "This is a button", value: "link", className: "dark link"
@@ -69,33 +59,39 @@ export function button() {
         }}></unit-button>
       </section>
 
-      <i>Add CSS class "blue", "green", "orange" or "red" to achieve a different button color.</i>
+      <h3>Colored buttons</h3>
+      <p>Add class "blue", "red", "green" or "orange" to unit-button.</p>
       <section style="display:flex;">
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link blue", value: "link", className: "blue link"
+          id: "link", href:"#", label: "Blue color", value: "link", className: "blue link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link red", value: "link", className: "red link"
+          id: "link", href:"#", label: "Red color", value: "link", className: "red link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link green", value: "link", className: "green link"
+          id: "link", href:"#", label: "Green color", value: "link", className: "green link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link orange", value: "link", className: "orange link"
+          id: "link", href:"#", label: "Orange color", value: "link", className: "orange link"
         }}></unit-button>
       </section>
 
       <section style="background-image: linear-gradient(#2B5779, #1C3659); display:flex;">
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link red", value: "link", className: "red link"
+          id: "link", href:"#", label: "Red color", value: "link", className: "red link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link green", value: "link", className: "green link"
+          id: "link", href:"#", label: "Green color", value: "link", className: "green link"
         }}></unit-button>
         <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link orange", value: "link", className: "orange link"
+          id: "link", href:"#", label: "Orange color", value: "link", className: "orange link"
         }}></unit-button>
       </section>
+
+      <h3>Close button</h3>
+      <unit-button .state=${{
+        id: "close", label: "", value: "", icon1: close, padding: "0"
+      }}></unit-button>
 
       <h2>Signature</h2>
       <unit-md .state=${{ raw: unitButton.signature, theme:"tomorrow" }}></unit-md>

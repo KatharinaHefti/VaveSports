@@ -13,7 +13,6 @@ export function showcase() {
     <h1>Inventory</h1>
 
 <!-- links-->
-    <p>In body copy unit-link will be used for all "a" tags. If a link is placed before a punctuation mark please include it to the link.</p>
     <section class=row>
       <section class="positive">
       <section>
@@ -30,7 +29,6 @@ export function showcase() {
     </section>
 
 <!-- input-->
-    <p>Unit-input</p>
     <section class=row>
       <section class=positive>
         <unit-input id="2" value="" label="Name" type="text" placeholder="Placeholder" content="false"><!---->
@@ -51,7 +49,6 @@ export function showcase() {
     </section>
 
 <!-- text-area -->
-    <p>Unit-textarea</p>
     <section class=row>
       <section class=positive>
       <unit-textarea value="value" id="1" label="Textarea" spellcheck="true" placeholder="Placeholder" content="true"><!---->
@@ -73,7 +70,6 @@ export function showcase() {
     </section>
 
 <!-- choice -->
-    <p>Unit-choice</p>
     <section class=row>
       <section class=positive>
         <unit-choice .state=${{
@@ -107,7 +103,6 @@ export function showcase() {
       </section>
     </section>
 
-    <p>Unit-multi</p>
     <section class=row>
       <section class=positive style=padding:0;flex-wrap:wrap>
         <h1 style="padding-left:.5rem;font-weight:200;font-size:2rem;line-height:3rem;margin:1em 0">Meine Frage wäre</h1>
@@ -157,7 +152,6 @@ export function showcase() {
     </section>
 
 <!-- buttons -->
-    <p>Unit-buttons "cancel" or "confirm" will appear after a user input.</p>
     <section class=row>
       <section class=positive>
       <unit-button .state=${{
@@ -172,7 +166,6 @@ export function showcase() {
     </section>
 
 <!-- code -->
-    <p>Unit-code</p>
     <section class=row>
       <section class=positive>
         <unit-code pattern="____"></unit-code>
@@ -183,7 +176,6 @@ export function showcase() {
     </section>
 
 <!-- slider -->
-    <p>Unit-slider</p>
     <section class=row>
       <section class=positive>
         <unit-slider id="slider1" min="0" max="10" step="2" value="6"></unit-slider>
@@ -194,7 +186,6 @@ export function showcase() {
     </section>
 
 <!-- dropdown -->
-    <p>Unit-dropdown</p>
     <section class=row>
       <section class=positive>
         <unit-dropdown .state=${{
@@ -223,6 +214,7 @@ export function showcase() {
       <section class=negative>
         <unit-dropdown class="dark" .state=${{
           "placeholder": "Select option",
+          "background-color": "#074880",
           "name": "optionsdark",
           "items": [ {
               "id": "eins",
