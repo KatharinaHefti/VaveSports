@@ -150,3 +150,8 @@ a {
 .busy-indicator {
   width: 300px;
 }
+
+.btn-pink {
+  background: pink;
+  color: pink;
+}

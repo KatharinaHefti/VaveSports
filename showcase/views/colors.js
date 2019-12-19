@@ -73,6 +73,38 @@ export function colors() {
     <article class=colors hidden=false>
       <h1>Colors</h1>
       <h2>Computed style guide</h2>
+
+      <!-- colors -->
+          <!-- <p>Color palette</p>
+          <section class=row>
+            <section class=positive style=display:flex;flex-wrap:wrap;>
+              <div class="color-box" style="background-color:#1C3659;">navy #1C3659</div>
+              <div class="color-box" style="background-color:#2B5779;">steel #2B5779</div>
+              <div class="color-box" style="background-color:#6CBCFF; color: black;">sky #6CBCFF</div>
+              <div class="color-box" style="background-color:#9DF6FA; color: black;">ice #9DF6FA</div>
+              <div class="color-box" style="background-color:#3EB147; color: black;">kelly #3EB147</div>
+              <div class="color-box" style="background-color:#FFCB4E; color: black;">sun #FFCB4E</div>
+              <div class="color-box" style="background-color:#FE8374; color: black;">coral #FE8374</div>
+              <div class="color-box" style="background-color:#8C51ED;">lavender #8C51ED</div>
+              <div class="color-box" style="background-color:#F7679E; color: black;">flamingo #F7679E</div>
+              <div class="color-box" style="background-color:#696969;">smoke #696969</div>
+              <div class="color-box" style="background-color:#B5B5B5; color: black;">silver #B5B5B5</div>
+              <div class="color-box" style="background-color:#EEEAEF; color: black;">snow #EEEAEF</div>
+            </section>
+            <section class=negative style=display:flex;flex-wrap:wrap;>
+              <div class="color-box" style="background-color:#6CBCFF; color: black;">sky #6CBCFF</div>
+              <div class="color-box" style="background-color:#9DF6FA; color: black;">ice #9DF6FA</div>
+              <div class="color-box" style="background-color:#3EB147; color: black;">kelly #3EB147</div>
+              <div class="color-box" style="background-color:#FFCB4E; color: black;">sun #FFCB4E</div>
+              <div class="color-box" style="background-color:#FE8374; color: black;">coral #FE8374</div>
+              <div class="color-box" style="background-color:#8C51ED;">lavender #8C51ED</div>
+              <div class="color-box" style="background-color:#F7679E; color: black;">flamingo #F7679E</div>
+              <div class="color-box" style="background-color:#B5B5B5; color: black;">silver #B5B5B5</div>
+              <div class="color-box" style="background-color:#F8F8FF; color: black;">ghost #F8F8FF</div>
+              <div class="color-box" style="background-color:#EEEAEF; color: black;">snow #EEEAEF</div>
+            </section>
+
+
       <section>
         <table class=colors>
           ${ rows }
