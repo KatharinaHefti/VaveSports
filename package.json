@@ -1,6 +1,6 @@
 {
   "name": "view-showcase",
-  "version": "5.0.63",
+  "version": "5.0.97",
   "description": "Show custom elements in action",
   "private": true,
   "scripts": {
@@ -36,14 +36,14 @@
     "view-units": "^0.2.1"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.1",
-    "core-js": "^3.4.4",
+    "autoprefixer": "^9.7.3",
+    "core-js": "^3.6.0",
     "cssnano": "^4.1.10",
     "fs-extra": "^8.1.0",
     "htmlnano": "^0.2.4",
     "parcel-bundler": "^1.12.3",
     "postcss-modules": "^1.4.1",
     "tap-spec": "^5.0.0",
-    "tape": "^4.11.0"
+    "tape": "^4.12.0"
   }
 }

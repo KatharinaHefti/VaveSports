@@ -10,40 +10,54 @@ export function dropdown() {
 
   const state = store.getState().dropdown || 0
 
-  const test = {
-    "name": "countries",
-    "items": [ {
-        "id": "1",
-        "value": "af",
-        "label": "Afghanistan"
-      },
-      {
-        "id": "2",
-        "value": "be",
-        "label": "Belgien"
-      },
-      {
-        "id": "3",
-        "value": "de",
-        "label": "Deutschland"
-      },
-      {
-        "id": "4",
-        "value": "en",
-        "label": "England"
-      },
-      {
-        "id": "5",
-        "value": "ca",
-        "label": "Kanada"
-      },
-      {
-        "id": "6",
-        "value": "ch",
-        "label": "Schweiz"
-      }
-    ]
-  }
+  const items = [ {
+      "id": "1",
+      "value": "af",
+      "label": "Afghanistan"
+    },
+    {
+      "id": "2",
+      "value": "be",
+      "label": "Belgien"
+    },
+    {
+      "id": "3",
+      "value": "de",
+      "label": "Deutschland"
+    },
+    {
+      "id": "4",
+      "value": "en",
+      "label": "England"
+    },
+    {
+      "id": "5",
+      "value": "ca",
+      "label": "Kanada"
+    },
+    {
+      "id": "6",
+      "value": "ch",
+      "label": "Schweiz"
+    }
+  ]
+
+  const negative = [ {
+      "id": "one",
+      "value": "one",
+      "label": "Option one"
+    },
+    {
+      "id": "two",
+      "value": "two",
+      "label": "Option two"
+    },
+    {
+      "id": "three",
+      "value": "three",
+      "label": "Option three"
+    }
+  ]
 
   return html `
     <article hidden=false>
@@ -55,8 +69,22 @@ export function dropdown() {
       <h3>Dropdown</h3>
       <section>
         <unit-dropdown .state=${{
-          "name": test.name,
-          "items": test.items.map(item => {
+          "placeholder": "Select country",
+          "value": "de",
+          "name": "countries",
+          "items": items.map(item => {
+            return { ...item }
+          })
+        }}></unit-dropdown>
+      </section>
+
+      <h3>Dropdown .dark</h3>
+      <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 20px; box-sizing: border-box; height: 300px">
+        <unit-dropdown class="dark" .state=${{
+          "placeholder": "Select option",
+          "name": "negative",
+          "background-color": "#234668",
+          "items": negative.map(item => {
             return { ...item }
           })
         }}></unit-dropdown>

@@ -11,9 +11,6 @@ if ( e.target.nodeName == "UNIT-TEXTAREA" ) {
 if ( e.target.nodeName == "UNIT-INPUT" ) {
   store.dispatch( { type: "input", data: e.detail.value } )
 }
-if ( e.target.nodeName == "UNIT-TOGGLE" ) {
-  store.dispatch( { type: "toggle", data: e.detail.value } )
-}
 if ( e.target.nodeName == "UNIT-SIDEBAR" ) {
   store.dispatch( { type: "sidebar", data: e.detail.value } )
 }
@@ -31,4 +28,16 @@ if ( e.target.nodeName == "FONTCOMBOS" ) {
 }
 if ( e.target.nodeName == "UNIT-LINK" ) {
   store.dispatch( { type: "link", data: e.detail.value } )
+}
+if ( e.target.nodeName == "UNIT-SLIDER" ) {
+  store.dispatch( { type: "slider", data: e.detail.value } )
+}
+if ( e.target.nodeName == "UNIT-CODE" ) {
+  store.dispatch( { type: "code", data: e.detail.value } )
+}
+if ( e.target.nodeName == "UNIT-DATE" ) {
+  store.dispatch( { type: "date", data: e.detail.value } )
+}
+if ( e.target.nodeName == "UNIT-MULTI" ) {
+  store.dispatch( { type: "multi", data: e.detail.value } )
 }

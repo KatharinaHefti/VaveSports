@@ -6,7 +6,8 @@ import store from '../data-store'
 import unitButton from 'view-base/unit-button/'
 import 'view-base/unit-md/'
 // Assets
-import * as boxes from 'view-base/type-icon'
+import boxes from 'view-base/type-icon/boxes.svg'
+import close from 'view-base/type-icon/close.svg'
 
 export function button() {
 
@@ -15,7 +16,7 @@ export function button() {
   // Only locally without state
   const onFarben = ( e ) => {
     e.stopPropagation()
-    const farben = [ "green", "blue", "orange", "red" ]
+    const farben = [ "green", "blue", "orange", "pink" ]
 
     if ( Number( e.target.dataset.idx ) > farben.length - 1 ) {
       e.target.dataset.idx = 0
@@ -25,18 +26,6 @@ export function button() {
     e.target.dataset.idx++
   }
 
-  const onSwitch = ( e ) => {
-    e.stopPropagation()
-
-    if ( e.target.state.label === "On" ) {
-      e.target.state = immu.set( e.target.state, "label", "Off" )
-      e.target.className = "switch-off blue"
-    } else {
-      e.target.state = immu.set( e.target.state, "label", "On" )
-      e.target.className = "switch-on blue"
-    }
-  }
-
   return html `
     <article hidden=false>
 
@@ -44,58 +33,65 @@ export function button() {
 
       <h2>Examples</h2>
 
-      <h3>Default height will increment with store</h3>
-      <section style="display:flex;align-items:center;">
-        <unit-button style="margin-right:10px;" width="90px" .state=${{
-          id: "counter", label: state
-        }}></unit-button>
-        <p style="padding-left:.5rem;">Paragraph</p>
-        <span style="padding-left:.5rem;">Span</span>
-      </section>
-
-      <h3>Farben</h3>
-      <section style="display:flex;align-items:center;flex-wrap:nowrap;">
-        <unit-button .state=${ {
-          id:"nothing",
-          "label": "width 350px",
-          "className": "blue",
-          "icon1": { src: boxes, fill:"var(--red2)", height: "2rem" },
-          "icon2": { src: boxes, fill:"var(--green2)", height: "2rem" }
-        }}></unit-button>
-        <unit-button style="padding-left:10px;" @action=${onFarben} data-idx="0" label="Klick for Color" value="Klick for Color" .state=${ {
-          "id": "localFarben", "icon2": boxes
-        }}></unit-button>
-      </section>
-
-      <h3>Attributes</h3>
+      <h3>Buttons</h3>
       <section style="display:flex;">
-        <unit-button style="padding-right: 1rem;" label="Set Attribute Value" value="Set Attribute Value"></unit-button>
+        <unit-button style="padding-right: 1rem;" label="This is a label" value="value"></unit-button>
         <unit-button style="flex:1" .state=${{
           id: "breite", label: "Set flex 1", value: "Set flex 1", icon1: boxes, icon2: boxes, className: "blue"
         }}></unit-button>
       </section>
 
-      <h3>Switch button</h3>
+      <h3>Button with "href" attribute</h3>
       <section style="display:flex;">
-        <unit-button @click="${onSwitch}" width="90px" style="padding-right: 1rem;" @action="${onSwitch}" selected="false" .state=${{
-          id: "switch", className: "switch-on blue"}} label="On" value="On"></unit-button>
+        <unit-button .state=${{
+          id: "link", href:"#", label: "This is a link-button", value: "link", className: "link"
+        }}></unit-button>
       </section>
 
-      <h3>White button (on a dark background)</h3>
-      <section style="display:flex; background-color:purple; padding:10px;">
-        <unit-button style="padding-right: 1rem;" width="200px" .state=${{label: "White Button", value: "white button", className: "white"}}></unit-button>
+      <h3>Dark style</h3>
+      <p>Add CSS class "dark" to unit-button.</p>
+      <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 5px; box-sizing: border-box;">
+      <unit-button .state=${{
+        id: "link", label: "This is a button", value: "link", className: "dark link"
+      }}></unit-button>
+        <unit-button .state=${{
+          id: "link", href:"#", label: "This is a link", value: "link", className: "dark link"
+        }}></unit-button>
       </section>
 
-      <h2>Helsana style examples</h2>
-      <p>Add class ".helsana" to unit-button tag in order for the styles to be applied.</p>
-      <h3>Normal</h3>
+      <h3>Colored buttons</h3>
+      <p>Add class "blue", "pink", "green" or "orange" to unit-button.</p>
       <section style="display:flex;">
-        <unit-button class="helsana" style="padding-right: 1rem;" label="Medicheck durchführen" value="Medicheck durchführen" height="56px"></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Blue color", value: "link", className: "blue link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Pink color", value: "link", className: "pink link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Green color", value: "link", className: "green link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Orange color", value: "link", className: "orange link"
+        }}></unit-button>
       </section>
-      <h3>Disabled</h3>
-      <section style="display:flex;">
-        <unit-button class="helsana" style="padding-right: 1rem;" label="Medicheck durchführen" value="Medicheck durchführen" height="56px" disabled=true></unit-button>
+
+      <section style="background-image: linear-gradient(#2B5779, #1C3659); display:flex;">
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Pink color", value: "link", className: "pink link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Green color", value: "link", className: "green link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Orange color", value: "link", className: "orange link"
+        }}></unit-button>
       </section>
+
+      <h3>Close button</h3>
+      <unit-button .state=${{
+        id: "close", label: "", value: "", icon1: close, padding: "0"
+      }}></unit-button>
 
       <h2>Signature</h2>
       <unit-md .state=${{ raw: unitButton.signature, theme:"tomorrow" }}></unit-md>
