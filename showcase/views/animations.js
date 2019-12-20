@@ -287,7 +287,6 @@ export function animations() {
             fill: #FFFFFF;
           }
 
-
           .st8 {
             fill: none;
             stroke: url(#B-line_1_);
