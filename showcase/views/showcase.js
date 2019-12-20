@@ -85,7 +85,6 @@ export function showcase() {
         }}></unit-choice>
       </section>
         <section class=negative>
-          <section>
             <unit-choice class="dark" .state=${{
               "id": "symptom",
               "items": [
@@ -97,7 +96,6 @@ export function showcase() {
                 return item
               })
             }}></unit-choice>
-        </section>
       </section>
     </section>
 
