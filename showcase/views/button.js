@@ -108,6 +108,7 @@ export function button() {
       </section>
 
       <h3>Close button</h3>
+      <p>Add class close to unit-button.</p>
       <unit-button .state=${{
         id: "close", label: "", value: "", icon1: close, padding: "0", className: "close"
       }}></unit-button>
