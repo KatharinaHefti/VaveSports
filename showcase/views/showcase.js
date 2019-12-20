@@ -17,8 +17,7 @@ export function showcase() {
       <section class="positive">
       <section>
       This is a body text with a <unit-link id="link1" value="#" label="link."><!---->
-        <a href="#"><!---->link<!----></a>
-      ></unit-link>
+        <a href="#"><!---->link<!----></a></unit-link>
     </section>
       </section>
       <section class=negative style=" color: white;">
@@ -234,39 +233,6 @@ export function showcase() {
       </section>
     </section>
 
-<!-- button colors -->
-    <section class=row>
-      <section class=positive style=flex-wrap:wrap>
-        <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link blue", value: "link", className: "blue link"
-        }}></unit-button>
-        <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link pink", value: "link", className: "pink link"
-        }}></unit-button>
-        <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link green", value: "link", className: "green link"
-        }}></unit-button>
-        <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link orange", value: "link", className: "orange link"
-        }}></unit-button>
-      </section>
-
-      <section class=negative style=flex-wrap:wrap>
-      <unit-button style=padding-left:.5em .state=${{
-        id: "link", href:"#", label: "Link grey", value: "link", className: "grey link"
-      }}></unit-button>
-        <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link pink", value: "link", className: "pink link"
-        }}></unit-button>
-        <unit-button class="btn-pink" style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link green", value: "link", className: "green link"
-        }}></unit-button>
-        <unit-button style=padding-left:.5em .state=${{
-          id: "link", href:"#", label: "Link orange", value: "link", className: "orange link"
-        }}></unit-button>
-      </section>
-    </section>
-
 <!-- unit-numbers -->
     <section class=row>
       <section class=positive>
@@ -313,6 +279,38 @@ export function showcase() {
       </section>
     </section>
 
+<!-- button colors -->
+    <section class=row>
+      <section class=positive style=flex-wrap:wrap>
+        <unit-button .state=${{
+          id: "link", href:"#", label: "Link blue", value: "link", className: "blue link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Link pink", value: "link", className: "pink link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Link green", value: "link", className: "green link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Link orange", value: "link", className: "orange link"
+        }}></unit-button>
+      </section>
+
+      <section class=negative style=flex-wrap:wrap>
+      <unit-button .state=${{
+        id: "link", href:"#", label: "Dark blue", value: "link", className: "dark blue link"
+      }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Dark pink", value: "link", className: "dark pink link"
+        }}></unit-button>
+        <unit-button class="btn-pink" style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Dark green", value: "link", className: "dark green link"
+        }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Dark orange", value: "link", className: "dark orange link"
+        }}></unit-button>
+      </section>
+    </section>
 
   </article>
   `

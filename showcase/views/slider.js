@@ -16,7 +16,7 @@ export function slider() {
       <h2>Examples</h2>
 
       <h3>Range slider</h3>
-      <section>
+      <section style="max-width: 600px">
         <unit-slider .state=${ {
           id: "slider1",
           min: "0",
@@ -27,7 +27,7 @@ export function slider() {
       </section>
 
       <h3>Range slider .dark</h3>
-      <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 20px; box-sizing: border-box">
+      <section style="background-image: linear-gradient(#2B5779, #1C3659); padding: 20px; box-sizing: border-box; max-width: 600px">
         <unit-slider class="dark" .state=${ {
           id: "slider2",
           min: "0",
