@@ -109,7 +109,7 @@ export function button() {
 
       <h3>Close button</h3>
       <unit-button .state=${{
-        id: "close", label: "", value: "", icon1: close, padding: "0"
+        id: "close", label: "", value: "", icon1: close, padding: "0", className: "close"
       }}></unit-button>
 
       <h2>Signature</h2>
