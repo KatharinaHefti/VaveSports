@@ -12,9 +12,6 @@ export function animations() {
 
   return html `
 
-
-
-
   <article class=animations>
     <h1>Animations</h1>
     <h2>Icons Plan</h2>
@@ -66,25 +63,194 @@ export function animations() {
       </g>
     </svg>
 
+
     <h2>Busy indicator horizontal</h2>
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    	 viewBox="0 0 347.99 51.89" style="enable-background:new 0 0 347.99 51.89;" xml:space="preserve">
-    <style type="text/css">
-    	.st0{fill:none;stroke:#7BB8E4;stroke-miterlimit:10;}
-    </style>
-    <path id="Abar" class="st0" d="M52.16,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
-    	C67.16,34.6,60.44,41.32,52.16,41.32z"/>
-    <path id="Bbar" class="st0" d="M119.73,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
-    	C134.73,34.6,128.02,41.32,119.73,41.32z"/>
-    <path id="Cbar" class="st0" d="M187.3,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
-    	C202.3,34.6,195.59,41.32,187.3,41.32z"/>
-    <path id="Dbar" class="st0" d="M254.88,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
-    	C269.88,34.6,263.16,41.32,254.88,41.32z"/>
-    <path id="Ebar" class="st0" d="M322.45,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
-    	C337.45,34.6,330.73,41.32,322.45,41.32z"/>
-    </svg>
+  <section class=negative>
+      <style>
+
+        svg {
+          width: 350px;
+          margin: 3em;
+        }
+
+        @keyframes fadeA {
+          0% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+
+          50% {
+            opacity: 0;
+          }
+
+          55% {
+            fill: rgba(108, 188, 255, 0);
+          }
 
 
+          100% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+        }
+
+        #Abar {
+          animation: fadeA 5s infinite;
+          animation-fill-mode: alternate-reverse;
+        }
+
+        @keyframes fadeB {
+          0% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+
+          50% {
+            opacity: 0;
+          }
+
+          55% {
+            fill: rgba(108, 188, 255, 0);
+          }
+
+          100% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+        }
+
+        #Bbar {
+          animation: fadeB 5s infinite;
+          animation-fill-mode: alternate-reverse;
+          animation-delay: 0.5s;
+        }
+
+        @keyframes fadeC {
+          0% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+
+          50% {
+            opacity: 0;
+          }
+
+          55% {
+            fill: rgba(108, 188, 255, 0);
+          }
+
+          100% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+        }
+
+        #Cbar {
+          animation: fadeC 5s infinite;
+          animation-fill-mode: alternate-reverse;
+          animation-delay: 1s;
+        }
+
+        @keyframes fadeD {
+          0% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+
+          50% {
+            opacity: 0;
+          }
+
+          55% {
+            fill: rgba(108, 188, 255, 0);
+          }
+
+          100% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+        }
+
+        #Dbar {
+          animation: fadeD 5s infinite;
+          animation-delay: 1.5s;
+          animation-fill-mode: alternate-reverse;
+        }
+
+        @keyframes fadeE {
+          0% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+
+          50% {
+            opacity: 0;
+          }
+
+          55% {
+            fill: rgba(108, 188, 255, 0);
+          }
+
+          100% {
+            opacity: 1;
+            fill: rgba(108, 188, 255, 0.2);
+          }
+        }
+
+        #Ebar {
+          animation: fadeE 5s infinite;
+          animation-delay: 2s;
+          animation-fill-mode: alternate-reverse;
+        }
+      </style>
+
+
+
+    <section class=row>
+      <section class=positive>
+      <svg version="1.1" id="busy-indicator xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 347.99 51.89" style="enable-background:new 0 0 347.99 51.89;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            fill: none;
+            stroke: #7BB8E4;
+            stroke-miterlimit: 10;
+          }
+        </style>
+        <path id="Abar" class="st0" d="M52.16,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C67.16,34.6,60.44,41.32,52.16,41.32z" />
+        <path id="Bbar" class="st0" d="M119.73,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C134.73,34.6,128.02,41.32,119.73,41.32z" />
+        <path id="Cbar" class="st0" d="M187.3,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C202.3,34.6,195.59,41.32,187.3,41.32z" />
+        <path id="Dbar" class="st0" d="M254.88,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C269.88,34.6,263.16,41.32,254.88,41.32z" />
+        <path id="Ebar" class="st0" d="M322.45,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C337.45,34.6,330.73,41.32,322.45,41.32z" />
+      </svg>
+        </unit-input>
+      </section>
+      <section class=negative>
+      <svg version="1.1" id="busy-indicator xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 347.99 51.89" style="enable-background:new 0 0 347.99 51.89;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            fill: none;
+            stroke: #7BB8E4;
+            stroke-miterlimit: 10;
+          }
+        </style>
+        <path id="Abar" class="st0" d="M52.16,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C67.16,34.6,60.44,41.32,52.16,41.32z" />
+        <path id="Bbar" class="st0" d="M119.73,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C134.73,34.6,128.02,41.32,119.73,41.32z" />
+        <path id="Cbar" class="st0" d="M187.3,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C202.3,34.6,195.59,41.32,187.3,41.32z" />
+        <path id="Dbar" class="st0" d="M254.88,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C269.88,34.6,263.16,41.32,254.88,41.32z" />
+        <path id="Ebar" class="st0" d="M322.45,41.32h-26c-8.28,0-15-6.72-15-15v0c0-8.28,6.72-15,15-15h26c8.28,0,15,6.72,15,15v0
+      	C337.45,34.6,330.73,41.32,322.45,41.32z" />
+      </svg>
+      </section>
+    </section>
 
     <h2>Busy indicator vertical</h2>
 

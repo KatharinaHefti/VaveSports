@@ -160,3 +160,27 @@ a {
 #icon-plan {
   width: 300px;
 }
+
+article.animations section.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+article.animations section.row>section {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  flex-grow: 0;
+  align-items: center;
+  padding-left: .5rem;
+  margin-bottom: .5rem;
+}
+
+article.animations section.row section.positive {
+  border: 1px solid lightgrey;
+  background: ghostwhite;
+}
+
+article.animations section.row section.negative {
+  background-image: linear-gradient(#02578a, #0c3977);
+}
