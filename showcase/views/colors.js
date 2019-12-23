@@ -15,18 +15,19 @@ export function colors() {
     // pink: hsl( 315 ),
     // turkis: hsl( 180 ),
     // blue: hsl( 210 )
-    teal: hsl( 202 ),
-    steel: hsl( 205 ),
-    sky: hsl( 198 ),
-    ice: hsl( 183 ),
-    sage: hsl( 123 ),
-    sun: hsl( 42 ),
-    coral: hsl( 1 ),
-    flamingo: hsl( 327 ),
-    lavender: hsl( 263 ),
-    smoke: hsl( 0 ),
-    silver: hsl( 0 ),
-    snow: hsl( 207 )
+
+    // teal: hsl( 202 ),
+    // steel: hsl( 205 ),
+    // sky: hsl( 198 ),
+    // ice: hsl( 183 ),
+    // sage: hsl( 123 ),
+    // sun: hsl( 42 ),
+    // coral: hsl( 1 ),
+    // flamingo: hsl( 327 ),
+    // lavender: hsl( 263 ),
+    // smoke: hsl( 0 ),
+    // silver: hsl( 0 ),
+    // snow: hsl( 207 )
   }
 
   const rows = [
@@ -136,7 +137,6 @@ export function colors() {
     </style>
     <article class=colors hidden=false>
       <h1>Colors</h1>
-        <!-- <h2>Computed style guide</h2>-->
 
       <!-- colors -->
           <p>Color palette</p>
@@ -144,53 +144,53 @@ export function colors() {
             <section class=positive style=display:flex;flex-wrap:wrap;>
               <div class="color-box" style="background-color:#0c3977;">sapphire</div>
               <p><b>Hex:&nbsp</b>#0c3977</p>
-              <p><b>HSL:&nbsp</b>215° 82% 26%</p>
-              <p><b>RGB:&nbsp</b>12 57 119</p>
+              <p><b>HSL:&nbsp</b>215, 82%, 26%</p>
+              <p><b>RGB:&nbsp</b>12, 57, 119</p>
               <div class="color-box" style="background-color:#02578a;">steel</div>
               <p><b>Hex:&nbsp</b>#02578a</p>
-              <p><b>HSL:&nbsp</b>203° 97% 27%</p>
-              <p><b>RGB:&nbsp</b>2 87 138</p>
-              <div class="color-box" style="background-color:#6CBCFF;">sky</div>
-              <p><b>Hex:&nbsp</b>#6CBCFF</p>
-              <p><b>HSL:&nbsp</b>207° 100% 71%</p>
-              <p><b>RGB:&nbsp </b>108 188 255</p>
+              <p><b>HSL:&nbsp</b>203, 97%, 27%</p>
+              <p><b>RGB:&nbsp</b>2, 87, 138</p>
+              <div class="color-box" style="background-color:#88C6FA;">sky</div>
+              <p><b>Hex:&nbsp</b>#88C6FA</p>
+              <p><b>HSL:&nbsp</b>207, 92%, 76%</p>
+              <p><b>RGB:&nbsp </b>136, 198, 250</p>
               <p class="pink">Don't use sky font color on ghost!</p>
-              <div class="color-box" style="background-color:#12C108;">kelly</div>
-              <p><b>Hex:&nbsp</b>#12C108</p>
-              <p><b>HSL:&nbsp</b>127° 90% 37%</p>
-              <p><b>RGB:&nbsp</b>9 179 30</p>
+              <div class="color-box" style="background-color:#2ED525;">kelly</div>
+              <p><b>Hex:&nbsp</b>#2ED525</p>
+              <p><b>HSL:&nbsp</b>117, 70%, 49%</p>
+              <p><b>RGB:&nbsp</b>46, 213, 37</p>
               <div class="color-box" style="background-color:#FFBE5B;">sun</div>
               <p><b>Hex:&nbsp</b>#FFBE5B</p>
-              <p><b>HSL:&nbsp</b>36° 100% 68%</p>
-              <p><b>RGB:&nbsp</b>255 190 91</p>
+              <p><b>HSL:&nbsp</b>36, 100%, 68%</p>
+              <p><b>RGB:&nbsp</b>255, 190, 91</p>
               <p class="pink">Don't use sun font color on ghost!</p>
-              <div class="color-box" style="background-color:#FF8C19;">tangerine</div>
-              <p><b>Hex:&nbsp</b>#FF8C19</p>
-              <p><b>HSL:&nbsp</b>30° 100% 55%</p>
-              <p><b>RGB:&nbsp</b>255 140 25</p>
+              <div class="color-box" style="background-color:#FF952B;">tangerine</div>
+              <p><b>Hex:&nbsp</b>#FF952B</p>
+              <p><b>HSL:&nbsp</b>0, 100%, 58%</p>
+              <p><b>RGB:&nbsp</b>255, 149, 43</p>
               <p class="pink">Don't use tangerine font color on ghost!</p>
               <div class="color-box" style="background-color:#F7679E;">flamingo</div>
               <p><b>Hex:&nbsp</b>#F7679E</p>
-              <p><b>HSL:&nbsp</b>337° 90% 69%</p>
-              <p><b>RGB:&nbsp</b>247 103 158</p>
+              <p><b>HSL:&nbsp</b>337, 90%, 69%</p>
+              <p><b>RGB:&nbsp</b>247,103, 158</p>
               <div class="color-box" style="background-color:#606066;">smoke</div>
               <p><b>Hex:&nbsp</b>#606066</p>
-              <p><b>HSL:&nbsp</b>240° 3% 39%</p>
-              <p><b>RGB:&nbsp</b>96 96 102</p>
+              <p><b>HSL:&nbsp</b>240, 3%, 39%</p>
+              <p><b>RGB:&nbsp</b>96, 96, 102</p>
               <div class="color-box" style="background-color:#b5b5bc; color:#606066">silver</div>
               <p><b>Hex:&nbsp</b>#b5b5bc</p>
-              <p><b>HSL:&nbsp</b>218° 90% 37%</p>
-              <p><b>RGB:&nbsp</b>9 72 179</p>
+              <p><b>HSL:&nbsp</b>218, 90%, 37%</p>
+              <p><b>RGB:&nbsp</b>9, 72, 179</p>
               <p class="pink">Don't use silver font color on ghost!</p>
               <div class="color-box" style="background-color:#d9d9dd; color:#606066">snow</div>
               <p><b>Hex:&nbsp</b>#d9d9dd</p>
-              <p><b>HSL:&nbsp</b>240° 6% 86%</p>
-              <p><b>RGB:&nbsp</b>217 217 221</p>
+              <p><b>HSL:&nbsp</b>240, 6%, 86%</p>
+              <p><b>RGB:&nbsp</b>217, 217, 221</p>
               <p class="pink">Don't use snow font color on ghost!</p>
               <div class="color-box-nogo" style="background-color:#F8F8FF; color: #606066;">ghost</div>
               <p><b>Hex:&nbsp</b>#F8F8FF</p>
-              <p><b>HSL:&nbsp</b>240° 100% 99%</p>
-              <p><b>RGB:&nbsp</b>248 248 255</p>
+              <p><b>HSL:&nbsp</b>240, 100%, 99%</p>
+              <p><b>RGB:&nbsp</b>248, 248, 255</p>
               <p class="pink">Never use ghost in the light theme!</p>
             </section>
 
@@ -198,50 +198,50 @@ export function colors() {
             <section class=negative style=display:flex;flex-wrap:wrap;>
               <div class="color-box-nogo" style="background-color:#0c3977;">sapphire</div>
               <p><b>Hex:&nbsp</b>#0c3977</p>
-              <p><b>HSL:&nbsp</b>215° 82% 26%</p>
-              <p><b>RGB:&nbsp</b>12 57 119</p>
+              <p><b>HSL:&nbsp</b>215, 82%, 26%</p>
+              <p><b>RGB:&nbsp</b>12, 57, 119</p>
               <p class="pink">Never use sapphire in the dark theme!</p>
               <div class="color-box-nogo" style="background-color:#02578a;">steel</div>
               <p><b>Hex:&nbsp</b>#02578a</p>
-              <p><b>HSL:&nbsp</b>203° 97% 27%</p>
-              <p><b>RGB:&nbsp</b>2 87 138</p>
+              <p><b>HSL:&nbsp</b>203, 97%, 27%</p>
+              <p><b>RGB:&nbsp</b>2, 87, 138</p>
               <div class="color-box" style="background-color:#6CBCFF;">sky</div>
               <p><b>Hex:&nbsp</b>#6CBCFF</p>
-              <p><b>HSL:&nbsp</b>207° 100% 71%</p>
-              <p><b>RGB:&nbsp </b>108 188 255</p>
+              <p><b>HSL:&nbsp</b>207, 100%, 71%</p>
+              <p><b>RGB:&nbsp </b>108, 188, 255</p>
               <div class="color-box" style="background-color:#12C108;">kelly</div>
               <p><b>Hex:&nbsp</b>#12C108</p>
-              <p><b>HSL:&nbsp</b>127° 90% 37%</p>
-              <p><b>RGB:&nbsp</b>9 179 30</p>
+              <p><b>HSL:&nbsp</b>127, 90%, 37%</p>
+              <p><b>RGB:&nbsp</b>9, 179, 30</p>
               <div class="color-box" style="background-color:#FFBE5B;">sun</div>
               <p><b>Hex:&nbsp</b>#FFBE5B</p>
-              <p><b>HSL:&nbsp</b>36° 100% 68%</p>
-              <p><b>RGB:&nbsp</b>255 190 91</p>
+              <p><b>HSL:&nbsp</b>36, 100%, 68%</p>
+              <p><b>RGB:&nbsp</b>255, 190, 91</p>
               <div class="color-box" style="background-color:#FF8C19;">tangerine</div>
               <p><b>Hex:&nbsp</b>#FF8C19</p>
-              <p><b>HSL:&nbsp</b>30° 100% 55%</p>
-              <p><b>RGB:&nbsp</b>255 140 25</p>
-              <div class="color-box" style="background-color:#F7679E;">flamingo</div>
-              <p><b>Hex:&nbsp</b>#F7679E</p>
-              <p><b>HSL:&nbsp</b>337° 90% 69%</p>
-              <p><b>RGB:&nbsp</b>247 103 158</p>
+              <p><b>HSL:&nbsp</b>30, 100%, 55%</p>
+              <p><b>RGB:&nbsp</b>255, 140, 25</p>
+              <div class="color-box" style="background-color:#FA609B;">flamingo</div>
+              <p><b>Hex:&nbsp</b>#FA609B</p>
+              <p><b>HSL:&nbsp</b>337, 94%, 68%</p>
+              <p><b>RGB:&nbsp</b>250, 96, 155</p>
               <div class="color-box-nogo" style="background-color:#606066;">smoke</div>
               <p><b>Hex:&nbsp</b>#606066</p>
-              <p><b>HSL:&nbsp</b>240° 3% 39%</p>
-              <p><b>RGB:&nbsp</b>96 96 102</p>
+              <p><b>HSL:&nbsp</b>240, 3%, 39%</p>
+              <p><b>RGB:&nbsp</b>96, 96, 102</p>
               <p class="pink">Never use smoke in the dark theme!</p>
               <div class="color-box" style="background-color:#b5b5bc; color:#606066;">silver</div>
               <p><b>Hex:&nbsp</b>#b5b5bc</p>
-              <p><b>HSL:&nbsp</b>218° 90% 37%</p>
-              <p><b>RGB:&nbsp</b>9 72 179</p>
+              <p><b>HSL:&nbsp</b>218, 90%, 37%</p>
+              <p><b>RGB:&nbsp</b>9, 72, 179</p>
               <div class="color-box" style="background-color:#d9d9dd; color:#606066">snow</div>
               <p><b>Hex:&nbsp</b>#d9d9dd</p>
-              <p><b>HSL:&nbsp</b>240° 6% 86%</p>
-              <p><b>RGB:&nbsp</b>217 217 221</p>
+              <p><b>HSL:&nbsp</b>240, 6%, 86%</p>
+              <p><b>RGB:&nbsp</b>217, 217, 221</p>
               <div class="color-box" style="background-color:#F8F8FF; color: #606066;">ghost</div>
               <p><b>Hex:&nbsp</b>#F8F8FF</p>
-              <p><b>HSL:&nbsp</b>240° 100% 99%</p>
-              <p><b>RGB:&nbsp</b>248 248 255</p>
+              <p><b>HSL:&nbsp</b>240, 100%, 99%</p>
+              <p><b>RGB:&nbsp</b>248, 248, 255</p>
             </section>
 
     <!--
