@@ -17,8 +17,8 @@ export function date() {
 
       <h2>Examples</h2>
       <p>Input for date.</p>
-      <section style="padding-top:10px">
-        <unit-date .state=${{
+      <section style="padding-top:10px;display:flex">
+        <unit-date style="flex:1" .state=${{
           "id": "date",
           "label": "Datum",
           "placeholder": "dd.mm.yyyy",

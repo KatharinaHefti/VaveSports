@@ -87,6 +87,9 @@ export function button() {
         <unit-button style=padding-left:.5em .state=${{
           id: "link", href:"#", label: "Orange", value: "link", className: "orange link"
         }}></unit-button>
+        <unit-button style=padding-left:.5em .state=${{
+          id: "link", href:"#", label: "Default", value: "link", className: "link"
+        }}></unit-button>
       </section>
 
       <section style="background-image: linear-gradient(#2B5779, #1C3659); display:flex;">

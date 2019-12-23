@@ -16,24 +16,32 @@ export function input() {
 
       <h2>Example</h2>
 
-      <h3>Show value, chars:100, font-size:1.4em, height: 30px</h3>
-      <unit-input id="1" .state=${{
-        "value": state,
-        "height": "2.5em",
-        "font-size": "1em",
-        "type": "text",
-        "placeholder": "Placeholder"
-      }}></unit-input>
+      <h3>Flex: 1</h3>
+      <section style="display:flex">
+        <unit-input style="flex:1" id="1" .state=${{
+          "value": state,
+          "height": "2.5em",
+          "font-size": "1em",
+          "label": "Type here",
+          "type": "text",
+          "placeholder": "Placeholder"
+        }}></unit-input>
+      </section>
 
       <h3>Show label, value and display inline</h3>
       <unit-input id="2" .state=${{
-        "value": state,
+        "value": "value",
         "label": "Name",
         "type": "text",
         "placeholder": "Placeholder"
       }}></unit-input>
+      <unit-input id="22" .state=${{
+        "value": "value",
+        "label": "Familienname",
+        "type": "text",
+        "placeholder": "Placeholder"
+      }}></unit-input>
       <unit-input id="3" .state=${{
-        "value": state.split( "" ).reverse().join( "" ),
         "disabled": true,
         "label": "Disabled",
         "type": "text",
