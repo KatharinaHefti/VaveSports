@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: mrs-eaves, serif;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+  }
+
+  h1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: 1s ease-in-out;
+    animation-name: BlurIn;
+    animation-fill-mode: forwards;
+    color: black;
+  }
+
+
+  #box{
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+
+#jahr{
+    font-size: 4rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-variant: small-caps;
+    font-kerning: auto;
+    letter-spacing: 0.05rem;
+}
+
+#sprache{
+    margin-top: 22rem;
+    text-align: center;
+;
+
+    
+}
+
+  @keyframes BlurIn {
+    0% {
+      filter: blur(12px);
+      opacity: 0
+    }
+  
+    100% {
+        filter: blur(0);
+        opacity: 1
+    }
+  }
